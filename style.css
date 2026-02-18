@@ -394,11 +394,11 @@ body.dark-theme {
 
 /* ========== HERO SECTION (Background Image) ========== */
 .hero-section {
-    background-image: url('asosiy.jpg');
+    background-image: url('asosiy.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    min-height: 600px;
+    min-height: 700px;
     position: relative;
 }
 
@@ -884,4 +884,42 @@ kbd {
     .footer-grid {
         grid-template-columns: 1fr;
     }
+}
+
+.test-mode-banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(45deg, #17afb9, #14a8ab);
+    color: white;
+    padding: 10px 0;
+    overflow: hidden;
+    z-index: 9999;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    border-bottom: 2px solid #1f879e;
+}
+
+.moving-text {
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    white-space: nowrap;
+    animation: moveText 15s linear infinite;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+@keyframes moveText {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Sahifa kontentini banner pastga surish */
+body {
+    margin-top: 0px !important;
 }

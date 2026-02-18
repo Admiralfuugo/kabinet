@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bo'limga yo'naltirish</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth; /* Silliq siljish */
+        }
+
+        /* Navigatsiya menyusi */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: #333;
+            padding: 15px 0;
+            text-align: center;
+            z-index: 1000;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .navbar a:hover {
+            background: #555;
+        }
+
+        /* Bo'limlar */
+        section {
+            min-height: 100vh;
+            padding: 80px 20px 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        #home { background: #f1f1f1; }
+        #about { background: #e1f5fe; }
+        #services { background: #fff3e0; }
+        #contact { background: #f3e5f5; }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #333;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 50%;
+            text-decoration: none;
+            font-size: 20px;
+            display: none;
+        }
+
+        .back-to-top.show {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. Navigatsiya menyusi (linklar) -->
+    <nav class="navbar">
+        <a href="#home">🏠 Bosh sahifa</a>
+        <a href="#about">👤 Biz haqimizda</a>
+        <a href="#services">⚙️ Xizmatlar</a>
+        <a href="#contact">📞 Bog'lanish</a>
+    </nav>
+
+    <!-- 2. Bo'limlar (ID bilan) -->
+    <section id="home">
+        <h1>Bosh sahifa</h1>
+        <p>Bu yerda asosiy ma'lumotlar joylashadi.</p>
+        <a href="#about" style="padding: 10px 20px; background: #333; color: white; text-decoration: none; border-radius: 5px;">Keyingi bo'limga o'tish</a>
+    </section>
+
+    <section id="about">
+        <h1>Biz haqimizda</h1>
+        <p>Kompaniya tarixi va ma'lumotlar.</p>
+        <a href="#services" style="padding: 10px 20px; background: #333; color: white; text-decoration: none; border-radius: 5px;">Xizmatlar bo'limiga o'tish</a>
+    </section>
+
+    <section id="services">
+        <h1>Xizmatlar</h1>
+        <p>Taklif etilayotgan xizmatlar ro'yxati.</p>
+        <a href="#contact" style="padding: 10px 20px; background: #333; color: white; text-decoration: none; border-radius: 5px;">Bog'lanish bo'limiga o'tish</a>
+    </section>
+
+    <section id="contact">
+        <h1>Bog'lanish</h1>
+        <p>Telefon: +998 90 123 45 67</p>
+        <p>Email: info@example.com</p>
+        <a href="#home" style="padding: 10px 20px; background: #333; color: white; text-decoration: none; border-radius: 5px;">Boshiga qaytish</a>
+    </section>
+
+    <!-- 3. Yuqoriga qaytish tugmasi -->
+    <a href="#" class="back-to-top" id="backToTop">↑</a>
+
+    <script>
+        // Yuqoriga qaytish tugmasi ko'rinishi
+        window.addEventListener('scroll', function() {
+            var backToTop = document.getElementById('backToTop');
+            if (window.pageYOffset > 300) {
+                backToTop.classList.add('show');
+            } else {
+                backToTop.classList.remove('show');
+            }
+        });
+    </script>
+
+</body>
+</html>
