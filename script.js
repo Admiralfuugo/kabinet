@@ -151,6 +151,7 @@ document.addEventListener('DOMContentLoaded', function() {
             specialists: "Mutaxassislar",
             civilians: "Fuqarolik xodimlari",
             news: "YANGILIKLAR",
+            datess: "HUJJATLAR",
             latest: "So'nggi yangiliklar",
             official: "Rasmiy bayonotlar",
             photo: "Foto galereya",
@@ -305,3 +306,61 @@ document.addEventListener('DOMContentLoaded', function() {
 
     console.log('Navbar muvaffaqiyatli yuklandi!');
 });
+
+
+// ariza
+// Ariza kartalari interaktivligi
+document.addEventListener('DOMContentLoaded', function() {
+    // Batafsil tugmalari
+    const detailsBtns = document.querySelectorAll('.btn-details');
+    const applyBtns = document.querySelectorAll('.btn-apply');
+    
+    detailsBtns.forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            
+            const card = this.closest('.application-card');
+            const details = card.querySelector('.card-details');
+            const icon = this.querySelector('i');
+            
+            // Boshqa ochiq detalni yopish
+            document.querySelectorAll('.card-details.show').forEach(openDetail => {
+                if (openDetail !== details) {
+                    openDetail.classList.remove('show');
+                    const openBtn = openDetail.closest('.application-card').querySelector('.btn-details i');
+                    if (openBtn) {
+                        openBtn.className = 'fas fa-chevron-down';
+                    }
+                }
+            });
+            
+            // Hozirgisini ochish/yopish
+            details.classList.toggle('show');
+            
+            if (details.classList.contains('show')) {
+                icon.className = 'fas fa-chevron-up';
+            } else {
+                icon.className = 'fas fa-chevron-down';
+            }
+        });
+    });
+    
+    // Ariza berish tugmalari
+    applyBtns.forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            const applicationType = this.dataset.application || this.closest('.application-card').querySelector('.card-title').textContent;
+            
+            // Sizning mavjud modalni ochish funksiyangiz
+            if (typeof openApplicationModal === 'function') {
+                openApplicationModal(applicationType);
+            } else {
+                // Agar modal funksiyasi bo'lmasa, ariza.html ga yo'naltirish
+                window.location.href = `ariza.html?type=${encodeURIComponent(applicationType)}`;
+            }
+        });
+    });
+});
+
+// ariza

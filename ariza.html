@@ -27,8 +27,9 @@
             </div> -->
 
             <div style="display: flex; align-items: center;">
+                <a href="index.html">
                 <img src="img/123.png" style="width: 30px; height: 30px; margin-right: 5px;">
-                <span>O'ZBEKISTON RESPUBLIKASI MUDOFAA VAZIRLIGI ㅤ</span>
+                <span style="color: azure; text-align: center;">O'ZBEKISTON RESPUBLIKASI MUDOFAA VAZIRLIGI ㅤ</span></a>
                 <span class="date-time" id="currentDateTime">
                     <i class="far fa-calendar-alt"></i>
                     <span id="date"></span>
@@ -181,92 +182,211 @@
             </button>
         </div>
        
-
-
-    </nav>
+   </nav>
 
     <!-- BACKGROUND IMAGE SECTION -->
-    <section class="hero-section">
-        <div class="hero-overlay">
-            <div class="container">
-                <div class="hero-content">
-                    
-                    <br>
-                    <br><br>
-                    <br><br>
-                    <br><br>
-                    <br><br>
-                   
-                    <br><br>
-                    <br><br>
-                    <br>
-                    <h2>HARBIY XIZMAT – BURCH, SHARAF VA BARQAROR KELAJAK!</h2>
-                    <p class="hero-motto">O'ZBEKISTON RESPUBLIKASI MUDOFAA VAZIRLIGI <br>HARBIY-KASBIY SARALASH BOSHQARMASI</p>
-                    
+    <!-- BACKGROUND IMAGE SECTION -->
+
+<!-- HARBIY ARIZALAR BO'LIMI (MAIN) -->
+<section class="applications-section" id="applications">
+    <div class="container">
+        
+
+        <div class="applications-grid">
+            <!-- 1. Kontrakt bo'yicha harbiy xizmat -->
+            <div class="application-card" data-type="contract">
+                <div class="card-badge">Kontrakt</div>
+                <div class="card-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3 class="card-title">Kontrakt bo'yicha harbiy xizmatga kirish uchun ariza</h3>
+                <p class="card-description">Shartnoma asosida harbiy xizmatga kirish uchun ariza topshiring</p>
+                
+                <div class="card-features">
+                    <div class="feature-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>18 yoshdan 27 yoshgacha</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>O'rta maxsus yoki oliy ma'lumot</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Jismoniy tayyorgarlik</span>
+                    </div>
+                </div>
+
+                <div class="card-details hidden">
+                    <h4>Batafsil ma'lumot:</h4>
+                    <ul>
+                        <li><i class="fas fa-chevron-right"></i> Xizmat muddati: Dastlabki 3 yil</li>
+                        <li><i class="fas fa-chevron-right"></i> Oylik maosh: 3-5 million so'm</li>
+                        <li><i class="fas fa-chevron-right"></i> Imtiyozlar: Uy-joy, tibbiy sug'urta</li>
+                        <li><i class="fas fa-chevron-right"></i> Harbiy unvon: Oddiy askardan boshlanadi</li>
+                        <li><i class="fas fa-chevron-right"></i> Keyingi imkoniyat: Kontraktni uzaytirish</li>
+                    </ul>
+                </div>
+
+                <div class="card-footer">
+                    <button class="btn-details">
+                        <span>Batafsil</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <button class="btn-apply" data-application="Kontrakt bo'yicha harbiy xizmat">
+                        <i class="fas fa-file-signature"></i>
+                        Ariza berish
+                    </button>
+                </div>
+            </div>
+
+            <!-- 2. Oliy harbiy ta'lim muassasalari -->
+            <div class="application-card" data-type="higher">
+                <div class="card-badge">Ta'lim</div>
+                <div class="card-icon">
+                    <i class="fas fa-university"></i>
+                </div>
+                <h3 class="card-title">Oliy harbiy ta'lim muassasalariga kirish uchun ariza</h3>
+                <p class="card-description">Harbiy institutlar va akademiyalarga o'qishga kirish</p>
+                
+                <div class="card-features">
+                    <div class="feature-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>11-sinf bitiruvchilari</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Qabul: Iyun-avgust</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Imtihon: Fan va jismoniy</span>
+                    </div>
+                </div>
+
+                <div class="card-details hidden">
+                    <h4>Batafsil ma'lumot:</h4>
+                    <ul>
+                        <li><i class="fas fa-chevron-right"></i> O'qish muddati: 4 yil</li>
+                        <li><i class="fas fa-chevron-right"></i> Ta'lim: Bepul, stipendiya</li>
+                        <li><i class="fas fa-chevron-right"></i> Harbiy unvon: Leytenant</li>
+                        <li><i class="fas fa-chevron-right"></i> Imtihon fanlari: Matematika, Fizika, Ona tili</li>
+                        <li><i class="fas fa-chevron-right"></i> Jismoniy normativlar: 100m yugurish, turnik</li>
+                    </ul>
+                </div>
+
+                <div class="card-footer">
+                    <button class="btn-details">
+                        <span>Batafsil</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <button class="btn-apply" data-application="Oliy harbiy ta'lim">
+                        <i class="fas fa-file-signature"></i>
+                        Ariza berish
+                    </button>
+                </div>
+            </div>
+
+            <!-- 3. Harbiy akademik litseylar -->
+            <div class="application-card" data-type="lyceum">
+                <div class="card-badge">Litsey</div>
+                <div class="card-icon">
+                    <i class="fas fa-school"></i>
+                </div>
+                <h3 class="card-title">Harbiy akademik litseylarga kirish uchun ariza</h3>
+                <p class="card-description">9-sinf bitiruvchilari uchun harbiy litseylar</p>
+                
+                <div class="card-features">
+                    <div class="feature-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>9-sinfdan keyin</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Yosh: 15-16</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>2 yillik ta'lim</span>
+                    </div>
+                </div>
+
+                <div class="card-details hidden">
+                    <h4>Batafsil ma'lumot:</h4>
+                    <ul>
+                        <li><i class="fas fa-chevron-right"></i> O'qish muddati: 2 yil</li>
+                        <li><i class="fas fa-chevron-right"></i> Imtihon: Matematika, ona tili</li>
+                        <li><i class="fas fa-chevron-right"></i> Jismoniy tayyorgarlik testi</li>
+                        <li><i class="fas fa-chevron-right"></i> Imkoniyat: Harbiy oliygohga kirish</li>
+                        <li><i class="fas fa-chevron-right"></i> Yotoqxona bilan ta'minlash</li>
+                    </ul>
+                </div>
+
+                <div class="card-footer">
+                    <button class="btn-details">
+                        <span>Batafsil</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <button class="btn-apply" data-application="Harbiy akademik litsey">
+                        <i class="fas fa-file-signature"></i>
+                        Ariza berish
+                    </button>
+                </div>
+            </div>
+
+            <!-- 4. Harbiy kafedralar -->
+            <div class="application-card" data-type="department">
+                <div class="card-badge">Kafedra</div>
+                <div class="card-icon">
+                    <i class="fas fa-book-open"></i>
+                </div>
+                <h3 class="card-title">Harbiy kafedralarga kirish uchun ariza</h3>
+                <p class="card-description">Fuqarolik oliygohlarida harbiy ta'lim</p>
+                
+                <div class="card-features">
+                    <div class="feature-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>2-3 kurs talabalari</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Nazariy va amaliy</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Zaxiradagi ofitser</span>
+                    </div>
+                </div>
+
+                <div class="card-details hidden">
+                    <h4>Batafsil ma'lumot:</h4>
+                    <ul>
+                        <li><i class="fas fa-chevron-right"></i> O'qish muddati: 2 yil (qo'shimcha)</li>
+                        <li><i class="fas fa-chevron-right"></i> Mashg'ulotlar: Haftada 2-3 marta</li>
+                        <li><i class="fas fa-chevron-right"></i> Harbiy unvon: Leytenant (zaxira)</li>
+                        <li><i class="fas fa-chevron-right"></i> Imtiyoz: Harbiy xizmatdan ozod qilinadi</li>
+                        <li><i class="fas fa-chevron-right"></i> Yakuniy: Harbiy qasamyod va lager</li>
+                    </ul>
+                </div>
+
+                <div class="card-footer">
+                    <button class="btn-details">
+                        <span>Batafsil</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <button class="btn-apply" data-application="Harbiy kafedra">
+                        <i class="fas fa-file-signature"></i>
+                        Ariza berish
+                    </button>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
 
     <!-- VIDEO GUIDE SECTION -->
-    <section class="video-guide-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Video yo'riqnoma</h2>
-                <p>Harbiy xizmat va vazirlik faoliyati haqida video materiallar</p>
-            </div>
-
-            
-            
-            <div class="video-grid">
-                <div class="video-card">
-                    <div class="video-thumbnail">
-                        <a href="https://youtu.be/hqabRIFI0Q4?si=p--bSTuF1shtFKN0" target="_blank">
-                        <img src="img/parol.png" alt="Video uchun rasm" ">
-                        </a>
-                        <a href="https://youtu.be/hqabRIFI0Q4?si=p--bSTuF1shtFKN0" target="_blank" class="play-button-link">
-                            <div class="play-button">
-                            <i class="fas fa-play"></i>
-                        </div>
-                        </a>
-                        
-                    </div>
-                    <div class="video-info">
-                        <h3>ONE.ID</h3>
-                        <p>Login va parolni tiklash juda oson!</p>
-                        <span class="video-duration"><i class="far fa-clock"></i> 01:08</span>
-                    </div>
-                </div>
-
-
-                <div class="video-card">
-                    <div class="video-thumbnail">
-                        <a href="https://youtu.be/IL7z72X5tPw?si=nQ1odp6mNkDgxPRf" target="_blank">
-                        <img src="img/ONE.jpg" alt="Video uchun rasm" ">
-                        </a>
-                        <a href="https://youtu.be/IL7z72X5tPw?si=nQ1odp6mNkDgxPRf" target="_blank" class="play-button-link">
-                            <div class="play-button">
-                            <i class="fas fa-play"></i>
-                        </div>
-                        </a>
-                        
-                    </div>
-                    <div class="video-info">
-                        <h3>ONE.ID</h3>
-                        <p>Tizimda ro'yhatdan o'tish tartibi</p>
-                        <span class="video-duration"><i class="far fa-clock"></i> 01:13</span>
-                    </div>
-                </div>
-                
-
-                
-            </div>
-
-            <div class="video-more">
-                <a href="#" class="view-all-btn">Barcha videolarni ko'rish <i class="fas fa-arrow-right"></i></a>
-            </div>
-        </div>
-    </section>
+    
 
     <!-- FOOTER SECTION -->
     <footer id="information" class="footer" >
