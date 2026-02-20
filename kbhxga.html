@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="img/123.png">
+    <title>Mudofaa Vazirligi | Rasmiy veb-sayt</title>
+    
+    <!-- Font Awesome 5 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+    <!-- CSS fayl -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- NAVBAR SECTION -->
+    <nav class="navbar">
+        <!-- Top bar - Qidiruv qismi birinchi qator -->
+        <div class="top-bar">
+
+            <!-- <div class="top-bar-left">
+                
+                <img width="50px"  src="123.png" alt="">
+                
+                <span class="ministry-name">O'ZBEKISTON RESPUBLIKASI MUDOFAA VAZIRLIGI</span>
+                
+            </div> -->
+
+            <div style="display: flex; align-items: center;">
+                <a href="index.html">
+                <img src="img/123.png" style="width: 30px; height: 30px; margin-right: 5px;">
+                <span style="color: azure; text-align: center;">O'ZBEKISTON RESPUBLIKASI MUDOFAA VAZIRLIGI ㅤ</span></a>
+                <span class="date-time" id="currentDateTime">
+                    <i class="far fa-calendar-alt"></i>
+                    <span id="date"></span>
+                    <i class="far fa-clock" style="margin-left: 10px;"></i>
+                    <span id="time"></span>
+                </span>
+            </div>
+
+
+
+            <div class="top-bar-right">
+                <!-- Search box birinchi qatorda -->
+                <div class="search-box-top">
+                    <input type="text" placeholder="Qidirish..." id="searchInput">
+                    <button id="searchBtn"><i class="fas fa-search"></i></button>
+                </div>
+
+                <!-- Til tanlash -->
+                <div class="language-selector">
+                    <button class="lang-btn active" data-lang="uz">UZ</button>
+                    <button class="lang-btn" data-lang="ru">RU</button>
+                    <button class="lang-btn" data-lang="en">EN</button>
+                </div>
+
+                <!-- Bildirishnomalar -->
+                <div class="notifications">
+                    <button class="notification-btn" id="notificationBtn">
+                        <i class="far fa-bell"></i>
+                        <span class="notification-badge">3</span>
+                    </button>
+                    <div class="notification-dropdown" id="notificationDropdown">
+                        <div class="notification-header">
+                            <h4>Bildirishnomalar</h4>
+                            <span class="mark-read">Hammasini o'qildi deb belgilash</span>
+                        </div>
+                        <div class="notification-list">
+                            <div class="notification-item unread">
+                                <i class="fas fa-bullhorn notification-icon"></i>
+                                <div class="notification-content">
+                                    <p class="notification-text">Yangi vakansiya e'lon qilindi</p>
+                                    <span class="notification-time">5 daqiqa oldin</span>
+                                </div>
+                            </div>
+                            <div class="notification-item unread">
+                                <i class="fas fa-file-alt notification-icon"></i>
+                                <div class="notification-content">
+                                    <p class="notification-text">Arizangiz ko'rib chiqilmoqda</p>
+                                    <span class="notification-time">1 soat oldin</span>
+                                </div>
+                            </div>
+                            <div class="notification-item">
+                                <i class="fas fa-calendar-check notification-icon"></i>
+                                <div class="notification-content">
+                                    <p class="notification-text">Harbiy qasamyod marosimi</p>
+                                    <span class="notification-time">1 kun oldin</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="notification-footer">
+                            <a href="#">Barcha bildirishnomalar</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kun/tun rejimi -->
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                </button>
+
+                
+
+            </div>
+        </div>
+
+        <!-- Main navbar - ikkinchi qator (o'rta qism) -->
+        <div class="main-nav">
+            <ul class="nav-links">
+                <li class="nav-item">
+                    <a href="#"><i class="fas fa-home"></i><span data-i18n="about">BIZ HAQIMIZDA</span></a>
+                    <div class="dropdown-menu">
+                        <a href="https://gov.uz/oz/mudofaa/pages/about" data-i18n="history">Vazirlik</a>
+                        <a href="https://gov.uz/oz/mudofaa/guides" data-i18n="leadership">Rahbariyat</a>
+                        <a href="#information" data-i18n="tasks">Bog'lanish</a>
+                        <a href="#" data-i18n="symbols">Ko'p beriladigan savollar</a>
+                        
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="#"><i class="fas fa-briefcase"></i><span data-i18n="career">KARYERA</span></a>
+                    <div class="dropdown-menu">
+                        <a href="#" data-i18n="militaryService">Bu nima</a>
+                        <a href="#" data-i18n="contract">Harbiy xizmatga qadar</a>
+                        <a href="#" data-i18n="academies">Harbiy xizmat davomida</a>
+                        <a href="https://vacancy.gov.uz/" data-i18n="internship"></a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="#"><i class="fas fa-users"></i><span data-i18n="candidates">NOMZODLARGA</span></a>
+                    <div class="dropdown-menu">
+                        <a href="#" data-i18n="requirements">Saralash</a>
+                        <a href="#" data-i18n="documents">KBHX ga</a>
+                        <a href="#" data-i18n="exams">OXTM ga</a>
+                        <a href="#" data-i18n="benefits">HAL ga</a>
+                        <a href="#" data-i18n="benefitT">HTO'M GA</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="#"><i class="fas fa-bullhorn"></i><span data-i18n="vacancies">VAKANSIYA</span></a>
+                    <div class="dropdown-menu">
+                        <a href="#" data-i18n="officers">Ofitserlar</a>
+                        <a href="#" data-i18n="sergeants">Serjantlar</a>
+                        <a href="#" data-i18n="specialists">Mutaxassislar</a>
+                        <a href="#" data-i18n="civilians">Fuqarolik xodimlari</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="#"><i class="fas fa-newspaper"></i><span data-i18n="news">YANGILIKLAR</span></a>
+                    <div class="dropdown-menu">
+                        <a href="#" data-i18n="latest">So'nggi yangiliklar</a>
+                        <a href="#" data-i18n="official">Rasmiy bayonotlar</a>
+                        <a href="#" data-i18n="photo">Foto galereya</a>
+                        <a href="#" data-i18n="video">Video materiallar</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="hujjatlar.html"><i class="fas fa-newspaper"></i><span data-i18n="datess">HUJJATLAR</span></a>
+                </li>
+            </ul>
+
+            <!-- Application button (o'rta qatorning o'ng qismi) -->
+            <div class="main-nav-actions">
+                <a href="ariza.html" class="application-btn">
+                    <i class="fas fa-file-alt"></i>
+                    <span data-i18n="apply">ARIZA BERISH</span>
+                </a>
+                <span class="phone-number">
+                    <i class="fas fa-phone-alt"></i>
+                    1530
+                </span>
+                <div class="user-info">
+                    <i class="fas fa-user-circle"></i>
+                    <span class="user-name">ANVAROV A.A.</span>
+                </div>
+            </div>
+
+            <!-- Mobile menu button -->
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+       
+   </nav>
+
+    <!-- BACKGROUND IMAGE SECTION -->
+
+<!-- KONTRAKT BO'YICHA HARBIY XIZMAT FAQ SECTION -->
+<section class="faq-section" id="kontrakt-faq">
+    <div class="container">
+        <div class="section-header">
+            <h2>KONTRAKT BO'YICHA HARBIY XIZMAT</h2>
+            <p>Shartnoma asosida harbiy xizmatga oid barcha ma'lumotlar</p>
+        </div>
+        
+        <div class="faq-container">
+            <!-- Kontrakt nima? - Asosiy savol -->
+            <div class="faq-item featured">
+                <div class="faq-question">
+                    <h3><i class="fas fa-file-signature" style="color: #d32f2f; margin-right: 10px;"></i> Kontrakt bo'yicha harbiy xizmat nima?</h3>
+                    <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="faq-answer">
+                    <div class="featured-answer">
+                        <p><strong>Kontrakt bo'yicha harbiy xizmat</strong> - bu fuqarolarning ixtiyoriy ravishda harbiy xizmatni o'tash shakli bo'lib, ular Mudofaa Vazirligi bilan shartnoma (kontrakt) tuzadilar.</p>
+                        <div class="info-box">
+                            <div class="info-item">
+                                <i class="fas fa-clock"></i>
+                                <span>Dastlabki muddat: 3 yil</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-money-bill-wave"></i>
+                                <span>Oylik maosh: 3-5 mln so'm</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-home"></i>
+                                <span>Xizmat turar joyi</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-graduation-cap"></i>
+                                <span>Imtiyozli ta'lim</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Kimlar kontrakt bo'lib xizmat qilishi mumkin? -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Kimlar kontrakt bo'lib xizmat qilishi mumkin?</h3>
+                    <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="faq-answer">
+                    <p>Kontrakt bo'yicha harbiy xizmatga quyidagi shaxslar qabul qilinadi:</p>
+                    <ul class="requirements-list">
+                        <li><i class="fas fa-check-circle"></i> <strong>Yosh chegarasi:</strong> 19 yoshdan 39 yoshgacha</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>Ma'lumot:</strong> Kamida o'rta maxsus ma'lumot</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>Sog'liq:</strong> "A" yoki "B" toifasi (harbiy xizmatga yaroqli)</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>Jismoniy tayyorgarlik:</strong> Belgilangan me'yorlarni topshirgan</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>Fuqarolik:</strong> O'zbekiston Respublikasi fuqarosi</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>Sudlanmaganlik:</strong> Sudlanganlik holati bo'lmasligi kerak</li>
+                    </ul>
+                    <p class="note"><i class="fas fa-info-circle"></i> Ayollar ham kontrakt asosida harbiy xizmatni o'tashlari mumkin (ayrim mutaxassisliklar bo'yicha).</p>
+                </div>
+            </div>
+            
+            <!-- Kontrakt turlari -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Kontraktning qanday turlari mavjud?</h3>
+                    <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="faq-answer">
+                    <div class="contract-types">
+                        <div class="contract-type">
+                            <h4><i class="fas fa-star"></i> Oddiy kontrakt</h4>
+                            <p><strong>Muddati:</strong> 3 yil</p>
+                            <p><strong>Maosh:</strong> 3-4 mln so'm</p>
+                            <p><strong>Shartlari:</strong> Oddiy harbiy xizmatchilar uchun</p>
+                        </div>
+                        <div class="contract-type">
+                            <h4><i class="fas fa-crown"></i> Ofitserlik kontrakti</h4>
+                            <p><strong>Muddati:</strong> 5 yil</p>
+                            <p><strong>Maosh:</strong> 5-8 mln so'm</p>
+                            <p><strong>Shartlari:</strong> Oliy ma'lumotli ofitserlar uchun</p>
+                        </div>
+                        <div class="contract-type">
+                            <h4><i class="fas fa-bolt"></i> Qisqa muddatli kontrakt</h4>
+                            <p><strong>Muddati:</strong> 1-2 yil</p>
+                            <p><strong>Maosh:</strong> 2.5-3.5 mln so'm</p>
+                            <p><strong>Shartlari:</strong> Maxsus topshiriqlar uchun</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Kontrakt bo'yicha oylik maosh va imtiyozlar -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Kontrakt bo'yicha xizmat qiluvchilarga qanday imtiyozlar beriladi?</h3>
+                    <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="faq-answer">
+                    <div class="benefits-grid">
+                        <div class="benefit-item">
+                            <i class="fas fa-money-bill-wave"></i>
+                            <h4>Pul ta'minoti</h4>
+                            <ul>
+                                <li>Oylik maosh (3-8 mln so'm)</li>
+                                <li>Har choraklik mukofot</li>
+                                <li>Yillik ta'til puli</li>
+                                <li>Qo'shimcha ustamalar</li>
+                            </ul>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-home"></i>
+                            <h4>Uy-joy</h4>
+                            <ul>
+                                <li>Xizmat turar joyi</li>
+                                <li>10 yildan keyin uy-joy subsidiyasi</li>
+                                <li>Harbiy ipoteka</li>
+                            </ul>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-medkit"></i>
+                            <h4>Tibbiy xizmat</h4>
+                            <ul>
+                                <li>Bepul davolanish</li>
+                                <li>Sanatoriy-kurortda dam olish</li>
+                                <li>Oila a'zolari uchun tibbiy xizmat</li>
+                            </ul>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <h4>Ta'lim</h4>
+                            <ul>
+                                <li>Harbiy o'quv yurtlarida bepul o'qish</li>
+                                <li>Malaka oshirish kurslari</li>
+                                <li>Xorijiy tillarni o'rganish</li>
+                            </ul>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-umbrella-beach"></i>
+                            <h4>Ta'til</h4>
+                            <ul>
+                                <li>30-45 kunlik yillik ta'til</li>
+                                <li>Kasallik ta'tili</li>
+                                <li>Oilaviy holatlar uchun ta'til</li>
+                            </ul>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-pension"></i>
+                            <h4>Pensiya</h4>
+                            <ul>
+                                <li>20 yil xizmatdan keyin pensiya</li>
+                                <li>Imtiyozli pensiya hisobi</li>
+                                <li>Harbiy pensiya qo'shimchalari</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Kontraktga qabul qilish bosqichlari -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Kontraktga qabul qilish bosqichlari qanday?</h3>
+                    <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="faq-answer">
+                    <div class="steps">
+                        <div class="step">
+                            <span class="step-number">1</span>
+                            <div class="step-content">
+                                <h4>Ariza topshirish</h4>
+                                <p>Harbiy komissarlik yoki onlayn ariza topshirish</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <span class="step-number">2</span>
+                            <div class="step-content">
+                                <h4>Hujjatlarni tekshirish</h4>
+                                <p>Pasport, ma'lumot haqidagi hujjat, tibbiy ma'lumotnoma</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <span class="step-number">3</span>
+                            <div class="step-content">
+                                <h4>Tibbiy ko'rik</h4>
+                                <p>8 mutaxassis shifokor tomonidan tekshiruv</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <span class="step-number">4</span>
+                            <div class="step-content">
+                                <h4>Jismoniy tayyorgarlik testi</h4>
+                                <p>100m, 3000m yugurish, tortilish (erkaklar uchun)</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <span class="step-number">5</span>
+                            <div class="step-content">
+                                <h4>Psixologik test</h4>
+                                <p>MMPI, IQ testlari, suhbat</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <span class="step-number">6</span>
+                            <div class="step-content">
+                                <h4>Shartnoma imzolash</h4>
+                                <p>3 yillik kontrakt imzolanadi</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Jismoniy tayyorgarlik me'yorlari -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Kontrakt uchun jismoniy tayyorgarlik me'yorlari qanday?</h3>
+                    <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="faq-answer">
+                    <div class="standards-table">
+                        <h4>Erkaklar uchun (yosh guruhlari bo'yicha):</h4>
+                        <table>
+                            <tr>
+                                <th>Mashq turi</th>
+                                <th>19-25 yosh</th>
+                                <th>26-30 yosh</th>
+                                <th>31-35 yosh</th>
+                                <th>36-39 yosh</th>
+                            </tr>
+                            <tr>
+                                <td>100 m yugurish</td>
+                                <td>14.0 sek</td>
+                                <td>14.8 sek</td>
+                                <td>15.6 sek</td>
+                                <td>16.4 sek</td>
+                            </tr>
+                            <tr>
+                                <td>3000 m yugurish</td>
+                                <td>12.30 min</td>
+                                <td>13.15 min</td>
+                                <td>14.00 min</td>
+                                <td>15.00 min</td>
+                            </tr>
+                            <tr>
+                                <td>Tortilish (turnik)</td>
+                                <td>12 marta</td>
+                                <td>10 marta</td>
+                                <td>8 marta</td>
+                                <td>6 marta</td>
+                            </tr>
+                        </table>
+                        
+                        <h4 style="margin-top: 20px;">Ayollar uchun (yosh guruhlari bo'yicha):</h4>
+                        <table>
+                            <tr>
+                                <th>Mashq turi</th>
+                                <th>19-25 yosh</th>
+                                <th>26-30 yosh</th>
+                                <th>31-35 yosh</th>
+                                <th>36-39 yosh</th>
+                            </tr>
+                            <tr>
+                                <td>100 m yugurish</td>
+                                <td>16.0 sek</td>
+                                <td>16.8 sek</td>
+                                <td>17.6 sek</td>
+                                <td>18.4 sek</td>
+                            </tr>
+                            <tr>
+                                <td>1000 m yugurish</td>
+                                <td>4.30 min</td>
+                                <td>5.00 min</td>
+                                <td>5.30 min</td>
+                                <td>6.00 min</td>
+                            </tr>
+                            <tr>
+                                <td>Press (tana ko'tarish)</td>
+                                <td>35 marta</td>
+                                <td>30 marta</td>
+                                <td>25 marta</td>
+                                <td>20 marta</td>
+                            </tr>
+                        </table>
+                        <p class="note"><i class="fas fa-info-circle"></i> Me'yorlar har bir yosh guruhi uchun minimal talablar hisoblanadi.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Kontrakt bo'yicha xizmat qilish uchun qanday hujjatlar kerak? -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Kontrakt uchun qanday hujjatlar kerak?</h3>
+                    <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="faq-answer">
+                    <div class="documents-list">
+                        <h4>Talab qilinadigan hujjatlar:</h4>
+                        <ul>
+                            <li><i class="fas fa-id-card"></i> Pasport (asl nusxa va nusxasi)</li>
+                            <li><i class="fas fa-file-alt"></i> Ariza (belgilangan shaklda)</li>
+                            <li><i class="fas fa-graduation-cap"></i> Ma'lumot to'g'risidagi hujjat (diplom, attestat)</li>
+                            <li><i class="fas fa-file-medical"></i> Tibbiy ma'lumotnoma (086-U shakl)</li>
+                            <li><i class="fas fa-camera"></i> 3x4 o'lchamdagi 6 ta fotosurat</li>
+                            <li><i class="fas fa-file-signature"></i> Mehnat daftarchasi (nusxasi)</li>
+                            <li><i class="fas fa-balance-scale"></i> Sudlanmaganlik haqida ma'lumotnoma</li>
+                            <li><i class="fas fa-address-card"></i> Harbiy guvohnoma (bor bo'lsa)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Kontrakt bo'yicha xizmat muddati va uzaytirish -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Kontrakt muddati qancha va uni uzaytirish mumkinmi?</h3>
+                    <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="faq-answer">
+                    <p><strong>Dastlabki kontrakt muddati:</strong> 3 yil</p>
+                    <p><strong>Keyingi kontraktlar:</strong></p>
+                    <ul>
+                        <li>1 yilga (maxsus holatlarda)</li>
+                        <li>3 yilga (oddiy xizmatchilar)</li>
+                        <li>5 yilga (ofitserlar)</li>
+                        <li>10 yilgacha (yuqori mansabdor shaxslar)</li>
+                    </ul>
+                    <p><strong>Uzaytirish shartlari:</strong></p>
+                    <ul>
+                        <li>Xizmat davomida ijobiy tavsif</li>
+                        <li>Intizomiy jazolar yo'qligi</li>
+                        <li>Jismoniy tayyorgarlik me'yorlarini topshirish</li>
+                        <li>Tibbiy ko'rikdan muvaffaqiyatli o'tish</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Kontraktni bekor qilish holatlari -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Qanday hollarda kontrakt bekor qilinishi mumkin?</h3>
+                    <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="faq-answer">
+                    <p>Kontrakt quyidagi hollarda bekor qilinishi mumkin:</p>
+                    <div class="termination-grid">
+                        <div class="termination-item">
+                            <h4><i class="fas fa-times-circle" style="color: #d32f2f;"></i> Xizmatchi tashabbusi bilan</h4>
+                            <ul>
+                                <li>Oilaviy holatlar</li>
+                                <li>Boshqa ishga o'tish</li>
+                                <li>Sog'lig'i sababli</li>
+                            </ul>
+                        </div>
+                        <div class="termination-item">
+                            <h4><i class="fas fa-gavel" style="color: #d32f2f;"></i> Qo'mondonlik tashabbusi bilan</h4>
+                            <ul>
+                                <li>Intizomiy buzilishlar</li>
+                                <li>Xizmat vazifasini bajarmaslik</li>
+                                <li>Ishonchsizlik</li>
+                            </ul>
+                        </div>
+                        <div class="termination-item">
+                            <h4><i class="fas fa-stethoscope" style="color: #d32f2f;"></i> Tibbiy sabablar</h4>
+                            <ul>
+                                <li>Xizmatga yaroqsiz deb topilganda</li>
+                                <li>Jiddiy kasallik</li>
+                                <li>Nogironlik</li>
+                            </ul>
+                        </div>
+                        <div class="termination-item">
+                            <h4><i class="fas fa-balance-scale" style="color: #d32f2f;"></i> Boshqa sabablar</h4>
+                            <ul>
+                                <li>Sudlanganlik</li>
+                                <li>Fuqarolikni o'zgartirish</li>
+                                <li>Yosh chegarasi</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Kontrakt bo'yicha xizmat qiluvchilarning farzandlari uchun imtiyozlar -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Kontrakt bo'yicha xizmat qiluvchilarning farzandlari uchun qanday imtiyozlar bor?</h3>
+                    <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="faq-answer">
+                    <ul class="benefits-list">
+                        <li><i class="fas fa-child"></i> <strong>Maktabgacha ta'lim:</strong> Bog'chalarga navbatsiz qabul qilish</li>
+                        <li><i class="fas fa-school"></i> <strong>Maktab:</strong> Maktablarda bepul ovqatlanish (kam ta'minlanganlar uchun)</li>
+                        <li><i class="fas fa-university"></i> <strong>Oliy ta'lim:</strong> Imtiyozli asosda qabul qilish (kontrakt asosida)</li>
+                        <li><i class="fas fa-medkit"></i> <strong>Tibbiy xizmat:</strong> Bepul tibbiy xizmat</li>
+                        <li><i class="fas fa-umbrella-beach"></i> <strong>Dam olish:</strong> Harbiy sanatoriylarda dam olish (50% chegirma)</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Kontrakt bo'yicha xizmat qilishning muddatli xizmatdan farqi -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Kontrakt xizmati muddatli xizmatdan qanday farq qiladi?</h3>
+                    <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="faq-answer">
+                    <div class="comparison-table">
+                        <table>
+                            <tr>
+                                <th>Ko'rsatkich</th>
+                                <th>Kontrakt xizmati</th>
+                                <th>Muddatli xizmat</th>
+                            </tr>
+                            <tr>
+                                <td>Muddat</td>
+                                <td>3 yil (ixtiyoriy)</td>
+                                <td>12 oy (majburiy)</td>
+                            </tr>
+                            <tr>
+                                <td>Maosh</td>
+                                <td>3-8 million so'm</td>
+                                <td>200-300 ming so'm</td>
+                            </tr>
+                            <tr>
+                                <td>Turar joy</td>
+                                <td>Xizmat turar joyi</td>
+                                <td>Kazarma</td>
+                            </tr>
+                            <tr>
+                                <td>Ta'til</td>
+                                <td>30-45 kun</td>
+                                <td>Yiliga 1 marta (10 kun)</td>
+                            </tr>
+                            <tr>
+                                <td>Pensiya</td>
+                                <td>20 yildan keyin</td>
+                                <td>Hisobga olinmaydi</td>
+                            </tr>
+                            <tr>
+                                <td>Oilaviy holat</td>
+                                <td>Oilali bo'lish mumkin</td>
+                                <td>Oilali bo'lish taqiqlanadi</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="faq-more">
+            <p>Kontrakt bo'yicha xizmat haqida qo'shimcha savollaringiz bormi?</p>
+            <div class="action-buttons">
+                <a href="#" class="faq-contact-btn">
+                    <i class="fas fa-phone-alt"></i> Maslahat olish
+                </a>
+                <a href="#" class="faq-docs-btn">
+                    <i class="fas fa-file-pdf"></i> Kontrakt namunasi (PDF)
+                </a>
+                <a href="ariza.html" class="faq-apply-btn">
+                    <i class="fas fa-file-signature"></i> Ariza berish
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+</section>
+
+    <!-- BACKGROUND IMAGE SECTION -->
+  
+
+    <!-- FOOTER SECTION -->
+    <footer id="information" class="footer" >
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-grid">
+                    <!-- Copyright column -->
+                    <div class="footer-col">
+                        <div class="footer-logo">
+                            <img width="50px"  src="img/123.png" alt="">
+                            <span>Mudofaa Vazirligi</span>
+                        </div>
+                        <p class="copyright-text">
+                            Ushbu saytda nashr etilgan materiallar<br>
+                            foydalanilganda army.gov.uz manbasi<br>
+                            ko'rsatilishi shart
+                        </p>
+                        <p class="copyright-year">
+                            <i class="far fa-copyright"></i> 2026 Barcha huquqlar himoyalangan
+                        </p>
+                    </div>
+
+                    <!-- Contact column -->
+                    <div  class="footer-col">
+                        <h3>ALOQA</h3>
+                        <div class="contact-info">
+                            <p>
+                                <i class="fas fa-map-marker-alt"></i>
+                                100000, Toshkent shahri, Mirzo Ulug‘bek ko‘chasi, 100
+                            </p>
+                            <p>
+                                <i class="fas fa-phone-alt"></i>
+                                <a href="tel:+998712698019">+998 71 269 80 19</a>
+                            </p>
+                            <p class="emergency-phone">
+                                <i class="fas fa-phone-volume"></i>
+                                <strong>1530</strong> (Ishonch telefoni)
+                            </p>
+                            <p>
+                                <i class="far fa-envelope"></i>
+                                <a href="mailto:mudofaa@mil.uz">mudofaa@mil.uz</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Social media column -->
+                    <div class="footer-col">
+                        <h3>BIZNI KUZATIB BORING!</h3>
+                        <div class="social-links">
+                            <a href=" https://t.me/Armygovuz" class="social-link"><i class="fab fa-telegram"></i></a>
+                            <!-- <a href="https://www.facebook.com/@Armygovuz" class="social-link"><i class="fab fa-facebook"></i></a> -->
+                            <a href=" https://instagram.com/Armygovuz" class="social-link"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.youtube.com/@Armygovuz" class="social-link"><i class="fab fa-youtube"></i></a>
+                            <!-- <a href="https://www.twintter.com/@Armygovuz" class="social-link"><i class="fab fa-twitter"></i></a> -->
+                        </div>
+                        
+                        <!-- Report text error -->
+                        <div class="report-error">
+                            <p>Matnda xato ko'rdingizmi?</p>
+                            <p class="error-instruction">
+                                <i class="fas fa-mouse-pointer"></i>
+                                Sichqoncha bilan belgilang va<br>
+                                <kbd>CTRL</kbd> + <kbd>Enter</kbd> ni bosing
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Quick links column -->
+                    <div class="footer-col">
+                        <h3>Tezkor havolalar</h3>
+                        <ul class="footer-links">
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Vakansiyalar</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Ariza berish</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Harbiy qismlar</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Matbuot xizmati</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Sayt xaritasi</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 O'zbekiston Respublikasi Mudofaa Vazirligi. Barcha huquqlar himoyalangan.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript fayl -->
+    <script src="script.js"></script>
+</body>
+</html>

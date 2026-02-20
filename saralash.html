@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="img/123.png">
+    <title>Mudofaa Vazirligi | Rasmiy veb-sayt</title>
+    
+    <!-- Font Awesome 5 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+    <!-- CSS fayl -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- NAVBAR SECTION -->
+    <nav class="navbar">
+        <!-- Top bar - Qidiruv qismi birinchi qator -->
+        <div class="top-bar">
+
+            <!-- <div class="top-bar-left">
+                
+                <img width="50px"  src="123.png" alt="">
+                
+                <span class="ministry-name">O'ZBEKISTON RESPUBLIKASI MUDOFAA VAZIRLIGI</span>
+                
+            </div> -->
+
+            <div style="display: flex; align-items: center;">
+                <a href="index.html">
+                <img src="img/123.png" style="width: 30px; height: 30px; margin-right: 5px;">
+                <span style="color: azure; text-align: center;">O'ZBEKISTON RESPUBLIKASI MUDOFAA VAZIRLIGI ㅤ</span></a>
+                <span class="date-time" id="currentDateTime">
+                    <i class="far fa-calendar-alt"></i>
+                    <span id="date"></span>
+                    <i class="far fa-clock" style="margin-left: 10px;"></i>
+                    <span id="time"></span>
+                </span>
+            </div>
+
+
+
+            <div class="top-bar-right">
+                <!-- Search box birinchi qatorda -->
+                <div class="search-box-top">
+                    <input type="text" placeholder="Qidirish..." id="searchInput">
+                    <button id="searchBtn"><i class="fas fa-search"></i></button>
+                </div>
+
+                <!-- Til tanlash -->
+                <div class="language-selector">
+                    <button class="lang-btn active" data-lang="uz">UZ</button>
+                    <button class="lang-btn" data-lang="ru">RU</button>
+                    <button class="lang-btn" data-lang="en">EN</button>
+                </div>
+
+                <!-- Bildirishnomalar -->
+                <div class="notifications">
+                    <button class="notification-btn" id="notificationBtn">
+                        <i class="far fa-bell"></i>
+                        <span class="notification-badge">3</span>
+                    </button>
+                    <div class="notification-dropdown" id="notificationDropdown">
+                        <div class="notification-header">
+                            <h4>Bildirishnomalar</h4>
+                            <span class="mark-read">Hammasini o'qildi deb belgilash</span>
+                        </div>
+                        <div class="notification-list">
+                            <div class="notification-item unread">
+                                <i class="fas fa-bullhorn notification-icon"></i>
+                                <div class="notification-content">
+                                    <p class="notification-text">Yangi vakansiya e'lon qilindi</p>
+                                    <span class="notification-time">5 daqiqa oldin</span>
+                                </div>
+                            </div>
+                            <div class="notification-item unread">
+                                <i class="fas fa-file-alt notification-icon"></i>
+                                <div class="notification-content">
+                                    <p class="notification-text">Arizangiz ko'rib chiqilmoqda</p>
+                                    <span class="notification-time">1 soat oldin</span>
+                                </div>
+                            </div>
+                            <div class="notification-item">
+                                <i class="fas fa-calendar-check notification-icon"></i>
+                                <div class="notification-content">
+                                    <p class="notification-text">Harbiy qasamyod marosimi</p>
+                                    <span class="notification-time">1 kun oldin</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="notification-footer">
+                            <a href="#">Barcha bildirishnomalar</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kun/tun rejimi -->
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                </button>
+
+                
+
+            </div>
+        </div>
+
+        <!-- Main navbar - ikkinchi qator (o'rta qism) -->
+        <div class="main-nav">
+            <ul class="nav-links">
+                <li class="nav-item">
+                    <a href="#"><i class="fas fa-home"></i><span data-i18n="about">BIZ HAQIMIZDA</span></a>
+                    <div class="dropdown-menu">
+                        <a href="https://gov.uz/oz/mudofaa/pages/about" data-i18n="history">Vazirlik</a>
+                        <a href="https://gov.uz/oz/mudofaa/guides" data-i18n="leadership">Rahbariyat</a>
+                        <a href="#information" data-i18n="tasks">Bog'lanish</a>
+                        <a href="#" data-i18n="symbols">Ko'p beriladigan savollar</a>
+                        
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="#"><i class="fas fa-briefcase"></i><span data-i18n="career">KARYERA</span></a>
+                    <div class="dropdown-menu">
+                        <a href="#" data-i18n="militaryService">Bu nima</a>
+                        <a href="#" data-i18n="contract">Harbiy xizmatga qadar</a>
+                        <a href="#" data-i18n="academies">Harbiy xizmat davomida</a>
+                        <a href="https://vacancy.gov.uz/" data-i18n="internship"></a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="#"><i class="fas fa-users"></i><span data-i18n="candidates">NOMZODLARGA</span></a>
+                    <div class="dropdown-menu">
+                        <a href="#" data-i18n="requirements">Saralash</a>
+                        <a href="#" data-i18n="documents">KBHX ga</a>
+                        <a href="#" data-i18n="exams">OXTM ga</a>
+                        <a href="#" data-i18n="benefits">HAL ga</a>
+                        <a href="#" data-i18n="benefitT">HTO'M GA</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="#"><i class="fas fa-bullhorn"></i><span data-i18n="vacancies">VAKANSIYA</span></a>
+                    <div class="dropdown-menu">
+                        <a href="#" data-i18n="officers">Ofitserlar</a>
+                        <a href="#" data-i18n="sergeants">Serjantlar</a>
+                        <a href="#" data-i18n="specialists">Mutaxassislar</a>
+                        <a href="#" data-i18n="civilians">Fuqarolik xodimlari</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="#"><i class="fas fa-newspaper"></i><span data-i18n="news">YANGILIKLAR</span></a>
+                    <div class="dropdown-menu">
+                        <a href="#" data-i18n="latest">So'nggi yangiliklar</a>
+                        <a href="#" data-i18n="official">Rasmiy bayonotlar</a>
+                        <a href="#" data-i18n="photo">Foto galereya</a>
+                        <a href="#" data-i18n="video">Video materiallar</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="hujjatlar.html"><i class="fas fa-newspaper"></i><span data-i18n="datess">HUJJATLAR</span></a>
+                </li>
+            </ul>
+
+            <!-- Application button (o'rta qatorning o'ng qismi) -->
+            <div class="main-nav-actions">
+                <a href="ariza.html" class="application-btn">
+                    <i class="fas fa-file-alt"></i>
+                    <span data-i18n="apply">ARIZA BERISH</span>
+                </a>
+                <span class="phone-number">
+                    <i class="fas fa-phone-alt"></i>
+                    1530
+                </span>
+                <div class="user-info">
+                    <i class="fas fa-user-circle"></i>
+                    <span class="user-name">ANVAROV A.A.</span>
+                </div>
+            </div>
+
+            <!-- Mobile menu button -->
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+       
+   </nav>
+
+    <!-- BACKGROUND IMAGE SECTION -->
+<!-- SARALASH FAQ SECTION -->
+<section class="faq-section" id="saralash-faq">
+    <div class="container">
+        <div class="section-header">
+            <h2>SARALASH NIMA?</h2>
+            <p>Harbiy xizmatga nomzodlarni saralash tizimi haqida batafsil ma'lumot</p>
+        </div>
+        
+        <div class="faq-container">
+            <!-- Saralash nima? - Asosiy savol -->
+            <div class="faq-item featured">
+                <div class="faq-question">
+                    <h3><i class="fas fa-star" style="color: #ffc107; margin-right: 10px;"></i> Saralash nima?</h3>
+                    <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="faq-answer">
+                    <div class="featured-answer">
+                        <p><strong>Saralash</strong> - bu harbiy xizmatga nomzodlarni tanlab olish tizimi bo'lib, u quyidagi bosqichlardan iborat:</p>
+                        <div class="info-box">
+                            <div class="info-item">
+                                <i class="fas fa-file-medical"></i>
+                                <span>Tibbiy ko'rik</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-dumbbell"></i>
+                                <span>Jismoniy tayyorgarlik</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-brain"></i>
+                                <span>Psixologik test</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-gavel"></i>
+                                <span>Huquqiy tekshiruv</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Saralash bosqichlari -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Saralashning asosiy bosqichlari qanday?</h3>
+                    <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="faq-answer">
+                    <div class="steps">
+                        <div class="step">
+                            <span class="step-number">1</span>
+                            <div class="step-content">
+                                <h4>Dastlabki hujjat tekshiruvi</h4>
+                                <p>Nomzodning shaxsiy hujjatlari, ma'lumoti va yoshi tekshiriladi</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <span class="step-number">2</span>
+                            <div class="step-content">
+                                <h4>Tibbiy ko'rik</h4>
+                                <p>12 ta mutaxassis shifokor tomonidan to'liq tibbiy tekshiruv</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <span class="step-number">3</span>
+                            <div class="step-content">
+                                <h4>Jismoniy tayyorgarlik testlari</h4>
+                                <p>100m yugurish, 3000m yugurish, tortilish va boshqa me'yorlar</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <span class="step-number">4</span>
+                            <div class="step-content">
+                                <h4>Psixologik test</h4>
+                                <p>Ruhiy barqarorlik va harbiy xizmatga moslik aniqlanadi</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <span class="step-number">5</span>
+                            <div class="step-content">
+                                <h4>Yakuniy qaror</h4>
+                                <p>Saralash komissiyasi tomonidan nomzod haqida qaror qabul qilinadi</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Tibbiy saralash -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Tibbiy saralash qanday o'tkaziladi?</h3>
+                    <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="faq-answer">
+                    <p>Tibbiy saralash quyidagi shifokorlar tomonidan amalga oshiriladi:</p>
+                    <ul class="doctor-list">
+                        <li><i class="fas fa-eye"></i> Oftalmolog (ko'z)</li>
+                        <li><i class="fas fa-heart"></i> Kardiolog (yurak)</li>
+                        <li><i class="fas fa-lungs"></i> Pulmonolog (o'pka)</li>
+                        <li><i class="fas fa-brain"></i> Nevropatolog (asab tizimi)</li>
+                        <li><i class="fas fa-stethoscope"></i> Terapevt (umumiy tekshiruv)</li>
+                        <li><i class="fas fa-tooth"></i> Stomatolog (tishlar)</li>
+                        <li><i class="fas fa-ear"></i> LOR (quloq, burun, tomoq)</li>
+                        <li><i class="fas fa-bone"></i> Xirurg (jarrohlik)</li>
+                    </ul>
+                    <p class="note"><i class="fas fa-info-circle"></i> Tibbiy ko'rik natijasiga ko'ra nomzodga "A", "B", "V", "G" yoki "D" toifasi beriladi.</p>
+                </div>
+            </div>
+            
+            <!-- Jismoniy tayyorgarlik me'yorlari -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Jismoniy tayyorgarlik uchun qanday me'yorlar bor?</h3>
+                    <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="faq-answer">
+                    <div class="standards-table">
+                        <h4>Erkaklar uchun:</h4>
+                        <table>
+                            <tr>
+                                <th>Mashq turi</th>
+                                <th>5 ball</th>
+                                <th>4 ball</th>
+                                <th>3 ball</th>
+                            </tr>
+                            <tr>
+                                <td>100 m yugurish</td>
+                                <td>13.5 sek</td>
+                                <td>14.5 sek</td>
+                                <td>15.5 sek</td>
+                            </tr>
+                            <tr>
+                                <td>3000 m yugurish</td>
+                                <td>12.00 min</td>
+                                <td>13.00 min</td>
+                                <td>14.00 min</td>
+                            </tr>
+                            <tr>
+                                <td>Tortilish (turnik)</td>
+                                <td>15 marta</td>
+                                <td>12 marta</td>
+                                <td>9 marta</td>
+                            </tr>
+                        </table>
+                        
+                        <h4 style="margin-top: 20px;">Ayollar uchun:</h4>
+                        <table>
+                            <tr>
+                                <th>Mashq turi</th>
+                                <th>5 ball</th>
+                                <th>4 ball</th>
+                                <th>3 ball</th>
+                            </tr>
+                            <tr>
+                                <td>100 m yugurish</td>
+                                <td>15.5 sek</td>
+                                <td>16.5 sek</td>
+                                <td>17.5 sek</td>
+                            </tr>
+                            <tr>
+                                <td>1000 m yugurish</td>
+                                <td>4.00 min</td>
+                                <td>4.30 min</td>
+                                <td>5.00 min</td>
+                            </tr>
+                            <tr>
+                                <td>Press (tana ko'tarish)</td>
+                                <td>40 marta</td>
+                                <td>35 marta</td>
+                                <td>30 marta</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Psixologik test -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Psixologik test qanday o'tkaziladi?</h3>
+                    <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="faq-answer">
+                    <p>Psixologik test quyidagi yo'nalishlarni o'z ichiga oladi:</p>
+                    <ul>
+                        <li><strong>MMPI testi</strong> - shaxs xususiyatlarini aniqlash</li>
+                        <li><strong>IQ testi</strong> - aqliy qobiliyat darajasi</li>
+                        <li><strong>Stressga chidamlilik</strong> - ekstremal vaziyatlarda harakat qilish qobiliyati</li>
+                        <li><strong>Diqqat va xotira</strong> - ma'lumotni qabul qilish va eslab qolish qobiliyati</li>
+                        <li><strong>Jamoada ishlash</strong> - kommunikativlik va hamkorlik qilish qobiliyati</li>
+                    </ul>
+                    <p class="note"><i class="fas fa-exclamation-triangle"></i> Psixologik testdan muvaffaqiyatli o'tmagan nomzodlar harbiy xizmatga qabul qilinmaydi.</p>
+                </div>
+            </div>
+            
+            <!-- Saralash natijalari -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Saralash natijalari qayerda e'lon qilinadi?</h3>
+                    <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="faq-answer">
+                    <p>Saralash natijalari quyidagi manbalarda e'lon qilinadi:</p>
+                    <ul>
+                        <li><i class="fas fa-globe"></i> Mudofaa vazirligining rasmiy veb-sayti (army.gov.uz)</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Hududiy harbiy komissarliklar</li>
+                        <li><i class="fas fa-mobile-alt"></i> Ariza berishda ko'rsatilgan telefon raqamiga SMS xabar</li>
+                        <li><i class="fas fa-envelope"></i> Elektron pochta orqali</li>
+                    </ul>
+                    <p>Nomzodlar o'z natijalarini shaxsiy kabinet orqali ham kuzatib borishlari mumkin.</p>
+                </div>
+            </div>
+            
+            <!-- Qayta topshirish imkoniyati -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Saralashdan o'ta olmasam, qayta topshirishim mumkinmi?</h3>
+                    <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="faq-answer">
+                    <p>Ha, saralashdan o'ta olmagan nomzodlar qayta topshirish imkoniyatiga ega:</p>
+                    <ul>
+                        <li><strong>Tibbiy ko'rikdan o'ta olmaganlar</strong> - 6 oydan keyin qayta topshirishlari mumkin</li>
+                        <li><strong>Jismoniy tayyorgarlikdan o'ta olmaganlar</strong> - 3 oydan keyin qayta topshirishlari mumkin</li>
+                        <li><strong>Psixologik testdan o'ta olmaganlar</strong> - 1 yildan keyin qayta topshirishlari mumkin</li>
+                    </ul>
+                    <p><strong>Muhim:</strong> Qayta topshirish faqat bir marta amalga oshirilishi mumkin.</p>
+                </div>
+            </div>
+            
+            <!-- Saralash muddati -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Saralash jarayoni qancha vaqt oladi?</h3>
+                    <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="faq-answer">
+                    <p>Saralash jarayoni odatda <strong>5-7 ish kuni</strong> davom etadi:</p>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <span class="timeline-day">1-kun:</span>
+                            <span class="timeline-desc">Hujjatlarni qabul qilish va dastlabki tekshiruv</span>
+                        </div>
+                        <div class="timeline-item">
+                            <span class="timeline-day">2-3 kunlar:</span>
+                            <span class="timeline-desc">Tibbiy ko'rik (8 mutaxassis)</span>
+                        </div>
+                        <div class="timeline-item">
+                            <span class="timeline-day">4-kun:</span>
+                            <span class="timeline-desc">Jismoniy tayyorgarlik testlari</span>
+                        </div>
+                        <div class="timeline-item">
+                            <span class="timeline-day">5-kun:</span>
+                            <span class="timeline-desc">Psixologik test va suhbat</span>
+                        </div>
+                        <div class="timeline-item">
+                            <span class="timeline-day">6-7 kunlar:</span>
+                            <span class="timeline-desc">Saralash komissiyasi qarori va natijalarni e'lon qilish</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="faq-more">
+            <p>Saralash haqida qo'shimcha savollaringiz bormi?</p>
+            <div class="action-buttons">
+                <a href="#" class="faq-contact-btn">
+                    <i class="fas fa-phone-alt"></i> Maslahat olish
+                </a>
+                <a href="#" class="faq-docs-btn">
+                    <i class="fas fa-file-pdf"></i> Saralash qoidalari (PDF)
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- BACKGROUND IMAGE SECTION -->
+  
+
+    <!-- FOOTER SECTION -->
+    <footer id="information" class="footer" >
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-grid">
+                    <!-- Copyright column -->
+                    <div class="footer-col">
+                        <div class="footer-logo">
+                            <img width="50px"  src="img/123.png" alt="">
+                            <span>Mudofaa Vazirligi</span>
+                        </div>
+                        <p class="copyright-text">
+                            Ushbu saytda nashr etilgan materiallar<br>
+                            foydalanilganda army.gov.uz manbasi<br>
+                            ko'rsatilishi shart
+                        </p>
+                        <p class="copyright-year">
+                            <i class="far fa-copyright"></i> 2026 Barcha huquqlar himoyalangan
+                        </p>
+                    </div>
+
+                    <!-- Contact column -->
+                    <div  class="footer-col">
+                        <h3>ALOQA</h3>
+                        <div class="contact-info">
+                            <p>
+                                <i class="fas fa-map-marker-alt"></i>
+                                100000, Toshkent shahri, Mirzo Ulug‘bek ko‘chasi, 100
+                            </p>
+                            <p>
+                                <i class="fas fa-phone-alt"></i>
+                                <a href="tel:+998712698019">+998 71 269 80 19</a>
+                            </p>
+                            <p class="emergency-phone">
+                                <i class="fas fa-phone-volume"></i>
+                                <strong>1530</strong> (Ishonch telefoni)
+                            </p>
+                            <p>
+                                <i class="far fa-envelope"></i>
+                                <a href="mailto:mudofaa@mil.uz">mudofaa@mil.uz</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Social media column -->
+                    <div class="footer-col">
+                        <h3>BIZNI KUZATIB BORING!</h3>
+                        <div class="social-links">
+                            <a href=" https://t.me/Armygovuz" class="social-link"><i class="fab fa-telegram"></i></a>
+                            <!-- <a href="https://www.facebook.com/@Armygovuz" class="social-link"><i class="fab fa-facebook"></i></a> -->
+                            <a href=" https://instagram.com/Armygovuz" class="social-link"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.youtube.com/@Armygovuz" class="social-link"><i class="fab fa-youtube"></i></a>
+                            <!-- <a href="https://www.twintter.com/@Armygovuz" class="social-link"><i class="fab fa-twitter"></i></a> -->
+                        </div>
+                        
+                        <!-- Report text error -->
+                        <div class="report-error">
+                            <p>Matnda xato ko'rdingizmi?</p>
+                            <p class="error-instruction">
+                                <i class="fas fa-mouse-pointer"></i>
+                                Sichqoncha bilan belgilang va<br>
+                                <kbd>CTRL</kbd> + <kbd>Enter</kbd> ni bosing
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Quick links column -->
+                    <div class="footer-col">
+                        <h3>Tezkor havolalar</h3>
+                        <ul class="footer-links">
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Vakansiyalar</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Ariza berish</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Harbiy qismlar</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Matbuot xizmati</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Sayt xaritasi</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 O'zbekiston Respublikasi Mudofaa Vazirligi. Barcha huquqlar himoyalangan.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript fayl -->
+    <script src="script.js"></script>
+</body>
+</html>

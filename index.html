@@ -11,21 +11,53 @@
     
     <!-- CSS fayl -->
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Test rejimi banneri uchun stil */
+        .test-mode-banner {
+            background: linear-gradient(90deg, #1d492e, #8ddf36);
+            color: white;
+            text-align: center;
+            padding: 8px 0;
+            font-weight: 600;
+            font-size: 14px;
+            letter-spacing: 1px;
+            border-bottom: 2px solid #fff3cd;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            z-index: 1000;
+            position: relative;
+            width: 100%;
+            animation: pulse 2s infinite;
+        }
+        
+        .test-mode-banner i {
+            margin: ;
+            animation: ;
+        }
+        
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.9; background: linear-gradient(90deg, #e99693, #ff1616); }
+            100% { opacity: 1; }
+        }
+        
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+    </style>
 </head>
 <body>
+    <!-- TEST REJIMI BANNERI - Navbardan yuqorida yoki pastda joylashtirilgan -->
+    <div class="test-mode-banner">
+        <i class='fas fa-exclamation-triangle' style='font: size 20px;color:red'></i>
+         SAYT TEST REJIMIDA ISHLAMOQDA 
+        <i class='fas fa-exclamation-triangle' style='font: size 20px;color:rgb(255, 0, 0)'></i>
+    </div>
+
     <!-- NAVBAR SECTION -->
     <nav class="navbar">
         <!-- Top bar - Qidiruv qismi birinchi qator -->
         <div class="top-bar">
-
-            <!-- <div class="top-bar-left">
-                
-                <img width="50px"  src="123.png" alt="">
-                
-                <span class="ministry-name">O'ZBEKISTON RESPUBLIKASI MUDOFAA VAZIRLIGI</span>
-                
-            </div> -->
-
             <div style="display: flex; align-items: center;">
                 <img src="img/123.png" style="width: 30px; height: 30px; margin-right: 5px;">
                 <span>O'ZBEKISTON RESPUBLIKASI MUDOFAA VAZIRLIGI ㅤ</span>
@@ -36,8 +68,6 @@
                     <span id="time"></span>
                 </span>
             </div>
-
-
 
             <div class="top-bar-right">
                 <!-- Search box birinchi qatorda -->
@@ -98,9 +128,6 @@
                     <i class="fas fa-moon"></i>
                     <i class="fas fa-sun"></i>
                 </button>
-
-                
-
             </div>
         </div>
 
@@ -113,7 +140,7 @@
                         <a href="https://gov.uz/oz/mudofaa/pages/about" data-i18n="history">Vazirlik</a>
                         <a href="https://gov.uz/oz/mudofaa/guides" data-i18n="leadership">Rahbariyat</a>
                         <a href="#information" data-i18n="tasks">Bog'lanish</a>
-                        <a href="#" data-i18n="symbols">Ko'p beriladigan savollar</a>
+                        <a href="faq.html" data-i18n="symbols">Ko'p beriladigan savollar</a>
                         
                     </div>
                 </li>
@@ -129,9 +156,9 @@
                 <li class="nav-item">
                     <a href="#"><i class="fas fa-users"></i><span data-i18n="candidates">NOMZODLARGA</span></a>
                     <div class="dropdown-menu">
-                        <a href="#" data-i18n="requirements">Saralash</a>
-                        <a href="#" data-i18n="documents">KBHX ga</a>
-                        <a href="#" data-i18n="exams">OXTM ga</a>
+                        <a href="saralash.html" data-i18n="requirements">SARALASH NIMA</a>
+                        <a href="kbhxga.html" data-i18n="documents">KBHX ga</a>
+                        <a href="ohtmga.html" data-i18n="exams">OXTM ga</a>
                         <a href="#" data-i18n="benefits">HAL ga</a>
                         <a href="#" data-i18n="benefitT">HTO'M GA</a>
                     </div>
@@ -139,10 +166,10 @@
                 <li class="nav-item">
                     <a href="#"><i class="fas fa-bullhorn"></i><span data-i18n="vacancies">VAKANSIYA</span></a>
                     <div class="dropdown-menu">
-                        <a href="#" data-i18n="officers">Ofitserlar</a>
-                        <a href="#" data-i18n="sergeants">Serjantlar</a>
-                        <a href="#" data-i18n="specialists">Mutaxassislar</a>
-                        <a href="#" data-i18n="civilians">Fuqarolik xodimlari</a>
+                        <a href="#" data-i18n="officers">Ofitserlik lavozimlariga </a>
+                        <a href="#" data-i18n="sergeants">Serjantlik lavozimlariga</a>
+                        <!-- <a href="#" data-i18n="specialists">Mutaxassislar</a>
+                        <a href="#" data-i18n="civilians">Fuqarolik xodimlari</a> -->
                     </div>
                 </li>
                 <li class="nav-item">
@@ -180,9 +207,6 @@
                 <i class="fas fa-bars"></i>
             </button>
         </div>
-       
-
-
     </nav>
 
     <!-- BACKGROUND IMAGE SECTION -->

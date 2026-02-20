@@ -132,7 +132,7 @@ document.addEventListener('DOMContentLoaded', function() {
             history: "VAZIRLIK",
             leadership: "RAHBARIYAT",
             tasks: "BOG'LANISH",
-            symbols: "KO'P BERILADIGAN SAVOLLAR",
+            symbols: "KO'P BERILADIGAN SAVOLLAR (FAQ)",
             international: "Xalqaro hamkorlik",
             career: "KARYERA",
             militaryService: "BU NIMA ?",
@@ -140,14 +140,14 @@ document.addEventListener('DOMContentLoaded', function() {
             academies: "HARBIY XIZMAT DAVRI",
             internship: "HARBIY XIZMATDAN SO'NG",
             candidates: "NOMZODLARGA",
-            requirements: "SARALASH",
+            requirements: "SARALASH NIMA",
             documents: "KBHX GA",
             exams: "OHTM GA",
             benefits: "HAL GA",
             benefitsT: "HTO'M",
             vacancies: "VAKANSIYA",
-            officers: "Ofitserlar",
-            sergeants: "Serjantlar",
+            officers: "OFITSERLIK LAVOZIMLARIGA",
+            sergeants: "SERJANTLIK LAVOZIMLARIGA",
             specialists: "Mutaxassislar",
             civilians: "Fuqarolik xodimlari",
             news: "YANGILIKLAR",
@@ -309,58 +309,81 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 // ariza
-// Ariza kartalari interaktivligi
+// Agar qo'shimcha funksiyalar kerak bo'lsa
 document.addEventListener('DOMContentLoaded', function() {
-    // Batafsil tugmalari
-    const detailsBtns = document.querySelectorAll('.btn-details');
-    const applyBtns = document.querySelectorAll('.btn-apply');
+    // Kartalarni qayta animatsiya qilish (kerak bo'lsa)
+    const cards = document.querySelectorAll('.application-card');
     
-    detailsBtns.forEach(btn => {
-        btn.addEventListener('click', function(e) {
+    // "Ariza berish" tugmalari uchun event listener
+    const applyButtons = document.querySelectorAll('.btn-apply');
+    applyButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
             e.preventDefault();
-            e.stopPropagation();
-            
             const card = this.closest('.application-card');
-            const details = card.querySelector('.card-details');
-            const icon = this.querySelector('i');
+            const cardType = card.getAttribute('data-type');
+            const cardTitle = card.querySelector('.card-title').textContent;
             
-            // Boshqa ochiq detalni yopish
-            document.querySelectorAll('.card-details.show').forEach(openDetail => {
-                if (openDetail !== details) {
-                    openDetail.classList.remove('show');
-                    const openBtn = openDetail.closest('.application-card').querySelector('.btn-details i');
-                    if (openBtn) {
-                        openBtn.className = 'fas fa-chevron-down';
-                    }
-                }
-            });
+            // Bu yerda o'zingizning logikangizni qo'shing
+            console.log('Ariza turi:', cardType);
+            console.log('Sarlavha:', cardTitle);
             
-            // Hozirgisini ochish/yopish
-            details.classList.toggle('show');
-            
-            if (details.classList.contains('show')) {
-                icon.className = 'fas fa-chevron-up';
-            } else {
-                icon.className = 'fas fa-chevron-down';
-            }
-        });
-    });
-    
-    // Ariza berish tugmalari
-    applyBtns.forEach(btn => {
-        btn.addEventListener('click', function(e) {
-            e.preventDefault();
-            const applicationType = this.dataset.application || this.closest('.application-card').querySelector('.card-title').textContent;
-            
-            // Sizning mavjud modalni ochish funksiyangiz
-            if (typeof openApplicationModal === 'function') {
-                openApplicationModal(applicationType);
-            } else {
-                // Agar modal funksiyasi bo'lmasa, ariza.html ga yo'naltirish
-                window.location.href = `ariza.html?type=${encodeURIComponent(applicationType)}`;
-            }
+            // Misol: alert o'rniga modal oynacha ochish
+            // window.location.href = 'ariza-formasi.html?type=' + cardType;
         });
     });
 });
-
 // ariza
+
+// faq
+// FAQ Accordion funksiyasi
+document.addEventListener('DOMContentLoaded', function() {
+    const faqItems = document.querySelectorAll('.faq-item');
+    
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        
+        question.addEventListener('click', function() {
+            // Agar ochiq bo'lsa yopish
+            if (item.classList.contains('active')) {
+                item.classList.remove('active');
+            } else {
+                // Boshqa ochiqlarni yopish (agar faqat bittasi ochiq bo'lishi kerak bo'lsa)
+                // faqItems.forEach(i => i.classList.remove('active'));
+                
+                // Faqat shu elementni ochish (boshqalari ochiq qoladi)
+                item.classList.add('active');
+            }
+        });
+    });
+    
+    // Qo'shimcha: URL dan #faq bo'lsa scroll qilish
+    if (window.location.hash === '#faq') {
+        const faqSection = document.getElementById('faq');
+        if (faqSection) {
+            setTimeout(() => {
+                faqSection.scrollIntoView({ behavior: 'smooth' });
+            }, 100);
+        }
+    }
+    
+    // Kontakt tugmasi uchun event
+    const contactBtn = document.querySelector('.faq-contact-btn');
+    if (contactBtn) {
+        contactBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            // Bu yerda o'zingizning logikangizni qo'shing
+            alert('Tez orada operatorlarimiz siz bilan bog\'lanadi');
+            // window.location.href = 'boglanish.html';
+        });
+    }
+});
+
+// Agar sahifa yuklanganda birinchi FAQ ni ochiq qilish kerak bo'lsa
+window.addEventListener('load', function() {
+    // Birinchi FAQ ni ochish (agar kerak bo'lsa)
+    // const firstFaq = document.querySelector('.faq-item');
+    // if (firstFaq) {
+    //     firstFaq.classList.add('active');
+    // }
+});
+// faq
