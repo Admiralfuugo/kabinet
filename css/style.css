@@ -1511,7 +1511,7 @@ body {
 }
 
 .faq-icon {
-    color: #d32f2f;
+    color: #2ef1ff;
     font-size: 18px;
     transition: transform 0.3s;
     min-width: 20px;
@@ -1562,7 +1562,7 @@ body {
 }
 
 .faq-answer strong {
-    color: #d32f2f;
+    color: #6bd5ff;
 }
 
 .faq-more {
@@ -1685,3 +1685,1294 @@ body {
     }
 }
 /* faq */ */
+
+/* ariza oson */
+/* ========== KBHX ARIZA ALGORITMI ========== */
+.kbhx-section {
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e9ecef 100%);
+}
+
+.kbhx-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-bottom: 25px;
+}
+
+.kbhx-grid.second-row {
+    margin-bottom: 40px;
+}
+
+.kbhx-card {
+    background: white;
+    border-radius: 20px;
+    padding: 30px 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.kbhx-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(211, 47, 47, 0.15);
+}
+
+.kbhx-card:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(135deg, #fdfeff, #6ff5ff);
+}
+
+.kbhx-icon {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.kbhx-icon i {
+    font-size: 50px;
+    color: #2b79ff;
+    background: rgba(211, 47, 47, 0.1);
+    padding: 15px;
+    border-radius: 50%;
+}
+
+.kbhx-step {
+    position: absolute;
+    top: -10px;
+    right: 0;
+    background: #57ffe0;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 25px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.kbhx-card h3 {
+    font-size: 20px;
+    color: #1a2634;
+    margin-bottom: 15px;
+}
+
+.kbhx-card p {
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.kbhx-details {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.kbhx-details span {
+    color: #555;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.kbhx-details i {
+    color: #27ae60;
+}
+
+.kbhx-cta {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.kbhx-apply-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(135deg, #7dff99, #2cd448);
+    color: white;
+    padding: 15px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 18px;
+    transition: all 0.3s;
+    box-shadow: 0 10px 20px rgba(211, 47, 47, 0.3);
+}
+
+.kbhx-apply-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(211, 47, 47, 0.4);
+}
+
+.kbhx-cta p {
+    margin-top: 15px;
+    color: #888;
+    font-size: 14px;
+}
+
+/* ========== HARBIY XIZMATCHILAR OYLIGI ========== */
+.salary-section {
+    padding: 60px 20px;
+    background: white;
+}
+
+.salary-calculator {
+    background: linear-gradient(135deg, #1a2634, #2c3e50);
+    color: white;
+    padding: 30px;
+    border-radius: 20px;
+    margin-bottom: 40px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.calculator-header {
+    margin-bottom: 25px;
+}
+
+.calculator-header h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.calculator-header h3 i {
+    color: #ffeb3b;
+}
+
+.calculator-row {
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr 1fr;
+    gap: 15px;
+    align-items: flex-end;
+}
+
+.calculator-item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.calculator-item label {
+    font-weight: 500;
+    color: #ffeb3b;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.calculator-select {
+    padding: 12px 15px;
+    border: none;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.9);
+    font-size: 15px;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.calculator-select:hover {
+    background: white;
+}
+
+.calculate-btn {
+    background: #ffeb3b;
+    color: #1a2634;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.3s;
+}
+
+.calculate-btn:hover {
+    background: #fdd835;
+    transform: scale(1.02);
+}
+
+.result-box {
+    margin-top: 25px;
+    padding: 20px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.result-box h4 {
+    color: #ffeb3b;
+    margin-bottom: 10px;
+}
+
+.result-amount {
+    font-size: 36px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.result-amount span {
+    font-size: 48px;
+}
+
+.result-note {
+    color: #aaa;
+    font-size: 12px;
+}
+
+.salary-table-wrapper {
+    overflow-x: auto;
+    margin-bottom: 20px;
+}
+
+.salary-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.salary-table th {
+    background: #1a2634;
+    color: white;
+    padding: 15px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.salary-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #eee;
+    text-align: center;
+    color: #555;
+}
+
+.salary-table tr:last-child td {
+    border-bottom: none;
+}
+
+.salary-table tr:hover {
+    background: #f8f9fa;
+}
+
+.salary-table td:first-child {
+    font-weight: 600;
+    color: #1a2634;
+    text-align: left;
+}
+
+.salary-note {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    border-left: 5px solid #d32f2f;
+}
+
+.salary-note p {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #666;
+    font-size: 14px;
+}
+
+.salary-note i {
+    color: #d32f2f;
+}
+
+/* ========== MEDIA QUERIES ========== */
+@media (max-width: 992px) {
+    .kbhx-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .calculator-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .kbhx-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .salary-table {
+        font-size: 14px;
+    }
+    
+    .salary-table th,
+    .salary-table td {
+        padding: 10px;
+    }
+    
+    .result-amount {
+        font-size: 28px;
+    }
+    
+    .result-amount span {
+        font-size: 36px;
+    }
+}
+/* ariza oson */
+
+/* <!-- okruglar -->    
+/* ========== HARBIY OKRUGLAR - 8 TA BIR QATORDA ========== */
+/* ========== HARBIY OKRUGLAR - FULL RESPONSIVE ========== */
+.military-districts-section {
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #ffffff 0%, #399cfe 100%);
+    color: white;
+    width: 100%;
+    overflow: hidden;
+}
+
+.military-districts-section .section-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.military-districts-section .section-header h2 {
+    color: white;
+    font-size: clamp(24px, 4vw, 36px);
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 15px;
+}
+
+.military-districts-section .section-header h2:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: clamp(60px, 15vw, 100px);
+    height: 3px;
+    background: linear-gradient(90deg, #ffeb3b, #fdd835);
+    border-radius: 3px;
+}
+
+.military-districts-section .section-header p {
+    color: #ddd;
+    font-size: clamp(14px, 2vw, 18px);
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Districts Container - Responsive Grid */
+.districts-container {
+    display: grid;
+    gap: 20px;
+    margin: 40px 0;
+    width: 100%;
+}
+
+/* Desktop: 1200px va katta */
+@media (min-width: 1200px) {
+    .districts-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Kichik desktop / Katta planshet: 992px - 1199px */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .districts-container {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 15px;
+    }
+}
+
+/* Planshet: 768px - 991px */
+@media (min-width: 768px) and (max-width: 991px) {
+    .districts-container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+    }
+}
+
+/* Katta telefon: 576px - 767px */
+@media (min-width: 576px) and (max-width: 767px) {
+    .districts-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+}
+
+/* Telefon: 575px gacha */
+@media (max-width: 575px) {
+    .districts-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+}
+
+/* Juda kichik telefon: 360px gacha */
+@media (max-width: 360px) {
+    .districts-container {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        max-width: 280px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* District Card */
+.district-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    padding: 20px 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 160px;
+}
+
+/* Desktop hover */
+@media (min-width: 992px) {
+    .district-card:hover {
+        transform: translateY(-8px);
+        background: rgba(255, 255, 255, 0.2);
+        border-color: #ffeb3b;
+        box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
+    }
+}
+
+/* Touch devices uchun active state */
+.district-card:active {
+    transform: scale(0.98);
+    background: rgba(255, 235, 59, 0.15);
+}
+
+.district-logo-wrapper {
+    margin-bottom: 12px;
+}
+
+.district-logo {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, #d32f2f, #b71c1c);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #ffeb3b;
+    transition: all 0.3s ease;
+    margin: 0 auto;
+}
+
+/* Responsive logo o'lchamlari */
+@media (min-width: 1200px) {
+    .district-logo {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .district-logo {
+        width: 65px;
+        height: 65px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .district-logo {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .district-logo {
+        width: 55px;
+        height: 55px;
+    }
+}
+
+@media (max-width: 575px) {
+    .district-logo {
+        width: 50px;
+        height: 50px;
+        border-width: 2px;
+    }
+}
+
+@media (max-width: 360px) {
+    .district-logo {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+.district-card:hover .district-logo {
+    transform: scale(1.1) rotate(5deg);
+    border-color: white;
+}
+
+.district-card:active .district-logo {
+    transform: scale(1.05) rotate(2deg);
+}
+
+.district-logo i {
+    font-size: 32px;
+    color: white;
+}
+
+/* Responsive icon o'lchamlari */
+@media (min-width: 1200px) {
+    .district-logo i {
+        font-size: 32px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .district-logo i {
+        font-size: 30px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .district-logo i {
+        font-size: 28px;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .district-logo i {
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 575px) {
+    .district-logo i {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 360px) {
+    .district-logo i {
+        font-size: 28px;
+    }
+}
+
+.district-name {
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    margin-top: 8px;
+    padding: 0 5px;
+    word-break: break-word;
+    line-height: 1.4;
+}
+
+/* Responsive nom o'lchamlari */
+@media (min-width: 1200px) {
+    .district-name {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .district-name {
+        font-size: 15px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .district-name {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .district-name {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 575px) {
+    .district-name {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 360px) {
+    .district-name {
+        font-size: 15px;
+    }
+}
+
+/* Yashirin ma'lumot (modal uchun) */
+.district-info {
+    display: none;
+}
+
+/* Modal oyna - Full Responsive */
+.district-modal {
+    display: none;
+    position: fixed;
+    z-index: 10000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    animation: fadeIn 0.3s ease;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.modal-content {
+    background: linear-gradient(135deg, #1a2634, #2c3e50);
+    color: white;
+    border: 2px solid #ffeb3b;
+    border-radius: 20px;
+    position: relative;
+    animation: slideIn 0.3s ease;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+    width: 90%;
+    max-width: 500px;
+    margin: 5% auto;
+    padding: 25px;
+}
+
+/* Responsive modal oyna */
+@media (min-width: 1200px) {
+    .modal-content {
+        max-width: 500px;
+        margin: 8% auto;
+        padding: 30px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .modal-content {
+        max-width: 450px;
+        margin: 8% auto;
+        padding: 25px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .modal-content {
+        max-width: 400px;
+        margin: 10% auto;
+        padding: 25px;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .modal-content {
+        max-width: 380px;
+        margin: 12% auto;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 575px) {
+    .modal-content {
+        width: 92%;
+        max-width: 350px;
+        margin: 15% auto;
+        padding: 18px;
+    }
+}
+
+@media (max-width: 360px) {
+    .modal-content {
+        width: 94%;
+        max-width: 300px;
+        margin: 10% auto;
+        padding: 15px;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.close-modal {
+    color: #ffeb3b;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.close-modal:hover,
+.close-modal:focus {
+    color: white;
+    background: rgba(255, 235, 59, 0.2);
+    transform: rotate(90deg);
+    outline: none;
+}
+
+.close-modal:active {
+    background: #ffeb3b;
+    color: #1a2634;
+}
+
+/* Responsive close tugmasi */
+@media (max-width: 575px) {
+    .close-modal {
+        right: 12px;
+        top: 8px;
+        font-size: 24px;
+        width: 30px;
+        height: 30px;
+    }
+}
+
+.modal-body {
+    margin-top: 15px;
+    max-height: 60vh;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-right: 8px;
+}
+
+/* Scrollbar styling */
+.modal-body::-webkit-scrollbar {
+    width: 5px;
+}
+
+.modal-body::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+.modal-body::-webkit-scrollbar-thumb {
+    background: #ffeb3b;
+    border-radius: 10px;
+}
+
+.modal-body h4 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #ffeb3b;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-bottom: 2px solid rgba(255, 235, 59, 0.3);
+    padding-bottom: 12px;
+    position: sticky;
+    top: 0;
+    background: #fafcff;
+    z-index: 5;
+}
+
+/* Responsive modal sarlavha */
+@media (min-width: 1200px) {
+    .modal-body h4 {
+        font-size: 22px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .modal-body h4 {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .modal-body h4 {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .modal-body h4 {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 575px) {
+    .modal-body h4 {
+        font-size: 18px;
+        margin-bottom: 12px;
+        padding-bottom: 10px;
+    }
+}
+
+.modal-body p {
+    margin-bottom: 12px;
+    font-size: 16px;
+    line-height: 1.6;
+    padding: 10px 15px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    border-left: 3px solid #ffeb3b;
+    word-break: break-word;
+}
+
+/* Responsive modal paragraflar */
+@media (min-width: 1200px) {
+    .modal-body p {
+        font-size: 16px;
+        padding: 12px 15px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .modal-body p {
+        font-size: 15px;
+        padding: 10px 12px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .modal-body p {
+        font-size: 15px;
+        padding: 10px 12px;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .modal-body p {
+        font-size: 14px;
+        padding: 8px 10px;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 575px) {
+    .modal-body p {
+        font-size: 14px;
+        padding: 8px 10px;
+        margin-bottom: 8px;
+    }
+}
+
+.modal-body p:last-child {
+    margin-bottom: 0;
+}
+
+.modal-body strong {
+    color: #ffeb3b;
+    display: inline-block;
+    font-weight: 600;
+}
+
+/* Responsive strong */
+@media (min-width: 768px) {
+    .modal-body strong {
+        min-width: 120px;
+    }
+}
+
+@media (max-width: 767px) {
+    .modal-body strong {
+        min-width: 100px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 575px) {
+    .modal-body strong {
+        min-width: 90px;
+        font-size: 13px;
+    }
+}
+
+
+  /* ========== RESPONSIVE MEDIA QUERIES ========== */
+        @media (max-width: 992px) {
+            .kbhx-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .kbhx-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .main-nav-actions .phone-number,
+            .main-nav-actions .user-info {
+                display: none;
+            }
+            
+            .top-bar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .top-bar-right {
+                width: 100%;
+                justify-content: space-between;
+            }
+            
+            .search-box-top input {
+                width: 120px;
+            }
+        }
+/* okruglar */
+
+
+/* ========== HARBIY OKRUGLAR - TO'G'IRLANGAN ========== */
+.military-districts-section {
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #4f5154 0%, hwb(195 27% 0%) 100%);
+    color: white;
+    width: 100%;
+}
+
+.military-districts-section .section-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.military-districts-section .section-header h2 {
+    color: white;
+    font-size: clamp(24px, 4vw, 36px);
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 15px;
+}
+
+.military-districts-section .section-header h2:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: clamp(60px, 15vw, 100px);
+    height: 3px;
+    background: linear-gradient(90deg, #ffeb3b, #fdd835);
+    border-radius: 3px;
+}
+
+.military-districts-section .section-header p {
+    color: #ddd;
+    font-size: clamp(14px, 2.5vw, 18px);
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Districts Container - Responsive Grid */
+.districts-container {
+    display: grid;
+    gap: 20px;
+    margin: 40px 0;
+    width: 100%;
+}
+
+/* Desktop: 1200px va katta - 8 ta bir qator */
+@media (min-width: 1200px) {
+    .districts-container {
+        grid-template-columns: repeat(8, 1fr);
+    }
+}
+
+/* Kichik desktop: 992px - 1199px - 4 ta */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .districts-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Planshet: 768px - 991px - 3 ta */
+@media (min-width: 768px) and (max-width: 991px) {
+    .districts-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Telefon: 480px - 767px - 2 ta */
+@media (min-width: 480px) and (max-width: 767px) {
+    .districts-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+}
+
+/* Kichik telefon: 480px gacha - 1 ta */
+@media (max-width: 479px) {
+    .districts-container {
+        grid-template-columns: 1fr;
+        max-width: 280px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* District Card */
+.district-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 20px 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.district-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.2);
+    border-color: #ffeb3b;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* District Logo */
+.district-logo {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, #d32f2f, #b71c1c);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #ffeb3b;
+    transition: all 0.3s ease;
+    margin: 0 auto;
+}
+
+/* Responsive logo */
+@media (min-width: 1200px) {
+    .district-logo {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@media (max-width: 767px) {
+    .district-logo {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+.district-card:hover .district-logo {
+    transform: scale(1.1) rotate(5deg);
+    border-color: white;
+}
+
+.district-logo i {
+    font-size: 32px;
+    color: white;
+}
+
+@media (min-width: 1200px) {
+    .district-logo i {
+        font-size: 28px;
+    }
+}
+
+/* District Name */
+.district-name {
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+@media (min-width: 1200px) {
+    .district-name {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 767px) {
+    .district-name {
+        font-size: 14px;
+    }
+}
+
+/* District Info (hidden) */
+.district-info {
+    display: none;
+}
+
+/* Modal */
+.district-modal {
+    display: none;
+    position: fixed;
+    z-index: 10000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(5px);
+    animation: fadeIn 0.3s;
+    overflow-y: auto;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.modal-content {
+    background: linear-gradient(135deg, #1a2634, #2c3e50);
+    color: white;
+    border: 2px solid #ffeb3b;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 450px;
+    margin: 30px auto;
+    padding: 25px;
+    position: relative;
+    animation: slideIn 0.3s;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .modal-content {
+        width: 95%;
+        margin: 20px auto;
+        padding: 20px;
+    }
+}
+
+.close-modal {
+    color: #ffeb3b;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.close-modal:hover {
+    color: white;
+    background: rgba(255,235,59,0.2);
+    transform: rotate(90deg);
+}
+
+.modal-body {
+    margin-top: 15px;
+    max-height: 60vh;
+    overflow-y: auto;
+    padding-right: 5px;
+}
+
+.modal-body h4 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #ffeb3b;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-bottom: 2px solid rgba(255,235,59,0.3);
+    padding-bottom: 10px;
+}
+
+.modal-body p {
+    margin-bottom: 12px;
+    font-size: 15px;
+    line-height: 1.5;
+    padding: 10px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 8px;
+    border-left: 3px solid #ffeb3b;
+}
+
+.info-label {
+    color: #ffeb3b;
+    font-weight: 600;
+    display: inline-block;
+    min-width: 110px;
+}
+
+@media (max-width: 768px) {
+    .info-label {
+        min-width: 100px;
+        font-size: 14px;
+    }
+}

@@ -386,4 +386,225 @@ window.addEventListener('load', function() {
     //     firstFaq.classList.add('active');
     // }
 });
-// faq
+// 
+
+
+/* ariza oson */
+/* ariza oson */
+// ========== HARBIY XIZMATCHILAR OYLIGI HISOBI ==========
+document.addEventListener('DOMContentLoaded', function() {
+    const rankSelect = document.getElementById('rankSelect');
+    const positionSelect = document.getElementById('positionSelect');
+    const experienceSelect = document.getElementById('experienceSelect');
+    const calculateBtn = document.getElementById('calculateBtn');
+    const resultBox = document.getElementById('resultBox');
+    const salaryAmount = document.getElementById('salaryAmount');
+
+    // Bazaviy oylik miqdori
+    const baseSalary = 2500000; // 2.5 million so'm
+
+    calculateBtn.addEventListener('click', function() {
+        const rankValue = parseFloat(rankSelect.value) || 1;
+        const positionValue = parseFloat(positionSelect.value) || 1;
+        const experienceValue = parseFloat(experienceSelect.value) || 1;
+
+        if (rankSelect.value === '0' || positionSelect.value === '0' || experienceSelect.value === '0') {
+            alert('Iltimos, barcha maydonlarni to\'ldiring!');
+            return;
+        }
+
+        // Oylikni hisoblash: bazaviy oylik * unvon koeffitsienti * lavozim koeffitsienti * ish staji koeffitsienti
+        const calculatedSalary = Math.round(baseSalary * rankValue * positionValue * experienceValue);
+        
+        // Sonni formatlash (masalan: 2500000 -> 2 500 000)
+        const formattedSalary = calculatedSalary.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+        
+        salaryAmount.textContent = formattedSalary;
+        resultBox.style.display = 'block';
+
+        // Rangli natija
+        if (calculatedSalary < 4000000) {
+            salaryAmount.style.color = '#27ae60';
+        } else if (calculatedSalary < 7000000) {
+            salaryAmount.style.color = '#f39c12';
+        } else {
+            salaryAmount.style.color = '#d32f2f';
+        }
+    });
+
+    // Real vaqtni yangilash (agar mavjud bo'lsa)
+    function updateDateTime() {
+        const dateElement = document.getElementById('date');
+        const timeElement = document.getElementById('time');
+        
+        if (dateElement && timeElement) {
+            const now = new Date();
+            const dateStr = now.toLocaleDateString('uz-UZ', { day: '2-digit', month: '2-digit', year: 'numeric' });
+            const timeStr = now.toLocaleTimeString('uz-UZ', { hour: '2-digit', minute: '2-digit' });
+            
+            dateElement.textContent = dateStr;
+            timeElement.textContent = timeStr;
+        }
+    }
+
+    updateDateTime();
+    setInterval(updateDateTime, 1000);
+});
+/* ariza oson */
+
+// <!-- okruglar -->
+
+// ========== HARBIY OKRUGLAR MODAL OYNA ==========
+// ========== HARBIY OKRUGLAR MODAL OYNA ==========
+document.addEventListener('DOMContentLoaded', function() {
+    const modal = document.getElementById('districtModal');
+    const modalBody = document.getElementById('modalBody');
+    const closeBtn = document.querySelector('.close-modal');
+    const districtCards = document.querySelectorAll('.district-card');
+
+    // Modal oyna mavjudligini tekshirish
+    if (!modal || !modalBody) return;
+
+    // Har bir okrug uchun click event
+    districtCards.forEach(card => {
+        card.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            
+            // Okrug ID sini olish
+            const districtId = this.getAttribute('data-district');
+            
+            // Mos keladigan ma'lumotni olish
+            const infoElement = document.getElementById(`info-${districtId}`);
+            
+            if (infoElement) {
+                // Ma'lumotni modal oynaga joylash
+                modalBody.innerHTML = infoElement.innerHTML;
+                
+                // Modalni ko'rsatish
+                modal.style.display = 'block';
+                
+                // Body scrollini to'xtatish
+                document.body.style.overflow = 'hidden';
+                
+                // Mobil uchun modalni yuqoridan ochish
+                setTimeout(() => {
+                    modal.scrollTop = 0;
+                }, 100);
+            }
+        });
+    });
+
+    // Close tugmasi
+    if (closeBtn) {
+        closeBtn.addEventListener('click', function() {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        });
+        
+        // Touch uchun
+        closeBtn.addEventListener('touchstart', function(e) {
+            e.preventDefault();
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        });
+    }
+
+    // Modal tashqarisiga bosilganda yopish
+    window.addEventListener('click', function(event) {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+    });
+
+    // Touch uchun
+    window.addEventListener('touchstart', function(event) {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+    });
+
+    // ESC tugmasi bilan yopish
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape' && modal.style.display === 'block') {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+    });
+
+    // Back button bilan yopish (mobil uchun)
+    window.addEventListener('popstate', function() {
+        if (modal.style.display === 'block') {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+    });
+
+    // Orientation change (mobil aylantirilganda)
+    window.addEventListener('orientationchange', function() {
+        if (modal.style.display === 'block') {
+            // Modal oynani markazga qaytarish
+            setTimeout(() => {
+                modal.scrollTop = 0;
+            }, 200);
+        }
+    });
+});
+// <!-- okruglar -->
+
+// ========== HARBIY OKRUGLAR MODAL ==========
+document.addEventListener('DOMContentLoaded', function() {
+    const modal = document.getElementById('districtModal');
+    const modalBody = document.getElementById('modalBody');
+    const closeBtn = document.querySelector('.close-modal');
+    const districtCards = document.querySelectorAll('.district-card');
+
+    if (!modal || !modalBody) return;
+
+    // Har bir okrug kartasi uchun click event
+    districtCards.forEach(card => {
+        card.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            
+            const districtId = this.getAttribute('data-district');
+            const infoElement = document.getElementById(`info-${districtId}`);
+            
+            if (infoElement) {
+                modalBody.innerHTML = infoElement.innerHTML;
+                modal.style.display = 'block';
+                document.body.style.overflow = 'hidden';
+                
+                setTimeout(() => {
+                    modal.scrollTop = 0;
+                }, 100);
+            }
+        });
+    });
+
+    // Close tugmasi
+    if (closeBtn) {
+        closeBtn.addEventListener('click', function() {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        });
+    }
+
+    // Modal tashqarisiga bosilganda yopish
+    window.addEventListener('click', function(event) {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+    });
+
+    // ESC tugmasi bilan yopish
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape' && modal.style.display === 'block') {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+    });
+});
