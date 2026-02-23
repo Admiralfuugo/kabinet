@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="img/123.png">
+    <title>Mudofaa Vazirligi | Rasmiy veb-sayt</title>
+    
+    <!-- Font Awesome 5 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+    <!-- CSS fayl -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- NAVBAR SECTION -->
+    <nav class="navbar">
+        <!-- Top bar - Qidiruv qismi birinchi qator -->
+        <div class="top-bar">
+
+            <!-- <div class="top-bar-left">
+                
+                <img width="50px"  src="123.png" alt="">
+                
+                <span class="ministry-name">O'ZBEKISTON RESPUBLIKASI MUDOFAA VAZIRLIGI</span>
+                
+            </div> -->
+
+            <div style="display: flex; align-items: center;">
+                <a href="index.html">
+                <img src="img/123.png" style="width: 30px; height: 30px; margin-right: 5px;">
+                <span style="color: azure; text-align: center;">O'ZBEKISTON RESPUBLIKASI MUDOFAA VAZIRLIGI ㅤ</span></a>
+                <span class="date-time" id="currentDateTime">
+                    <i class="far fa-calendar-alt"></i>
+                    <span id="date"></span>
+                    <i class="far fa-clock" style="margin-left: 10px;"></i>
+                    <span id="time"></span>
+                </span>
+            </div>
+
+
+
+            <div class="top-bar-right">
+                <!-- Search box birinchi qatorda -->
+                <div class="search-box-top">
+                    <input type="text" placeholder="Qidirish..." id="searchInput">
+                    <button id="searchBtn"><i class="fas fa-search"></i></button>
+                </div>
+
+                <!-- Til tanlash -->
+                <div class="language-selector">
+                    <button class="lang-btn active" data-lang="uz">UZ</button>
+                    <button class="lang-btn" data-lang="ru">RU</button>
+                    <button class="lang-btn" data-lang="en">EN</button>
+                </div>
+
+                <!-- Bildirishnomalar -->
+                <div class="notifications">
+                    <button class="notification-btn" id="notificationBtn">
+                        <i class="far fa-bell"></i>
+                        <span class="notification-badge">3</span>
+                    </button>
+                    <div class="notification-dropdown" id="notificationDropdown">
+                        <div class="notification-header">
+                            <h4>Bildirishnomalar</h4>
+                            <span class="mark-read">Hammasini o'qildi deb belgilash</span>
+                        </div>
+                        <div class="notification-list">
+                            <div class="notification-item unread">
+                                <i class="fas fa-bullhorn notification-icon"></i>
+                                <div class="notification-content">
+                                    <p class="notification-text">Yangi vakansiya e'lon qilindi</p>
+                                    <span class="notification-time">5 daqiqa oldin</span>
+                                </div>
+                            </div>
+                            <div class="notification-item unread">
+                                <i class="fas fa-file-alt notification-icon"></i>
+                                <div class="notification-content">
+                                    <p class="notification-text">Arizangiz ko'rib chiqilmoqda</p>
+                                    <span class="notification-time">1 soat oldin</span>
+                                </div>
+                            </div>
+                            <div class="notification-item">
+                                <i class="fas fa-calendar-check notification-icon"></i>
+                                <div class="notification-content">
+                                    <p class="notification-text">Harbiy qasamyod marosimi</p>
+                                    <span class="notification-time">1 kun oldin</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="notification-footer">
+                            <a href="#">Barcha bildirishnomalar</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kun/tun rejimi -->
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                </button>
+
+                
+
+            </div>
+        </div>
+
+        <!-- Main navbar - ikkinchi qator (o'rta qism) -->
+        <div class="main-nav">
+            <ul class="nav-links">
+                <li class="nav-item">
+                    <a href="#"><i class="fas fa-home"></i><span data-i18n="about">BIZ HAQIMIZDA</span></a>
+                    <div class="dropdown-menu">
+                        <a href="https://gov.uz/oz/mudofaa/pages/about" data-i18n="history">Vazirlik</a>
+                        <a href="https://gov.uz/oz/mudofaa/guides" data-i18n="leadership">Rahbariyat</a>
+                        <a href="#information" data-i18n="tasks">Bog'lanish</a>
+                        <a href="#" data-i18n="symbols">Ko'p beriladigan savollar</a>
+                        
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="#"><i class="fas fa-briefcase"></i><span data-i18n="career">KARYERA</span></a>
+                    <div class="dropdown-menu">
+                        <a href="#" data-i18n="militaryService">Bu nima</a>
+                        <a href="#" data-i18n="contract">Harbiy xizmatga qadar</a>
+                        <a href="#" data-i18n="academies">Harbiy xizmat davomida</a>
+                        <a href="https://vacancy.gov.uz/" data-i18n="internship"></a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="#"><i class="fas fa-users"></i><span data-i18n="candidates">NOMZODLARGA</span></a>
+                    <div class="dropdown-menu">
+                        <a href="#" data-i18n="requirements">Saralash</a>
+                        <a href="#" data-i18n="documents">KBHX ga</a>
+                        <a href="#" data-i18n="exams">OXTM ga</a>
+                        <a href="#" data-i18n="benefits">HAL ga</a>
+                        <a href="#" data-i18n="benefitT">HTO'M GA</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="#"><i class="fas fa-bullhorn"></i><span data-i18n="vacancies">VAKANSIYA</span></a>
+                    <div class="dropdown-menu">
+                        <a href="#" data-i18n="officers">Ofitserlar</a>
+                        <a href="#" data-i18n="sergeants">Serjantlar</a>
+                        <a href="#" data-i18n="specialists">Mutaxassislar</a>
+                        <a href="#" data-i18n="civilians">Fuqarolik xodimlari</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="#"><i class="fas fa-newspaper"></i><span data-i18n="news">YANGILIKLAR</span></a>
+                    <div class="dropdown-menu">
+                        <a href="#" data-i18n="latest">So'nggi yangiliklar</a>
+                        <a href="#" data-i18n="official">Rasmiy bayonotlar</a>
+                        <a href="#" data-i18n="photo">Foto galereya</a>
+                        <a href="#" data-i18n="video">Video materiallar</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="hujjatlar.html"><i class="fas fa-newspaper"></i><span data-i18n="datess">HUJJATLAR</span></a>
+                </li>
+            </ul>
+
+            <!-- Application button (o'rta qatorning o'ng qismi) -->
+            <div class="main-nav-actions">
+                <a href="ariza.html" class="application-btn">
+                    <i class="fas fa-file-alt"></i>
+                    <span data-i18n="apply">ARIZA BERISH</span>
+                </a>
+                <span class="phone-number">
+                    <i class="fas fa-phone-alt"></i>
+                    1530
+                </span>
+                <div class="user-info">
+                    <i class="fas fa-user-circle"></i>
+                    <span class="user-name">ANVAROV A.A.</span>
+                </div>
+            </div>
+
+            <!-- Mobile menu button -->
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+       
+   </nav>
+
+    <!-- BACKGROUND IMAGE SECTION -->
+   <!-- HARBIY XIZMAT DAVRIDA BO'LIMI -->
+<section class="service-period-section" id="service-period">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">HARBIY XIZMAT <span>DAVRIDA</span></h2>
+            <p class="section-subtitle">Harbiy xizmat davridagi huquq, imtiyoz va imkoniyatlar</p>
+        </div>
+
+        <!-- Xizmat davri haqida qisqacha -->
+        <div class="service-intro">
+            <div class="intro-card">
+                <div class="intro-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <div class="intro-text">
+                    <h3>Vatan himoyachisi - sharafli nom</h3>
+                    <p>Harbiy xizmatni o'tash davrida siz davlat tomonidan to'liq ijtimoiy himoya, moddiy ta'minot va kasbiy rivojlanish imkoniyatlari bilan ta'minlanasiz. Quyida xizmat davridagi asosiy imkoniyatlar bilan tanishing.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Asosiy imkoniyatlar grid -->
+        <div class="opportunities-grid">
+            <!-- 1. Moddiy ta'minot -->
+            <div class="opportunity-card">
+                <div class="card-header">
+                    <div class="card-icon">
+                        <i class="fas fa-coins"></i>
+                    </div>
+                    <h3>Moddiy ta'minot</h3>
+                </div>
+                <div class="card-body">
+                    <ul class="opportunity-list">
+                        <li><i class="fas fa-check-circle"></i> Oylik maosh: 3-7 million so'm (lavozim va unvonga qarab)</li>
+                        <li><i class="fas fa-check-circle"></i> Har choraklik mukofotlar</li>
+                        <li><i class="fas fa-check-circle"></i> Yil yakuni bo'yicha qo'shimcha to'lov</li>
+                        <li><i class="fas fa-check-circle"></i> Xizmat safari vaqtida qo'shimcha to'lovlar</li>
+                        <li><i class="fas fa-check-circle"></i> 13-oylik maosh (yil yakunida)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 2. Uy-joy bilan ta'minlash -->
+            <div class="opportunity-card">
+                <div class="card-header">
+                    <div class="card-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Uy-joy bilan ta'minlash</h3>
+                </div>
+                <div class="card-body">
+                    <ul class="opportunity-list">
+                        <li><i class="fas fa-check-circle"></i> Xizmat turar joyi (kazarma yoki yotoqxona)</li>
+                        <li><i class="fas fa-check-circle"></i> Ijara uchun kompensatsiya (oylik maoshning 50% gacha)</li>
+                        <li><i class="fas fa-check-circle"></i> Imtiyozli ipoteka krediti (yillik 3-5%)</li>
+                        <li><i class="fas fa-check-circle"></i> Harbiy xizmatchilar uchun uy-joy dasturi</li>
+                        <li><i class="fas fa-check-circle"></i> Xizmat muddati tugagach, uy-joy olish imkoniyati</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 3. Tibbiy xizmat -->
+            <div class="opportunity-card">
+                <div class="card-header">
+                    <div class="card-icon">
+                        <i class="fas fa-stethoscope"></i>
+                    </div>
+                    <h3>Tibbiy xizmat</h3>
+                </div>
+                <div class="card-body">
+                    <ul class="opportunity-list">
+                        <li><i class="fas fa-check-circle"></i> Bepul tibbiy xizmat harbiy kasalxonalarda</li>
+                        <li><i class="fas fa-check-circle"></i> Sanatoriy-kurortda davolanish imkoniyati (yiliga 1 marta)</li>
+                        <li><i class="fas fa-check-circle"></i> Stomatologik xizmat (bepul)</li>
+                        <li><i class="fas fa-check-circle"></i> Dori vositalari bilan ta'minlash (50-100% chegirma)</li>
+                        <li><i class="fas fa-check-circle"></i> Oila a'zolari uchun tibbiy sug'urta</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 4. Ta'lim imkoniyatlari -->
+            <div class="opportunity-card">
+                <div class="card-header">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Ta'lim imkoniyatlari</h3>
+                </div>
+                <div class="card-body">
+                    <ul class="opportunity-list">
+                        <li><i class="fas fa-check-circle"></i> Harbiy akademiyada o'qish imkoniyati</li>
+                        <li><i class="fas fa-check-circle"></i> Malaka oshirish kurslari (bepul)</li>
+                        <li><i class="fas fa-check-circle"></i> Chet elda harbiy ta'lim olish</li>
+                        <li><i class="fas fa-check-circle"></i> Fuqarolik oliygohlarida sirtqi ta'lim</li>
+                        <li><i class="fas fa-check-circle"></i> Kasbiy qayta tayyorlash kurslari</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Lavozim va unvonlar jadvali -->
+        <div class="ranks-section">
+            <h3 class="section-subtitle">Harbiy unvonlar <span>va lavozimlar</span></h3>
+            
+            <div class="ranks-container">
+                <div class="rank-category">
+                    <h4>Oddiy askarlar</h4>
+                    <div class="rank-item">
+                        <span>Oddiy askar</span>
+                        <span class="rank-badge">0-6 oy</span>
+                    </div>
+                    <div class="rank-item">
+                        <span>Katta askar</span>
+                        <span class="rank-badge">6-12 oy</span>
+                    </div>
+                </div>
+                
+                <div class="rank-category">
+                    <h4>Serjantlar</h4>
+                    <div class="rank-item">
+                        <span>Kichik serjant</span>
+                        <span class="rank-badge">1-2 yil</span>
+                    </div>
+                    <div class="rank-item">
+                        <span>Serjant</span>
+                        <span class="rank-badge">2-4 yil</span>
+                    </div>
+                    <div class="rank-item">
+                        <span>Katta serjant</span>
+                        <span class="rank-badge">4-6 yil</span>
+                    </div>
+                    <div class="rank-item">
+                        <span>Starshina</span>
+                        <span class="rank-badge">6+ yil</span>
+                    </div>
+                </div>
+                
+                <div class="rank-category">
+                    <h4>Ofitserlar</h4>
+                    <div class="rank-item">
+                        <span>Kichik leytenant</span>
+                        <span class="rank-badge">0-2 yil</span>
+                    </div>
+                    <div class="rank-item">
+                        <span>Leytenant</span>
+                        <span class="rank-badge">2-4 yil</span>
+                    </div>
+                    <div class="rank-item">
+                        <span>Katta leytenant</span>
+                        <span class="rank-badge">4-6 yil</span>
+                    </div>
+                    <div class="rank-item">
+                        <span>Kapitan</span>
+                        <span class="rank-badge">6-9 yil</span>
+                    </div>
+                    <div class="rank-item">
+                        <span>Mayor</span>
+                        <span class="rank-badge">9-12 yil</span>
+                    </div>
+                    <div class="rank-item">
+                        <span>Podpolkovnik</span>
+                        <span class="rank-badge">12-15 yil</span>
+                    </div>
+                    <div class="rank-item">
+                        <span>Polkovnik</span>
+                        <span class="rank-badge">15+ yil</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Xizmat davridagi imtiyozlar -->
+        <div class="benefits-detail-section">
+            <h3 class="section-subtitle">Xizmat davridagi <span>imtiyozlar</span></h3>
+            
+            <div class="benefits-detail-grid">
+                <div class="benefit-detail-item">
+                    <div class="detail-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="detail-content">
+                        <h4>Ta'til muddati</h4>
+                        <p>Asosiy ta'til: 30 kun (oddiy askarlar), 45 kun (ofitserlar). Qo'shimcha ta'til: 5-15 kun (xizmat sharoitiga qarab).</p>
+                    </div>
+                </div>
+                
+                <div class="benefit-detail-item">
+                    <div class="detail-icon">
+                        <i class="fas fa-bus"></i>
+                    </div>
+                    <div class="detail-content">
+                        <h4>Transport imtiyozlari</h4>
+                        <p>Yiliga 1 marta dam olish joyiga borish va qaytish uchun transport xarajatlari qoplanadi. Shahar transportida 50% chegirma.</p>
+                    </div>
+                </div>
+                
+                <div class="benefit-detail-item">
+                    <div class="detail-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <div class="detail-content">
+                        <h4>Oziq-ovqat ta'minoti</h4>
+                        <p>Bepul ovqatlanish (kuniga 3 mahal). Oziq-ovqat ratsioni harbiy qismlarda belgilangan normativlar asosida.</p>
+                    </div>
+                </div>
+                
+                <div class="benefit-detail-item">
+                    <div class="detail-icon">
+                        <i class="fas fa-tshirt"></i>
+                    </div>
+                    <div class="detail-content">
+                        <h4>Kiyim-kechak ta'minoti</h4>
+                        <p>Harbiy forma va kiyim-kechak bilan to'liq ta'minlash. Mavsumga qarab yozgi va qishki kiyimlar.</p>
+                    </div>
+                </div>
+                
+                <div class="benefit-detail-item">
+                    <div class="detail-icon">
+                        <i class="fas fa-futbol"></i>
+                    </div>
+                    <div class="detail-content">
+                        <h4>Sport va dam olish</h4>
+                        <p>Sport zallari, futbol maydonlari, sport to'garaklari. Harbiy qismlarda sport musobaqalari.</p>
+                    </div>
+                </div>
+                
+                <div class="benefit-detail-item">
+                    <div class="detail-icon">
+                        <i class="fas fa-family"></i>
+                    </div>
+                    <div class="detail-content">
+                        <h4>Oila a'zolari uchun imtiyozlar</h4>
+                        <p>Harbiy xizmatchining oila a'zolari uchun tibbiy xizmat, bolalar bog'chasi va maktablarda imtiyozlar.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Karyera o'sish yo'nalishlari -->
+        <div class="career-growth-section">
+            <h3 class="section-subtitle">Karyera <span>o'sish yo'nalishlari</span></h3>
+            
+            <div class="growth-timeline">
+                <div class="growth-step">
+                    <div class="step-marker">1</div>
+                    <div class="step-content">
+                        <h4>Boshlang'ich bosqich (0-2 yil)</h4>
+                        <p>Oddiy askar yoki kichik serjant. Boshlang'ich harbiy tayyorgarlik va ixtisoslik bo'yicha o'qitish.</p>
+                    </div>
+                </div>
+                
+                <div class="growth-step">
+                    <div class="step-marker">2</div>
+                    <div class="step-content">
+                        <h4>O'rta bosqich (2-5 yil)</h4>
+                        <p>Serjant yoki katta serjant. Bo'lim komandiri, o'rinbosar lavozimlari. Malaka oshirish kurslari.</p>
+                    </div>
+                </div>
+                
+                <div class="growth-step">
+                    <div class="step-marker">3</div>
+                    <div class="step-content">
+                        <h4>Yuqori bosqich (5-10 yil)</h4>
+                        <p>Kichik ofitserlar (leytenant, katta leytenant). Vzvod komandiri, rota komandiri o'rinbosari.</p>
+                    </div>
+                </div>
+                
+                <div class="growth-step">
+                    <div class="step-marker">4</div>
+                    <div class="step-content">
+                        <h4>Rahbarlik bosqichi (10+ yil)</h4>
+                        <p>Kapitan, mayor, podpolkovnik. Rota komandiri, batalon komandiri, bo'linma rahbari.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Xizmat davridagi qo'llab-quvvatlash -->
+        <div class="support-section">
+            <h3 class="section-subtitle">Psixologik va ijtimoiy <span>qo'llab-quvvatlash</span></h3>
+            
+            <div class="support-grid">
+                <div class="support-item">
+                    <i class="fas fa-heart"></i>
+                    <h4>Psixologik xizmat</h4>
+                    <p>Harbiy qismlarda psixologlar faoliyat yuritadi. Individual va guruhiy maslahatlar.</p>
+                </div>
+                
+                <div class="support-item">
+                    <i class="fas fa-balance-scale"></i>
+                    <h4>Huquqiy yordam</h4>
+                    <p>Harbiy xizmatchilar va ularning oila a'zolariga bepul huquqiy konsultatsiyalar.</p>
+                </div>
+                
+                <div class="support-item">
+                    <i class="fas fa-hands-helping"></i>
+                    <h4>Ijtimoiy yordam</h4>
+                    <p>Qiyin vaziyatdagi harbiy xizmatchilarga moddiy va ma'naviy yordam.</p>
+                </div>
+                
+                <div class="support-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <h4>Ishonch telefoni</h4>
+                    <p>1530 - kecha-kunduz ishlaydigan ishonch telefoni. Har qanday masala bo'yicha murojaat.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Muddatli xizmatdan so'ng -->
+        <div class="after-service-section">
+            <h3 class="section-subtitle">Xizmatdan so'ng <span>imkoniyatlar</span></h3>
+            
+            <div class="after-service-grid">
+                <div class="after-card">
+                    <div class="after-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h4>Ishga joylashish</h4>
+                    <p>Harbiy xizmatni o'tagan fuqarolar davlat xizmatiga kirishda imtiyozlarga ega.</p>
+                </div>
+                
+                <div class="after-card">
+                    <div class="after-icon">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <h4>O'qishni davom ettirish</h4>
+                    <p>Oliy o'quv yurtlariga kirishda imtiyozlar, grantlar bo'yicha ustunlik.</p>
+                </div>
+                
+                <div class="after-card">
+                    <div class="after-icon">
+                        <i class="fas fa-pension"></i>
+                    </div>
+                    <h4>Pensiya ta'minoti</h4>
+                    <p>20 yil xizmatdan so'ng harbiy pensiya olish huquqi. Imtiyozli pensiya yoshi.</p>
+                </div>
+                
+                <div class="after-card">
+                    <div class="after-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h4>Faxriy maqomi</h4>
+                    <p>Harbiy xizmat faxriylari uchun qo'shimcha imtiyozlar va davlat tomonidan qo'llab-quvvatlash.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    
+
+    <!-- FOOTER SECTION -->
+    <footer id="information" class="footer" >
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-grid">
+                    <!-- Copyright column -->
+                    <div class="footer-col">
+                        <div class="footer-logo">
+                            <img width="50px"  src="img/123.png" alt="">
+                            <span>Mudofaa Vazirligi</span>
+                        </div>
+                        <p class="copyright-text">
+                            Ushbu saytda nashr etilgan materiallar<br>
+                            foydalanilganda army.gov.uz manbasi<br>
+                            ko'rsatilishi shart
+                        </p>
+                        <p class="copyright-year">
+                            <i class="far fa-copyright"></i> 2026 Barcha huquqlar himoyalangan
+                        </p>
+                    </div>
+
+                    <!-- Contact column -->
+                    <div  class="footer-col">
+                        <h3>ALOQA</h3>
+                        <div class="contact-info">
+                            <p>
+                                <i class="fas fa-map-marker-alt"></i>
+                                100000, Toshkent shahri, Mirzo Ulug‘bek ko‘chasi, 100
+                            </p>
+                            <p>
+                                <i class="fas fa-phone-alt"></i>
+                                <a href="tel:+998712698019">+998 71 269 80 19</a>
+                            </p>
+                            <p class="emergency-phone">
+                                <i class="fas fa-phone-volume"></i>
+                                <strong>1530</strong> (Ishonch telefoni)
+                            </p>
+                            <p>
+                                <i class="far fa-envelope"></i>
+                                <a href="mailto:mudofaa@mil.uz">mudofaa@mil.uz</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Social media column -->
+                    <div class="footer-col">
+                        <h3>BIZNI KUZATIB BORING!</h3>
+                        <div class="social-links">
+                            <a href=" https://t.me/Armygovuz" class="social-link"><i class="fab fa-telegram"></i></a>
+                            <!-- <a href="https://www.facebook.com/@Armygovuz" class="social-link"><i class="fab fa-facebook"></i></a> -->
+                            <a href=" https://instagram.com/Armygovuz" class="social-link"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.youtube.com/@Armygovuz" class="social-link"><i class="fab fa-youtube"></i></a>
+                            <!-- <a href="https://www.twintter.com/@Armygovuz" class="social-link"><i class="fab fa-twitter"></i></a> -->
+                        </div>
+                        
+                        <!-- Report text error -->
+                        <div class="report-error">
+                            <p>Matnda xato ko'rdingizmi?</p>
+                            <p class="error-instruction">
+                                <i class="fas fa-mouse-pointer"></i>
+                                Sichqoncha bilan belgilang va<br>
+                                <kbd>CTRL</kbd> + <kbd>Enter</kbd> ni bosing
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Quick links column -->
+                    <div class="footer-col">
+                        <h3>Tezkor havolalar</h3>
+                        <ul class="footer-links">
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Vakansiyalar</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Ariza berish</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Harbiy qismlar</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Matbuot xizmati</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Sayt xaritasi</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 O'zbekiston Respublikasi Mudofaa Vazirligi. Barcha huquqlar himoyalangan.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript fayl -->
+    <script src="script.js"></script>
+</body>
+</html>

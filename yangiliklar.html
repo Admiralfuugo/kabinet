@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="img/123.png">
+    <title>Mudofaa Vazirligi | Rasmiy veb-sayt</title>
+    
+    <!-- Font Awesome 5 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+    <!-- CSS fayl -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- NAVBAR SECTION -->
+    <nav class="navbar">
+        <!-- Top bar - Qidiruv qismi birinchi qator -->
+        <div class="top-bar">
+
+            <!-- <div class="top-bar-left">
+                
+                <img width="50px"  src="123.png" alt="">
+                
+                <span class="ministry-name">O'ZBEKISTON RESPUBLIKASI MUDOFAA VAZIRLIGI</span>
+                
+            </div> -->
+
+            <div style="display: flex; align-items: center;">
+                <a href="index.html">
+                <img src="img/123.png" style="width: 30px; height: 30px; margin-right: 5px;">
+                <span style="color: azure; text-align: center;">O'ZBEKISTON RESPUBLIKASI MUDOFAA VAZIRLIGI ㅤ</span></a>
+                <span class="date-time" id="currentDateTime">
+                    <i class="far fa-calendar-alt"></i>
+                    <span id="date"></span>
+                    <i class="far fa-clock" style="margin-left: 10px;"></i>
+                    <span id="time"></span>
+                </span>
+            </div>
+
+
+
+            <div class="top-bar-right">
+                <!-- Search box birinchi qatorda -->
+                <div class="search-box-top">
+                    <input type="text" placeholder="Qidirish..." id="searchInput">
+                    <button id="searchBtn"><i class="fas fa-search"></i></button>
+                </div>
+
+                <!-- Til tanlash -->
+                <div class="language-selector">
+                    <button class="lang-btn active" data-lang="uz">UZ</button>
+                    <button class="lang-btn" data-lang="ru">RU</button>
+                    <button class="lang-btn" data-lang="en">EN</button>
+                </div>
+
+                <!-- Bildirishnomalar -->
+                <div class="notifications">
+                    <button class="notification-btn" id="notificationBtn">
+                        <i class="far fa-bell"></i>
+                        <span class="notification-badge">3</span>
+                    </button>
+                    <div class="notification-dropdown" id="notificationDropdown">
+                        <div class="notification-header">
+                            <h4>Bildirishnomalar</h4>
+                            <span class="mark-read">Hammasini o'qildi deb belgilash</span>
+                        </div>
+                        <div class="notification-list">
+                            <div class="notification-item unread">
+                                <i class="fas fa-bullhorn notification-icon"></i>
+                                <div class="notification-content">
+                                    <p class="notification-text">Yangi vakansiya e'lon qilindi</p>
+                                    <span class="notification-time">5 daqiqa oldin</span>
+                                </div>
+                            </div>
+                            <div class="notification-item unread">
+                                <i class="fas fa-file-alt notification-icon"></i>
+                                <div class="notification-content">
+                                    <p class="notification-text">Arizangiz ko'rib chiqilmoqda</p>
+                                    <span class="notification-time">1 soat oldin</span>
+                                </div>
+                            </div>
+                            <div class="notification-item">
+                                <i class="fas fa-calendar-check notification-icon"></i>
+                                <div class="notification-content">
+                                    <p class="notification-text">Harbiy qasamyod marosimi</p>
+                                    <span class="notification-time">1 kun oldin</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="notification-footer">
+                            <a href="#">Barcha bildirishnomalar</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kun/tun rejimi -->
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                </button>
+
+                
+
+            </div>
+        </div>
+
+        <!-- Main navbar - ikkinchi qator (o'rta qism) -->
+        <div class="main-nav">
+            <ul class="nav-links">
+                <li class="nav-item">
+                    <a href="#"><i class="fas fa-home"></i><span data-i18n="about">BIZ HAQIMIZDA</span></a>
+                    <div class="dropdown-menu">
+                        <a href="https://gov.uz/oz/mudofaa/pages/about" data-i18n="history">Vazirlik</a>
+                        <a href="https://gov.uz/oz/mudofaa/guides" data-i18n="leadership">Rahbariyat</a>
+                        <a href="#information" data-i18n="tasks">Bog'lanish</a>
+                        <a href="#" data-i18n="symbols">Ko'p beriladigan savollar</a>
+                        
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="#"><i class="fas fa-briefcase"></i><span data-i18n="career">KARYERA</span></a>
+                    <div class="dropdown-menu">
+                        <a href="#" data-i18n="militaryService">Bu nima</a>
+                        <a href="#" data-i18n="contract">Harbiy xizmatga qadar</a>
+                        <a href="#" data-i18n="academies">Harbiy xizmat davomida</a>
+                        <a href="https://vacancy.gov.uz/" data-i18n="internship"></a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="#"><i class="fas fa-users"></i><span data-i18n="candidates">NOMZODLARGA</span></a>
+                    <div class="dropdown-menu">
+                        <a href="#" data-i18n="requirements">Saralash</a>
+                        <a href="#" data-i18n="documents">KBHX ga</a>
+                        <a href="#" data-i18n="exams">OXTM ga</a>
+                        <a href="#" data-i18n="benefits">HAL ga</a>
+                        <a href="#" data-i18n="benefitT">HTO'M GA</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="#"><i class="fas fa-bullhorn"></i><span data-i18n="vacancies">VAKANSIYA</span></a>
+                    <div class="dropdown-menu">
+                        <a href="#" data-i18n="officers">Ofitserlar</a>
+                        <a href="#" data-i18n="sergeants">Serjantlar</a>
+                        <a href="#" data-i18n="specialists">Mutaxassislar</a>
+                        <a href="#" data-i18n="civilians">Fuqarolik xodimlari</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="#"><i class="fas fa-newspaper"></i><span data-i18n="news">YANGILIKLAR</span></a>
+                    <div class="dropdown-menu">
+                        <a href="#" data-i18n="latest">So'nggi yangiliklar</a>
+                        <a href="#" data-i18n="official">Rasmiy bayonotlar</a>
+                        <a href="#" data-i18n="photo">Foto galereya</a>
+                        <a href="#" data-i18n="video">Video materiallar</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="hujjatlar.html"><i class="fas fa-newspaper"></i><span data-i18n="datess">HUJJATLAR</span></a>
+                </li>
+            </ul>
+
+            <!-- Application button (o'rta qatorning o'ng qismi) -->
+            <div class="main-nav-actions">
+                <a href="ariza.html" class="application-btn">
+                    <i class="fas fa-file-alt"></i>
+                    <span data-i18n="apply">ARIZA BERISH</span>
+                </a>
+                <span class="phone-number">
+                    <i class="fas fa-phone-alt"></i>
+                    1530
+                </span>
+                <div class="user-info">
+                    <i class="fas fa-user-circle"></i>
+                    <span class="user-name">ANVAROV A.A.</span>
+                </div>
+            </div>
+
+            <!-- Mobile menu button -->
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+       
+   </nav>
+
+    <!-- BACKGROUND IMAGE SECTION -->
+    <!-- BACKGROUND IMAGE SECTION -->
+<!-- YANGILIKLAR BO'LIMI -->
+<section class="news-section" id="news">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">SO'NGI <span>YANGILIKLAR</span></h2>
+            <p class="section-subtitle">O'zbekiston Respublikasi Mudofaa Vazirligining so'nggi yangiliklari va e'lonlari</p>
+        </div>
+
+        <!-- Katta yangilik (Featured) -->
+        <div class="featured-news">
+            <div class="featured-news-card">
+                <div class="featured-news-image">
+                    <img src="img/yangiliklar/1.JPG" alt="Harbiy parad">
+                    <div class="news-category">Muhim</div>
+                </div>
+                <div class="featured-news-content">
+                    <div class="news-meta">
+                        <span class="news-date"><i class="far fa-calendar-alt"></i> 23 Fevral, 2025</span>
+                        <span class="news-views"><i class="far fa-eye"></i> 12.5k</span>
+                        <span class="news-comments"><i class="far fa-comment"></i> 45</span>
+                    </div>
+                    <h3 class="featured-news-title">O'zbekiston Respublikasi Qurolli Kuchlari tashkil topganining 33 yilligi</h3>
+                    <p class="featured-news-excerpt">Toshkent shahrida harbiy parad bo'lib o'tdi. Prezident, Qurolli Kuchlarning Oliy Bosh Qo'mondoni Shavkat Mirziyoyev ishtirokida tantanali marosim o'tkazildi.</p>
+                    <a href="#" class="read-more">Batafsil o'qish <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Yangiliklar grid -->
+        <div class="news-grid">
+            <!-- Yangilik 1 -->
+            <div class="news-card">
+                <div class="news-card-image">
+                    <img src="img/yangiliklar/02.jpg" alt="Harbiy mashg'ulotlar">
+                    <span class="news-card-category">Mashg'ulotlar</span>
+                </div>
+                <div class="news-card-content">
+                    <div class="news-card-meta">
+                        <span><i class="far fa-clock"></i> 2 soat oldin</span>
+                        <span><i class="far fa-eye"></i> 3.2k</span>
+                    </div>
+                    <h4 class="news-card-title">Harbiy qismlarda taktik mashg'ulotlar o'tkazilmoqda</h4>
+                    <p class="news-card-excerpt">Termiz garnizonida joylashgan harbiy qismlarda dala mashg'ulotlari davom etmoqda. Jangovar tayyorgarlik jarayonlari...</p>
+                    <a href="#" class="news-card-link">Batafsil <i class="fas fa-chevron-right"></i></a>
+                </div>
+            </div>
+
+            <!-- Yangilik 2 -->
+            <div class="news-card">
+                <div class="news-card-image">
+                    <img src="img/yangiliklar/2.jpg" alt="Xalqaro hamkorlik">
+                    <span class="news-card-category">Hamkorlik</span>
+                </div>
+                <div class="news-card-content">
+                    <div class="news-card-meta">
+                        <span><i class="far fa-clock"></i> 5 soat oldin</span>
+                        <span><i class="far fa-eye"></i> 2.8k</span>
+                    </div>
+                    <h4 class="news-card-title">O'zbekiston va Qozog'iston mudofaa vazirlari uchrashuvi</h4>
+                    <p class="news-card-excerpt">Ikki davlat mudofaa vazirlari o'rtasida harbiy-texnik hamkorlik masalalari muhokama qilindi. Qo'shma harbiy mashg'ulotlar...</p>
+                    <a href="#" class="news-card-link">Batafsil <i class="fas fa-chevron-right"></i></a>
+                </div>
+            </div>
+
+            <!-- Yangilik 3 -->
+            <div class="news-card">
+                <div class="news-card-image">
+                    <img src="img/yangiliklar/3.JPG" alt="Harbiy qabul">
+                    <span class="news-card-category">Qabul</span>
+                </div>
+                <div class="news-card-content">
+                    <div class="news-card-meta">
+                        <span><i class="far fa-clock"></i> 1 kun oldin</span>
+                        <span><i class="far fa-eye"></i> 5.1k</span>
+                    </div>
+                    <h4 class="news-card-title">Oliy harbiy ta'lim muassasalariga qabul e'lon qilindi</h4>
+                    <p class="news-card-excerpt">2025-2026 o'quv yili uchun harbiy institutlar va akademik litseylarga hujjat qabul qilish boshlanganligi haqida ma'lumot...</p>
+                    <a href="#" class="news-card-link">Batafsil <i class="fas fa-chevron-right"></i></a>
+                </div>
+            </div>
+
+            <!-- Yangilik 4 -->
+            <div class="news-card">
+                <div class="news-card-image">
+                    <img src="img/yangiliklar/4.JPG" alt="Faxriylar">
+                    <span class="news-card-category">Ijtimoiy</span>
+                </div>
+                <div class="news-card-content">
+                    <div class="news-card-meta">
+                        <span><i class="far fa-clock"></i> 2 kun oldin</span>
+                        <span><i class="far fa-eye"></i> 4.3k</span>
+                    </div>
+                    <h4 class="news-card-title">Urush faxriylariga hurmat: "G'amxo'rlik" aksiyasi</h4>
+                    <p class="news-card-excerpt">Yosh harbiy xizmatchilar Ikkinchi jahon urushi va mehnat faxriylarining uylariga tashrif buyurib, ularni tabriklashdi...</p>
+                    <a href="#" class="news-card-link">Batafsil <i class="fas fa-chevron-right"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ko'proq yangiliklar tugmasi -->
+        <div class="news-footer">
+            <a href="#" class="btn-news-more">
+                <i class="fas fa-sync-alt"></i>
+                Ko'proq yangiliklar
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- VIDEO VA FOTO GALEREYA BO'LIMI -->
+<section class="gallery-section">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">FOTO VA <span>VIDEO GALEREYA</span></h2>
+            <p class="section-subtitle">Harbiy hayotdan lavhalar va muhim voqealar</p>
+        </div>
+
+        <!-- Galereya tabs -->
+        <div class="gallery-tabs">
+            <button class="gallery-tab active" data-tab="photo">Foto galereya</button>
+            <button class="gallery-tab" data-tab="video">Video galereya</button>
+        </div>
+
+        <!-- Foto galereya -->
+        <div class="gallery-content active" id="photo-gallery">
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="img/yangiliklar/1.JPG" alt="Harbiy parad">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h4>Mustaqillik paradiga tayyorgarlik</h4>
+                            <span>15 Fevral 2025</span>
+                        </div>
+                        <a href="#" class="gallery-zoom"><i class="fas fa-search-plus"></i></a>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="img/yangiliklar/10.JPG" alt="Mashg'ulotlar">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h4>Desantchilar mashg'ulotlari</h4>
+                            <span>10 Fevral 2025</span>
+                        </div>
+                        <a href="#" class="gallery-zoom"><i class="fas fa-search-plus"></i></a>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="img/yangiliklar/8.jpg" alt="Harbiy qasamyod">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h4>Yosh askarlar qasamyod qabul qilmoqda</h4>
+                            <span>5 Fevral 2025</span>
+                        </div>
+                        <a href="#" class="gallery-zoom"><i class="fas fa-search-plus"></i></a>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="img/yangiliklar/14.JPG" alt="Harbiy texnika">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h4>Yangi harbiy texnika ko'rgazmasi</h4>
+                            <span>1 Fevral 2025</span>
+                        </div>
+                        <a href="#" class="gallery-zoom"><i class="fas fa-search-plus"></i></a>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="img/yangiliklar/11.JPG" alt="Harbiy sport">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h4>Harbiy sport musobaqalari</h4>
+                            <span>28 Yanvar 2025</span>
+                        </div>
+                        <a href="#" class="gallery-zoom"><i class="fas fa-search-plus"></i></a>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="img/yangiliklar/6.JPG" alt="Faxriylar bilan uchrashuv">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h4>Faxriylar bilan uchrashuv</h4>
+                            <span>20 Yanvar 2025</span>
+                        </div>
+                        <a href="#" class="gallery-zoom"><i class="fas fa-search-plus"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Video galereya -->
+        <div class="gallery-content" id="video-gallery">
+            <div class="video-grid">
+                <div class="video-item">
+                    <div class="video-thumbnail">
+                        <img src="https://via.placeholder.com/400x250/1a4d3a/ffffff?text=Video+1" alt="Video 1">
+                        <a href="#" class="video-play"><i class="fas fa-play"></i></a>
+                    </div>
+                    <div class="video-info">
+                        <h4>Harbiy parad - to'liq video</h4>
+                        <span>23 Fevral 2025</span>
+                    </div>
+                </div>
+                <div class="video-item">
+                    <div class="video-thumbnail">
+                        <img src="https://via.placeholder.com/400x250/0b2d1f/ffffff?text=Video+2" alt="Video 2">
+                        <a href="#" class="video-play"><i class="fas fa-play"></i></a>
+                    </div>
+                    <div class="video-info">
+                        <h4>Harbiy havo kuchlari ko'rgazmasi</h4>
+                        <span>15 Fevral 2025</span>
+                    </div>
+                </div>
+                <div class="video-item">
+                    <div class="video-thumbnail">
+                        <img src="https://via.placeholder.com/400x250/2c5f4a/ffffff?text=Video+3" alt="Video 3">
+                        <a href="#" class="video-play"><i class="fas fa-play"></i></a>
+                    </div>
+                    <div class="video-info">
+                        <h4>Intervyu: Mudofaa vaziri</h4>
+                        <span>10 Fevral 2025</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- VIDEO GUIDE SECTION -->
+    
+
+    <!-- FOOTER SECTION -->
+    <footer id="information" class="footer" >
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-grid">
+                    <!-- Copyright column -->
+                    <div class="footer-col">
+                        <div class="footer-logo">
+                            <img width="50px"  src="img/123.png" alt="">
+                            <span>Mudofaa Vazirligi</span>
+                        </div>
+                        <p class="copyright-text">
+                            Ushbu saytda nashr etilgan materiallar<br>
+                            foydalanilganda army.gov.uz manbasi<br>
+                            ko'rsatilishi shart
+                        </p>
+                        <p class="copyright-year">
+                            <i class="far fa-copyright"></i> 2026 Barcha huquqlar himoyalangan
+                        </p>
+                    </div>
+
+                    <!-- Contact column -->
+                    <div  class="footer-col">
+                        <h3>ALOQA</h3>
+                        <div class="contact-info">
+                            <p>
+                                <i class="fas fa-map-marker-alt"></i>
+                                100000, Toshkent shahri, Mirzo Ulug‘bek ko‘chasi, 100
+                            </p>
+                            <p>
+                                <i class="fas fa-phone-alt"></i>
+                                <a href="tel:+998712698019">+998 71 269 80 19</a>
+                            </p>
+                            <p class="emergency-phone">
+                                <i class="fas fa-phone-volume"></i>
+                                <strong>1530</strong> (Ishonch telefoni)
+                            </p>
+                            <p>
+                                <i class="far fa-envelope"></i>
+                                <a href="mailto:mudofaa@mil.uz">mudofaa@mil.uz</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Social media column -->
+                    <div class="footer-col">
+                        <h3>BIZNI KUZATIB BORING!</h3>
+                        <div class="social-links">
+                            <a href=" https://t.me/Armygovuz" class="social-link"><i class="fab fa-telegram"></i></a>
+                            <!-- <a href="https://www.facebook.com/@Armygovuz" class="social-link"><i class="fab fa-facebook"></i></a> -->
+                            <a href=" https://instagram.com/Armygovuz" class="social-link"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.youtube.com/@Armygovuz" class="social-link"><i class="fab fa-youtube"></i></a>
+                            <!-- <a href="https://www.twintter.com/@Armygovuz" class="social-link"><i class="fab fa-twitter"></i></a> -->
+                        </div>
+                        
+                        <!-- Report text error -->
+                        <div class="report-error">
+                            <p>Matnda xato ko'rdingizmi?</p>
+                            <p class="error-instruction">
+                                <i class="fas fa-mouse-pointer"></i>
+                                Sichqoncha bilan belgilang va<br>
+                                <kbd>CTRL</kbd> + <kbd>Enter</kbd> ni bosing
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Quick links column -->
+                    <div class="footer-col">
+                        <h3>Tezkor havolalar</h3>
+                        <ul class="footer-links">
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Vakansiyalar</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Ariza berish</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Harbiy qismlar</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Matbuot xizmati</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Sayt xaritasi</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 O'zbekiston Respublikasi Mudofaa Vazirligi. Barcha huquqlar himoyalangan.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript fayl -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -608,3 +608,91 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+
+// yangiliklar
+// Galereya tablarini boshqarish
+document.addEventListener('DOMContentLoaded', function() {
+    const galleryTabs = document.querySelectorAll('.gallery-tab');
+    const galleryContents = document.querySelectorAll('.gallery-content');
+    
+    if (galleryTabs.length > 0) {
+        galleryTabs.forEach(tab => {
+            tab.addEventListener('click', function() {
+                // Active tab ni o'zgartirish
+                galleryTabs.forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+                
+                // Active content ni o'zgartirish
+                const tabId = this.dataset.tab;
+                galleryContents.forEach(content => {
+                    content.classList.remove('active');
+                    if (content.id === tabId + '-gallery') {
+                        content.classList.add('active');
+                    }
+                });
+            });
+        });
+    }
+});
+
+// yangiliklar
+
+// kabinet1
+// FAQ Accordion
+// document.addEventListener('DOMContentLoaded', function() {
+//     const faqItems = document.querySelectorAll('.faq-item');
+    
+//     if (faqItems.length > 0) {
+//         faqItems.forEach(item => {
+//             const question = item.querySelector('.faq-question');
+            
+//             question.addEventListener('click', function() {
+//                 // Active classni o'zgartirish
+//                 item.classList.toggle('active');
+                
+//                 // Boshqa ochiq FAQ larni yopish
+//                 faqItems.forEach(otherItem => {
+//                     if (otherItem !== item && otherItem.classList.contains('active')) {
+//                         otherItem.classList.remove('active');
+//                     }
+//                 });
+//             });
+//         });
+//     }
+// });
+
+// kabinet1
+
+// Region tabs bo'yicha vakansiyalarni filtrlash
+// document.addEventListener('DOMContentLoaded', function() {
+//     const regionTabs = document.querySelectorAll('.region-tab');
+//     const vacancyCards = document.querySelectorAll('.vacancy-card');
+    
+//     if (regionTabs.length > 0) {
+//         regionTabs.forEach(tab => {
+//             tab.addEventListener('click', function() {
+//                 // Active tabni o'zgartirish
+//                 regionTabs.forEach(t => t.classList.remove('active'));
+//                 this.classList.add('active');
+                
+//                 const selectedRegion = this.dataset.region;
+                
+//                 // Vakansiyalarni filtrlash
+//                 vacancyCards.forEach(card => {
+//                     if (selectedRegion === 'all') {
+//                         card.style.display = 'block';
+//                     } else {
+//                         if (card.dataset.region === selectedRegion) {
+//                             card.style.display = 'block';
+//                         } else {
+//                             card.style.display = 'none';
+//                         }
+//                     }
+//                 });
+//             });
+//         });
+//     }
+    
+    // Vakansiya ariza tugmalari
+    
