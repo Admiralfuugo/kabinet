@@ -159,8 +159,8 @@
                         <a href="saralash.html" data-i18n="requirements">SARALASH NIMA</a>
                         <a href="kbhxga.html" data-i18n="documents">KBHX ga</a>
                         <a href="ohtmga.html" data-i18n="exams">OXTM ga</a>
-                        <a href="#" data-i18n="benefits">HAL ga</a>
-                        <a href="#" data-i18n="benefitT">HTO'M GA</a>
+                        <a href="hal.html" data-i18n="benefits">HAL ga</a>
+                   
                     </div>
                 </li>
                 <li class="nav-item">
@@ -176,9 +176,7 @@
                     <a href="#"><i class="fas fa-newspaper"></i><span data-i18n="news">YANGILIKLAR</span></a>
                     <div class="dropdown-menu">
                         <a href="yangiliklar.html" data-i18n="latest">So'nggi yangiliklar</a>
-                        <a href="#" data-i18n="official">Rasmiy bayonotlar</a>
-                        <a href="#" data-i18n="photo">Foto galereya</a>
-                        <a href="#" data-i18n="video">Video materiallar</a>
+                       
                     </div>
                 </li>
                 <li class="nav-item">
@@ -196,10 +194,14 @@
                     <i class="fas fa-phone-alt"></i>
                     1530
                 </span>
+
                 <div class="user-info">
-                    <i class="fas fa-user-circle"></i>
-                    <span class="user-name">ANVAROV A.A.</span>
+                    <a href="profil.html" class="user-link">
+                        <img src="img/anvarov.png" alt="User" class="user-img">
+                        <span class="user-name">ANVAROV A.A.</span>
+                    </a>
                 </div>
+                
             </div>
 
             <!-- Mobile menu button -->
@@ -298,115 +300,208 @@
 
 
 <!-- KBHX ARIZA ALGORITMI - ENDI ARIZA TOPSHIRISH JUDDA OSON -->
-<section class="kbhx-section">
+<!-- ARIZA TOPSHIRISH BOSQICHLARI - HARBIY XIZMATGA QADAM -->
+<section class="application-steps-section">
     <div class="container">
-        <div class="section-header">
-            <h2>ENDI ARIZA TOPSHIRISH JUDDA OSON</h2>
-            <p>KBHX (Kadrlar va harbiy xizmat) bo'limiga ariza topshirish algoritmi</p>
+        <!-- <div class="section-header">
+            <h2 class="section-title">HARBIY XIZMATGA <span>QADAM</span></h2>
+            <p class="section-subtitle">Nomzodlar uchun ariza topshirishning oddiy va tushunarli bosqichlari</p>
+        </div> -->
+
+        <!-- Bosqichlar ketma-ketligi (bir qatorda) -->
+        <div class="steps-timeline">
+            <!-- 1-bosqich: Ro'yxatdan o'tish -->
+            <div class="timeline-step" data-step="1">
+                <div class="step-marker">
+                    <span class="step-number">1</span>
+                    <i class="fas fa-check-circle step-check"></i>
+                </div>
+                <div class="step-content">
+                    <div class="step-icon">
+                        <i class="fas fa-user-plus"></i>
+                    </div>
+                    <h4>ARIZA TOPASHIRISH</h4>
+                    
+                    <div class="step-status" id="status-step1">
+                        <span class="status-badge pending">Kutilmoqda</span>
+                    </div>
+                </div>
+                <div class="step-connector"></div>
+            </div>
+
+            <!-- 2-bosqich: Hujjat topshirish -->
+            <div class="timeline-step" data-step="2">
+                <div class="step-marker">
+                    <span class="step-number">2</span>
+                    <i class="fas fa-check-circle step-check"></i>
+                </div>
+                <div class="step-content">
+                    <div class="step-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h4>HUJJATLARNI TOPSHIRISH</h4>
+                    
+                    <div class="step-status" id="status-step2">
+                        <span class="status-badge pending">Kutilmoqda</span>
+                    </div>
+                </div>
+                <div class="step-connector"></div>
+            </div>
+
+            <!-- 3-bosqich: Tekshiruv -->
+            <div class="timeline-step" data-step="3">
+                <div class="step-marker">
+                    <span class="step-number">3</span>
+                    <i class="fas fa-check-circle step-check"></i>
+                </div>
+                <div class="step-content">
+                    <div class="step-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h4>HUJJATLARNI TEKSHIRISH</h4>
+                    
+                    <div class="step-status" id="status-step3">
+                        <span class="status-badge pending">Kutilmoqda</span>
+                    </div>
+                </div>
+                <div class="step-connector"></div>
+            </div>
+
+            <!-- 4-bosqich: Tibbiy ko'rik -->
+            <div class="timeline-step" data-step="4">
+                <div class="step-marker">
+                    <span class="step-number">4</span>
+                    <i class="fas fa-check-circle step-check"></i>
+                </div>
+                <div class="step-content">
+                    <div class="step-icon">
+                        <i class="fas fa-stethoscope"></i>
+                    </div>
+                    <h4>TIBBIY KO'RIDAN O'TISH</h4>
+                    
+                    <div class="step-status" id="status-step4">
+                        <span class="status-badge pending">Kutilmoqda</span>
+                    </div>
+                </div>
+                <div class="step-connector"></div>
+            </div>
+
+            <!-- 5-bosqich: Jismoniy tayyorgarlik -->
+            <div class="timeline-step" data-step="5">
+                <div class="step-marker">
+                    <span class="step-number">5</span>
+                    <i class="fas fa-check-circle step-check"></i>
+                </div>
+                <div class="step-content">
+                    <div class="step-icon">
+                        <i class="fas fa-running"></i>
+                    </div>
+                    <h4>JISMONIY TAYYOR GARLIK</h4>
+                   
+                    <div class="step-status" id="status-step5">
+                        <span class="status-badge pending">Kutilmoqda</span>
+                    </div>
+                </div>
+                <div class="step-connector"></div>
+            </div>
+
+            <!-- 6-bosqich: Suhbat -->
+            <div class="timeline-step" data-step="6">
+                <div class="step-marker">
+                    <span class="step-number">6</span>
+                    <i class="fas fa-check-circle step-check"></i>
+                </div>
+                <div class="step-content">
+                    <div class="step-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h4>PSIXOLOGIK TESTDAN O'TISH</h4>
+                    
+                    <div class="step-status" id="status-step6">
+                        <span class="status-badge pending">Kutilmoqda</span>
+                    </div>
+                </div>
+                <div class="step-connector"></div>
+            </div>
+
+            <!-- 7-bosqich: Qasamyod -->
+            <div class="timeline-step" data-step="7">
+                <div class="step-marker">
+                    <span class="step-number">7</span>
+                    <i class="fas fa-check-circle step-check"></i>
+                </div>
+                <div class="step-content">
+                    <div class="step-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h4>QASAMYOD QABUL QILISH</h4>
+                    
+                    <div class="step-status" id="status-step7">
+                        <span class="status-badge pending">Kutilmoqda</span>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <!-- 1-qator: 3 ta karta -->
-        <div class="kbhx-grid">
-            <!-- Karta 1 -->
-            <div class="kbhx-card">
-                <div class="kbhx-icon">
-                    <i class="fas fa-user-edit"></i>
-                    <span class="kbhx-step">1-qadam</span>
+        <!-- Nomzod ma'lumotlari va joriy holat -->
+        <!-- <div class="candidate-info-panel">
+            <div class="candidate-profile">
+                <div class="profile-avatar">
+                    <i class="fas fa-user-shield"></i>
                 </div>
-                <h3>Shaxsiy ma'lumotlarni kiritish</h3>
-                <p>Onlayn ariza formasiga ism, familiya, sharifingizni kiriting</p>
-                <div class="kbhx-details">
-                    <span><i class="fas fa-check-circle"></i> Pasport ma'lumotlari</span>
-                    <span><i class="fas fa-check-circle"></i> Yashash manzili</span>
-                    <span><i class="fas fa-check-circle"></i> Telefon raqami</span>
+                <div class="profile-details">
+                    <h4>Nomzod: <span id="candidateName">Karimov Jasur Akmalovich</span></h4>
+                    <p><i class="fas fa-id-card"></i> Passport: AB1234567</p>
+                    <p><i class="fas fa-phone"></i> Telefon: +998 99 123 45 67</p>
                 </div>
             </div>
 
-            <!-- Karta 2 -->
-            <div class="kbhx-card">
-                <div class="kbhx-icon">
-                    <i class="fas fa-file-upload"></i>
-                    <span class="kbhx-step">2-qadam</span>
+            <div class="candidate-progress">
+                <div class="progress-header">
+                    <span class="progress-title">Umumiy tayyorgarlik</span>
+                    <span class="progress-percent" id="progressPercent">0%</span>
                 </div>
-                <h3>Hujjatlarni yuklash</h3>
-                <p>Kerakli hujjatlarni elektron shaklda tizimga yuklang</p>
-                <div class="kbhx-details">
-                    <span><i class="fas fa-check-circle"></i> Pasport nusxasi</span>
-                    <span><i class="fas fa-check-circle"></i> Ma'lumot haqida hujjat</span>
-                    <span><i class="fas fa-check-circle"></i> 3x4 fotosurat</span>
+                <div class="progress-bar-container">
+                    <div class="progress-bar-fill" id="progressBar" style="width: 0%"></div>
                 </div>
-            </div>
-
-            <!-- Karta 3 -->
-            <div class="kbhx-card">
-                <div class="kbhx-icon">
-                    <i class="fas fa-paper-plane"></i>
-                    <span class="kbhx-step">3-qadam</span>
-                </div>
-                <h3>Arizani jo'natish</h3>
-                <p>Arizangizni tekshirib, yakuniy jo'natishni amalga oshiring</p>
-                <div class="kbhx-details">
-                    <span><i class="fas fa-check-circle"></i> Ma'lumotlarni tekshirish</span>
-                    <span><i class="fas fa-check-circle"></i> Tasdiqlash kodi</span>
-                    <span><i class="fas fa-check-circle"></i> Jo'natish</span>
+                <div class="current-step-info">
+                    <i class="fas fa-arrow-right"></i>
+                    <span id="currentStepText">Hozirgi bosqich: Ro'yxatdan o'tish</span>
                 </div>
             </div>
-        </div>
+        </div> -->
 
-        <!-- 2-qator: 3 ta karta -->
-        <div class="kbhx-grid second-row">
-            <!-- Karta 4 -->
-            <div class="kbhx-card">
-                <div class="kbhx-icon">
-                    <i class="fas fa-clock"></i>
-                    <span class="kbhx-step">4-qadam</span>
-                </div>
-                <h3>Ariza holatini kuzatish</h3>
-                <p>Arizangiz qaysi bosqichda ekanligini onlayn kuzatib boring</p>
-                <div class="kbhx-details">
-                    <span><i class="fas fa-check-circle"></i> SMS bildirishnoma</span>
-                    <span><i class="fas fa-check-circle"></i> Shaxsiy kabinet</span>
-                    <span><i class="fas fa-check-circle"></i> Qabul qilingan sana</span>
-                </div>
+        <!-- Bosqichlarni boshqarish paneli (demo uchun) -->
+        <!-- <div class="steps-control-panel">
+            <h4><i class="fas fa-cog"></i> Bosqichlarni boshqarish (demo rejimi)</h4>
+            <div class="control-buttons">
+                <button class="control-btn" data-step="1">1-bosqich</button>
+                <button class="control-btn" data-step="2">2-bosqich</button>
+                <button class="control-btn" data-step="3">3-bosqich</button>
+                <button class="control-btn" data-step="4">4-bosqich</button>
+                <button class="control-btn" data-step="5">5-bosqich</button>
+                <button class="control-btn" data-step="6">6-bosqich</button>
+                <button class="control-btn" data-step="7">7-bosqich</button>
+                <button class="control-btn reset-btn" id="resetSteps">Qayta boshlash</button>
             </div>
+            <p class="control-note">* Bu panel faqat ko'rsatish uchun. Haqiqiy tizimda bosqichlar avtomatik yangilanadi.</p>
+        </div> -->
 
-            <!-- Karta 5 -->
-            <div class="kbhx-card">
-                <div class="kbhx-icon">
-                    <i class="fas fa-calendar-check"></i>
-                    <span class="kbhx-step">5-qadam</span>
-                </div>
-                <h3>Navbat va sana belgilash</h3>
-                <p>Harbiy komissarlikka borish uchun qulay sana va vaqtni tanlang</p>
-                <div class="kbhx-details">
-                    <span><i class="fas fa-check-circle"></i> Onlayn navbat</span>
-                    <span><i class="fas fa-check-circle"></i> Eslatma xizmati</span>
-                    <span><i class="fas fa-check-circle"></i> Kerakli hujjatlar</span>
-                </div>
+        <!-- Qo'shimcha ma'lumot -->
+        <!-- <div class="steps-info-footer">
+            <div class="info-item">
+                <i class="fas fa-clock"></i>
+                <span>O'rtacha davomiylik: 15-20 kun</span>
             </div>
-
-            <!-- Karta 6 -->
-            <div class="kbhx-card">
-                <div class="kbhx-icon">
-                    <i class="fas fa-check-double"></i>
-                    <span class="kbhx-step">6-qadam</span>
-                </div>
-                <h3>Yakuniy natija</h3>
-                <p>Arizangiz ko'rib chiqilib, sizga javob beriladi</p>
-                <div class="kbhx-details">
-                    <span><i class="fas fa-check-circle"></i> Qabul qilingan</span>
-                    <span><i class="fas fa-check-circle"></i> Qo'shimcha hujjat</span>
-                    <span><i class="fas fa-check-circle"></i> Rad etilgan</span>
-                </div>
+            <div class="info-item">
+                <i class="fas fa-bell"></i>
+                <span>Har bir bosqich tugagach SMS orqali xabar beramiz</span>
             </div>
-        </div>
-
-        <div class="kbhx-cta">
-            <a href="ariza.html" class="kbhx-apply-btn">
-                <i class="fas fa-file-signature"></i> ARIZA BERISH
-            </a>
-            
-        </div>
+            <div class="info-item">
+                <i class="fas fa-headset"></i>
+                <span>Savollar bo'lsa: 1530 ishonch telefoni</span>
+            </div>
+        </div> -->
     </div>
 </section>
 

@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="img/123.png">
+    <title>Mudofaa Vazirligi | Rasmiy veb-sayt</title>
+    
+    <!-- Font Awesome 5 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+    <!-- CSS fayl -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- NAVBAR SECTION -->
+    <nav class="navbar">
+        <!-- Top bar - Qidiruv qismi birinchi qator -->
+        <div class="top-bar">
+
+            <!-- <div class="top-bar-left">
+                
+                <img width="50px"  src="123.png" alt="">
+                
+                <span class="ministry-name">O'ZBEKISTON RESPUBLIKASI MUDOFAA VAZIRLIGI</span>
+                
+            </div> -->
+
+            <div style="display: flex; align-items: center;">
+                <a href="index.html">
+                <img src="img/123.png" style="width: 30px; height: 30px; margin-right: 5px;">
+                <span style="color: azure; text-align: center;">O'ZBEKISTON RESPUBLIKASI MUDOFAA VAZIRLIGI ㅤ</span></a>
+                <span class="date-time" id="currentDateTime">
+                    <i class="far fa-calendar-alt"></i>
+                    <span id="date"></span>
+                    <i class="far fa-clock" style="margin-left: 10px;"></i>
+                    <span id="time"></span>
+                </span>
+            </div>
+
+
+
+            <div class="top-bar-right">
+                <!-- Search box birinchi qatorda -->
+                <div class="search-box-top">
+                    <input type="text" placeholder="Qidirish..." id="searchInput">
+                    <button id="searchBtn"><i class="fas fa-search"></i></button>
+                </div>
+
+                <!-- Til tanlash -->
+                <div class="language-selector">
+                    <button class="lang-btn active" data-lang="uz">UZ</button>
+                    <button class="lang-btn" data-lang="ru">RU</button>
+                    <button class="lang-btn" data-lang="en">EN</button>
+                </div>
+
+                <!-- Bildirishnomalar -->
+                <div class="notifications">
+                    <button class="notification-btn" id="notificationBtn">
+                        <i class="far fa-bell"></i>
+                        <span class="notification-badge">3</span>
+                    </button>
+                    <div class="notification-dropdown" id="notificationDropdown">
+                        <div class="notification-header">
+                            <h4>Bildirishnomalar</h4>
+                            <span class="mark-read">Hammasini o'qildi deb belgilash</span>
+                        </div>
+                        <div class="notification-list">
+                            <div class="notification-item unread">
+                                <i class="fas fa-bullhorn notification-icon"></i>
+                                <div class="notification-content">
+                                    <p class="notification-text">Yangi vakansiya e'lon qilindi</p>
+                                    <span class="notification-time">5 daqiqa oldin</span>
+                                </div>
+                            </div>
+                            <div class="notification-item unread">
+                                <i class="fas fa-file-alt notification-icon"></i>
+                                <div class="notification-content">
+                                    <p class="notification-text">Arizangiz ko'rib chiqilmoqda</p>
+                                    <span class="notification-time">1 soat oldin</span>
+                                </div>
+                            </div>
+                            <div class="notification-item">
+                                <i class="fas fa-calendar-check notification-icon"></i>
+                                <div class="notification-content">
+                                    <p class="notification-text">Harbiy qasamyod marosimi</p>
+                                    <span class="notification-time">1 kun oldin</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="notification-footer">
+                            <a href="#">Barcha bildirishnomalar</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kun/tun rejimi -->
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                </button>
+
+                
+
+            </div>
+        </div>
+
+        <!-- Main navbar - ikkinchi qator (o'rta qism) -->
+        <div class="main-nav">
+            <ul class="nav-links">
+                <li class="nav-item">
+                    <a href="#"><i class="fas fa-home"></i><span data-i18n="about">BIZ HAQIMIZDA</span></a>
+                    <div class="dropdown-menu">
+                        <a href="https://gov.uz/oz/mudofaa/pages/about" data-i18n="history">Vazirlik</a>
+                        <a href="https://gov.uz/oz/mudofaa/guides" data-i18n="leadership">Rahbariyat</a>
+                        <a href="#information" data-i18n="tasks">Bog'lanish</a>
+                        <a href="#" data-i18n="symbols">Ko'p beriladigan savollar</a>
+                        
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="#"><i class="fas fa-briefcase"></i><span data-i18n="career">KARYERA</span></a>
+                    <div class="dropdown-menu">
+                        <a href="#" data-i18n="militaryService">Bu nima</a>
+                        <a href="#" data-i18n="contract">Harbiy xizmatga qadar</a>
+                        <a href="#" data-i18n="academies">Harbiy xizmat davomida</a>
+                        <a href="https://vacancy.gov.uz/" data-i18n="internship"></a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="#"><i class="fas fa-users"></i><span data-i18n="candidates">NOMZODLARGA</span></a>
+                    <div class="dropdown-menu">
+                        <a href="#" data-i18n="requirements">Saralash</a>
+                        <a href="#" data-i18n="documents">KBHX ga</a>
+                        <a href="#" data-i18n="exams">OXTM ga</a>
+                        <a href="#" data-i18n="benefits">HAL ga</a>
+                        <a href="#" data-i18n="benefitT">HTO'M GA</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="#"><i class="fas fa-bullhorn"></i><span data-i18n="vacancies">VAKANSIYA</span></a>
+                    <div class="dropdown-menu">
+                        <a href="#" data-i18n="officers">Ofitserlar</a>
+                        <a href="#" data-i18n="sergeants">Serjantlar</a>
+                        <a href="#" data-i18n="specialists">Mutaxassislar</a>
+                        <a href="#" data-i18n="civilians">Fuqarolik xodimlari</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="#"><i class="fas fa-newspaper"></i><span data-i18n="news">YANGILIKLAR</span></a>
+                    <div class="dropdown-menu">
+                        <a href="#" data-i18n="latest">So'nggi yangiliklar</a>
+                        <a href="#" data-i18n="official">Rasmiy bayonotlar</a>
+                        <a href="#" data-i18n="photo">Foto galereya</a>
+                        <a href="#" data-i18n="video">Video materiallar</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="hujjatlar.html"><i class="fas fa-newspaper"></i><span data-i18n="datess">HUJJATLAR</span></a>
+                </li>
+            </ul>
+
+            <!-- Application button (o'rta qatorning o'ng qismi) -->
+            <div class="main-nav-actions">
+                <a href="ariza.html" class="application-btn">
+                    <i class="fas fa-file-alt"></i>
+                    <span data-i18n="apply">ARIZA BERISH</span>
+                </a>
+                <span class="phone-number">
+                    <i class="fas fa-phone-alt"></i>
+                    1530
+                </span>
+                <div class="user-info">
+                    <a href="profil.html" class="user-link">
+                        <img src="img/anvarov.png" alt="User" class="user-img">
+                        <span class="user-name">ANVAROV A.A.</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Mobile menu button -->
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+       
+   </nav>
+
+<!-- BACKGROUND IMAGE SECTION -->
+
+
+<!-- NOMZODNING SHAXSIY KABINETI -->
+<section class="personal-cabinet-section">
+    <div class="container">
+        
+
+        <div class="cabinet-wrapper">
+            <!-- Chap panel - Nomzod profili -->
+            <div class="cabinet-sidebar">
+                <div class="profile-card">
+                    <div class="profile-avatar-large">
+                        <img src="img/anvarov.png" alt="Nomzod">
+                        <button class="avatar-edit" title="Rasmni o'zgartirish">
+                            <i class="fas fa-camera"></i>
+                        </button>
+                    </div>
+                    <h3 class="profile-name">Anvarov Akbarali Abobakirovich</h3>
+                    <p class="profile-id"><i class="fas fa-id-card"></i> ID: MV-2026-00234</p>
+                    
+                    <div class="profile-badge">
+                        <span class="badge-status active">
+                            <i class="fas fa-circle"></i> Aktiv nomzod
+                        </span>
+                    </div>
+
+                    <div class="profile-stats">
+                        <div class="stat-item">
+                            <span class="stat-value">87%</span>
+                            <span class="stat-label">Profillik</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">4/7</span>
+                            <span class="stat-label">Bosqich</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">15</span>
+                            <span class="stat-label">Kun</span>
+                        </div>
+                    </div>
+
+                    <div class="profile-contact">
+                        <h4>Bog'lanish ma'lumotlari</h4>
+                        <p><i class="fas fa-phone"></i> +998 99 123 45 67</p>
+                        <p><i class="fas fa-envelope"></i> j.karimov@mail.uz</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Toshkent, Yunusobod tumani</p>
+                    </div>
+
+                    <div class="profile-actions">
+                        <button class="btn-profile" id="editProfileBtn">
+                            <i class="fas fa-user-edit"></i> Profilni tahrirlash
+                        </button>
+                        <button class="btn-profile btn-logout" id="logoutBtn">
+                            <i class="fas fa-sign-out-alt"></i> Chiqish
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Tezkor havolalar -->
+                <div class="quick-links-card">
+                    <h4><i class="fas fa-link"></i> Tezkor havolalar</h4>
+                    <ul class="quick-links">
+                        <li><a href="#"><i class="fas fa-file-alt"></i> Mening arizalarim</a></li>
+                        <li><a href="#"><i class="fas fa-download"></i> Hujjatlar shabloni</a></li>
+                        <li><a href="#"><i class="fas fa-question-circle"></i> Ko'p so'raladigan savollar</a></li>
+                        <li><a href="#"><i class="fas fa-headset"></i> Texnik yordam</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- O'ng panel - Asosiy ma'lumotlar -->
+            <div class="cabinet-main">
+                <!-- Ariza holati kartasi -->
+                <div class="status-card">
+                    <div class="status-header">
+                        <h3><i class="fas fa-file-signature"></i> Ariza holati</h3>
+                        <span class="status-date">Oxirgi yangilanish: 06.03.2026 14:30</span>
+                    </div>
+
+                    <div class="application-status">
+                        <div class="status-tracker">
+                            <div class="tracker-step completed">
+                                <div class="tracker-icon"><i class="fas fa-check"></i></div>
+                                <span>Ro'yxatdan o'tish</span>
+                                <small>05.03.2026</small>
+                            </div>
+                            <div class="tracker-step completed">
+                                <div class="tracker-icon"><i class="fas fa-check"></i></div>
+                                <span>Hujjat topshirish</span>
+                                <small>05.03.2026</small>
+                            </div>
+                            <div class="tracker-step active">
+                                <div class="tracker-icon"><i class="fas fa-spinner"></i></div>
+                                <span>Tekshiruv</span>
+                                <small>Jarayonda</small>
+                            </div>
+                            <div class="tracker-step pending">
+                                <div class="tracker-icon"><i class="fas fa-clock"></i></div>
+                                <span>Tibbiy ko'rik</span>
+                                <small>Kutilmoqda</small>
+                            </div>
+                            <div class="tracker-step pending">
+                                <div class="tracker-icon"><i class="fas fa-clock"></i></div>
+                                <span>Jismoniy tayyorlik</span>
+                                <small>Kutilmoqda</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Progress bar -->
+                    <div class="application-progress">
+                        <div class="progress-label">
+                            <span>Umumiy tayyorgarlik</span>
+                            <span class="progress-value">43%</span>
+                        </div>
+                        <div class="progress-track">
+                            <div class="progress-fill" style="width: 43%"></div>
+                        </div>
+                    </div>
+
+                    <!-- Navbatdagi topshiriq -->
+                    <div class="next-task">
+                        <i class="fas fa-bell"></i>
+                        <div>
+                            <strong>Navbatdagi topshiriq:</strong>
+                            <p>Hujjatlarni tekshirish yakunlanishini kuting. Taxminiy vaqt: 2-3 kun</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hujjatlar kartasi -->
+                <div class="documents-card">
+                    <div class="card-header">
+                        <h3><i class="fas fa-folder-open"></i> Mening hujjatlarim</h3>
+                        <button class="btn-upload" id="uploadDocBtn">
+                            <i class="fas fa-upload"></i> Yuklash
+                        </button>
+                    </div>
+
+                    <div class="documents-list">
+                        <div class="document-item approved">
+                            <div class="doc-icon"><i class="fas fa-file-pdf"></i></div>
+                            <div class="doc-info">
+                                <h4>Pasport nusxasi</h4>
+                                <p>Yuklangan: 05.03.2026 | Hajm: 2.4 MB</p>
+                            </div>
+                            <div class="doc-status approved">
+                                <i class="fas fa-check-circle"></i> Tasdiqlangan
+                            </div>
+                            <div class="doc-actions">
+                                <button title="Ko'rish"><i class="fas fa-eye"></i></button>
+                                <button title="Yuklash"><i class="fas fa-download"></i></button>
+                            </div>
+                        </div>
+
+                        <div class="document-item approved">
+                            <div class="doc-icon"><i class="fas fa-file-image"></i></div>
+                            <div class="doc-info">
+                                <h4>3x4 fotosurat</h4>
+                                <p>Yuklangan: 05.03.2026 | Hajm: 1.2 MB</p>
+                            </div>
+                            <div class="doc-status approved">
+                                <i class="fas fa-check-circle"></i> Tasdiqlangan
+                            </div>
+                            <div class="doc-actions">
+                                <button title="Ko'rish"><i class="fas fa-eye"></i></button>
+                                <button title="Yuklash"><i class="fas fa-download"></i></button>
+                            </div>
+                        </div>
+
+                        <div class="document-item pending">
+                            <div class="doc-icon"><i class="fas fa-file-pdf"></i></div>
+                            <div class="doc-info">
+                                <h4>Diplom nusxasi</h4>
+                                <p>Yuklangan: 05.03.2026 | Hajm: 3.1 MB</p>
+                            </div>
+                            <div class="doc-status pending">
+                                <i class="fas fa-clock"></i> Tekshirilmoqda
+                            </div>
+                            <div class="doc-actions">
+                                <button title="Ko'rish"><i class="fas fa-eye"></i></button>
+                                <button title="Yuklash"><i class="fas fa-download"></i></button>
+                            </div>
+                        </div>
+
+                        <div class="document-item missing">
+                            <div class="doc-icon"><i class="fas fa-file-medical"></i></div>
+                            <div class="doc-info">
+                                <h4>Tibbiy ma'lumotnoma</h4>
+                                <p>Talab qilinadi | Format: PDF/JPG</p>
+                            </div>
+                            <div class="doc-status missing">
+                                <i class="fas fa-exclamation-triangle"></i> Yuklanmagan
+                            </div>
+                            <div class="doc-actions">
+                                <button class="btn-upload-small" title="Yuklash">
+                                    <i class="fas fa-upload"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Xabarlar va bildirishnomalar -->
+                <div class="notifications-card">
+                    <div class="card-header">
+                        <h3><i class="fas fa-bell"></i> So'nggi xabarlar</h3>
+                        <span class="badge-new">3 ta yangi</span>
+                    </div>
+
+                    <div class="notifications-list">
+                        <div class="notification-item unread">
+                            <div class="notif-icon"><i class="fas fa-check-circle"></i></div>
+                            <div class="notif-content">
+                                <h4>Hujjatlar tasdiqlandi</h4>
+                                <p>Pasport va fotosurat muvaffaqiyatli tasdiqlandi</p>
+                                <span class="notif-time">2 soat oldin</span>
+                            </div>
+                        </div>
+
+                        <div class="notification-item unread">
+                            <div class="notif-icon"><i class="fas fa-clock"></i></div>
+                            <div class="notif-content">
+                                <h4>Tibbiy ko'rik vaqti</h4>
+                                <p>10.03.2026 kuni soat 10:00 da tibbiy ko'rikdan o'ting</p>
+                                <span class="notif-time">1 kun oldin</span>
+                            </div>
+                        </div>
+
+                        <div class="notification-item read">
+                            <div class="notif-icon"><i class="fas fa-info-circle"></i></div>
+                            <div class="notif-content">
+                                <h4>Ariza qabul qilindi</h4>
+                                <p>Arizangiz muvaffaqiyatli qabul qilindi</p>
+                                <span class="notif-time">2 kun oldin</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="notifications-footer">
+                        <a href="#" class="view-all">Barcha xabarlarni ko'rish</a>
+                    </div>
+                </div>
+
+                <!-- Kalendar va muhim sanalar -->
+                <div class="calendar-card">
+                    <h3><i class="fas fa-calendar-alt"></i> Muhim sanalar</h3>
+                    <div class="calendar-list">
+                        <div class="calendar-item">
+                            <div class="calendar-date">
+                                <span class="date-day">10</span>
+                                <span class="date-month">Mart</span>
+                            </div>
+                            <div class="calendar-event">
+                                <h4>Tibbiy ko'rik</h4>
+                                <p>Soat 10:00, Markaziy harbiy kasalxona</p>
+                            </div>
+                        </div>
+                        <div class="calendar-item">
+                            <div class="calendar-date">
+                                <span class="date-day">15</span>
+                                <span class="date-month">Mart</span>
+                            </div>
+                            <div class="calendar-event">
+                                <h4>Jismoniy tayyorgarlik testi</h4>
+                                <p>Soat 09:00, Sport majmuasi</p>
+                            </div>
+                        </div>
+                        <div class="calendar-item">
+                            <div class="calendar-date">
+                                <span class="date-day">20</span>
+                                <span class="date-month">Mart</span>
+                            </div>
+                            <div class="calendar-event">
+                                <h4>Suhbat</h4>
+                                <p>Soat 14:00, Harbiy qism 12345</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+<!-- SARALASH FAQ SECTION -->
+
+
+<!-- BACKGROUND IMAGE SECTION -->
+  
+
+    <!-- FOOTER SECTION -->
+    <footer id="information" class="footer" >
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-grid">
+                    <!-- Copyright column -->
+                    <div class="footer-col">
+                        <div class="footer-logo">
+                            <img width="50px"  src="img/123.png" alt="">
+                            <span>Mudofaa Vazirligi</span>
+                        </div>
+                        <p class="copyright-text">
+                            Ushbu saytda nashr etilgan materiallar<br>
+                            foydalanilganda army.gov.uz manbasi<br>
+                            ko'rsatilishi shart
+                        </p>
+                        <p class="copyright-year">
+                            <i class="far fa-copyright"></i> 2026 Barcha huquqlar himoyalangan
+                        </p>
+                    </div>
+
+                    <!-- Contact column -->
+                    <div  class="footer-col">
+                        <h3>ALOQA</h3>
+                        <div class="contact-info">
+                            <p>
+                                <i class="fas fa-map-marker-alt"></i>
+                                100000, Toshkent shahri, Mirzo Ulug‘bek ko‘chasi, 100
+                            </p>
+                            <p>
+                                <i class="fas fa-phone-alt"></i>
+                                <a href="tel:+998712698019">+998 71 269 80 19</a>
+                            </p>
+                            <p class="emergency-phone">
+                                <i class="fas fa-phone-volume"></i>
+                                <strong>1530</strong> (Ishonch telefoni)
+                            </p>
+                            <p>
+                                <i class="far fa-envelope"></i>
+                                <a href="mailto:mudofaa@mil.uz">mudofaa@mil.uz</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Social media column -->
+                    <div class="footer-col">
+                        <h3>BIZNI KUZATIB BORING!</h3>
+                        <div class="social-links">
+                            <a href=" https://t.me/Armygovuz" class="social-link"><i class="fab fa-telegram"></i></a>
+                            <!-- <a href="https://www.facebook.com/@Armygovuz" class="social-link"><i class="fab fa-facebook"></i></a> -->
+                            <a href=" https://instagram.com/Armygovuz" class="social-link"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.youtube.com/@Armygovuz" class="social-link"><i class="fab fa-youtube"></i></a>
+                            <!-- <a href="https://www.twintter.com/@Armygovuz" class="social-link"><i class="fab fa-twitter"></i></a> -->
+                        </div>
+                        
+                        <!-- Report text error -->
+                        <div class="report-error">
+                            <p>Matnda xato ko'rdingizmi?</p>
+                            <p class="error-instruction">
+                                <i class="fas fa-mouse-pointer"></i>
+                                Sichqoncha bilan belgilang va<br>
+                                <kbd>CTRL</kbd> + <kbd>Enter</kbd> ni bosing
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Quick links column -->
+                    <div class="footer-col">
+                        <h3>Tezkor havolalar</h3>
+                        <ul class="footer-links">
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Vakansiyalar</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Ariza berish</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Harbiy qismlar</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Matbuot xizmati</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Sayt xaritasi</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 O'zbekiston Respublikasi Mudofaa Vazirligi. Barcha huquqlar himoyalangan.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript fayl -->
+    <script src="script.js"></script>
+</body>
+</html>

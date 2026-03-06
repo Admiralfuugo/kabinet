@@ -696,3 +696,237 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Vakansiya ariza tugmalari
     
+    /* oson ariza */
+    // Ariza bosqichlarini boshqarish
+document.addEventListener('DOMContentLoaded', function() {
+    // Bosqichlar ma'lumotlari
+    const steps = document.querySelectorAll('.timeline-step');
+    const stepStatuses = [
+        document.getElementById('status-step1'),
+        document.getElementById('status-step2'),
+        document.getElementById('status-step3'),
+        document.getElementById('status-step4'),
+        document.getElementById('status-step5'),
+        document.getElementById('status-step6'),
+        document.getElementById('status-step7')
+    ];
+    
+    const progressBar = document.getElementById('progressBar');
+    const progressPercent = document.getElementById('progressPercent');
+    const currentStepText = document.getElementById('currentStepText');
+    
+    const stepNames = [
+        'Ro\'yxatdan o\'tish',
+        'Hujjat topshirish',
+        'Hujjatlarni tekshirish',
+        'Tibbiy ko\'rik',
+        'Jismoniy tayyorgarlik',
+        'Suhbat',
+        'Harbiy qasamyod'
+    ];
+    
+    let currentStep = 1; // 1-bosqichdan boshlanadi
+    
+    // Bosqichni yangilash
+    function updateStep(stepNumber) {
+        // Avvalgi aktiv va completed larni tozalash
+        steps.forEach(step => {
+            step.classList.remove('active', 'completed');
+        });
+        
+        // Bosqichlarni yangilash
+        for (let i = 0; i < steps.length; i++) {
+            if (i + 1 < stepNumber) {
+                // Tugallangan bosqichlar
+                steps[i].classList.add('completed');
+                if (stepStatuses[i]) {
+                    stepStatuses[i].innerHTML = '<span class="status-badge completed">Bajarildi</span>';
+                }
+            } else if (i + 1 === stepNumber) {
+                // Joriy bosqich
+                steps[i].classList.add('active');
+                if (stepStatuses[i]) {
+                    stepStatuses[i].innerHTML = '<span class="status-badge processing">Jarayonda</span>';
+                }
+            } else {
+                // Kelgusi bosqichlar
+                if (stepStatuses[i]) {
+                    stepStatuses[i].innerHTML = '<span class="status-badge pending">Kutilmoqda</span>';
+                }
+            }
+        }
+        
+        // Progress barni yangilash
+        const progress = Math.round((stepNumber / steps.length) * 100);
+        progressBar.style.width = progress + '%';
+        progressPercent.textContent = progress + '%';
+        
+        // Joriy bosqich matnini yangilash
+        currentStepText.innerHTML = `<i class="fas fa-arrow-right"></i> Hozirgi bosqich: ${stepNames[stepNumber - 1]}`;
+    }
+    
+    // Bosqichga o'tish (control tugmalari uchun)
+    function goToStep(stepNumber) {
+        if (stepNumber >= 1 && stepNumber <= steps.length) {
+            currentStep = stepNumber;
+            updateStep(currentStep);
+        }
+    }
+    
+    // Bosqichni qayta boshlash
+    function resetSteps() {
+        currentStep = 1;
+        updateStep(currentStep);
+    }
+    
+    // Control tugmalari
+    const controlButtons = document.querySelectorAll('.control-btn[data-step]');
+    const resetButton = document.getElementById('resetSteps');
+    
+    controlButtons.forEach(btn => {
+        btn.addEventListener('click', function() {
+            const step = parseInt(this.dataset.step);
+            if (!isNaN(step)) {
+                goToStep(step);
+            }
+        });
+    });
+    
+    if (resetButton) {
+        resetButton.addEventListener('click', resetSteps);
+    }
+    
+    // Timeline step'larga click (tez o'tish uchun)
+    steps.forEach((step, index) => {
+        step.addEventListener('click', function() {
+            goToStep(index + 1);
+        });
+    });
+    
+    // Boshlang'ich holat
+    updateStep(currentStep);
+    
+    // Real tizim simulyatsiyasi (har 5 sekundda bosqich o'zgaradi)
+    // Bu faqat demo uchun
+    let autoProgress = true;
+    if (autoProgress) {
+        let interval = setInterval(() => {
+            if (currentStep < steps.length) {
+                currentStep++;
+                updateStep(currentStep);
+            } else {
+                clearInterval(interval);
+            }
+        }, 5000); // Har 5 sekundda bosqich o'zgaradi
+    }
+});
+    /* oson ariza */
+
+    
+// profil uchun bosh
+// Shaxsiy kabinet funksiyalari
+document.addEventListener('DOMContentLoaded', function() {
+    // Profilni tahrirlash
+    const editProfileBtn = document.getElementById('editProfileBtn');
+    if (editProfileBtn) {
+        editProfileBtn.addEventListener('click', function() {
+            alert('Profilni tahrirlash oynasi ochiladi');
+            // Bu yerda modal oyna ochish mumkin
+        });
+    }
+    
+    // Chiqish
+    const logoutBtn = document.getElementById('logoutBtn');
+    if (logoutBtn) {
+        logoutBtn.addEventListener('click', function() {
+            if (confirm('Tizimdan chiqishni xohlaysizmi?')) {
+                window.location.href = 'index.html';
+            }
+        });
+    }
+    
+    // Hujjat yuklash
+    const uploadDocBtn = document.getElementById('uploadDocBtn');
+    if (uploadDocBtn) {
+        uploadDocBtn.addEventListener('click', function() {
+            alert('Hujjat yuklash oynasi ochiladi');
+        });
+    }
+    
+    // Kichik yuklash tugmalari
+    const uploadSmallBtns = document.querySelectorAll('.btn-upload-small');
+    uploadSmallBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            alert('Hujjat yuklash oynasi');
+        });
+    });
+    
+    // Hujjatlarni ko'rish
+    const viewButtons = document.querySelectorAll('.doc-actions button:first-child');
+    viewButtons.forEach(btn => {
+        btn.addEventListener('click', function() {
+            const docName = this.closest('.document-item').querySelector('.doc-info h4').textContent;
+            alert(`${docName} - hujjatni ko'rish`);
+        });
+    });
+    
+    // Hujjatlarni yuklash
+    const downloadButtons = document.querySelectorAll('.doc-actions button:nth-child(2)');
+    downloadButtons.forEach(btn => {
+        btn.addEventListener('click', function() {
+            const docName = this.closest('.document-item').querySelector('.doc-info h4').textContent;
+            alert(`${docName} - yuklanmoqda...`);
+        });
+    });
+    
+    // Bildirishnomalarni bosish
+    const notificationItems = document.querySelectorAll('.notification-item');
+    notificationItems.forEach(item => {
+        item.addEventListener('click', function() {
+            this.classList.remove('unread');
+        });
+    });
+    
+    // Avatar tahrirlash
+    const avatarEdit = document.querySelector('.avatar-edit');
+    if (avatarEdit) {
+        avatarEdit.addEventListener('click', function() {
+            alert('Rasmni o\'zgartirish oynasi');
+        });
+    }
+    
+    // Real vaqtni yangilash (simulyatsiya)
+    function updateStatusDate() {
+        const statusDate = document.querySelector('.status-date');
+        if (statusDate) {
+            const now = new Date();
+            const formatted = now.toLocaleDateString('uz-UZ', {
+                day: '2-digit',
+                month: '2-digit',
+                year: 'numeric'
+            }) + ' ' + now.toLocaleTimeString('uz-UZ', {
+                hour: '2-digit',
+                minute: '2-digit'
+            });
+            statusDate.textContent = `Oxirgi yangilanish: ${formatted}`;
+        }
+    }
+    
+    // Har daqiqada yangilash
+    setInterval(updateStatusDate, 60000);
+    
+    // Progress barni animatsiya bilan yangilash
+    let progress = 43;
+    setInterval(() => {
+        if (progress < 100) {
+            progress += 1;
+            const progressFill = document.querySelector('.progress-fill');
+            const progressValue = document.querySelector('.progress-value');
+            if (progressFill && progressValue) {
+                progressFill.style.width = progress + '%';
+                progressValue.textContent = progress + '%';
+            }
+        }
+    }, 300000); // Har 5 daqiqada 1% oshadi (simulyatsiya)
+});
+// profil uchun oxir

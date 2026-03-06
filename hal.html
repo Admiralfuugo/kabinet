@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="img/123.png">
+    <title>Mudofaa Vazirligi | Rasmiy veb-sayt</title>
+    
+    <!-- Font Awesome 5 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+    <!-- CSS fayl -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- NAVBAR SECTION -->
+    <nav class="navbar">
+        <!-- Top bar - Qidiruv qismi birinchi qator -->
+        <div class="top-bar">
+
+            <!-- <div class="top-bar-left">
+                
+                <img width="50px"  src="123.png" alt="">
+                
+                <span class="ministry-name">O'ZBEKISTON RESPUBLIKASI MUDOFAA VAZIRLIGI</span>
+                
+            </div> -->
+
+            <div style="display: flex; align-items: center;">
+                <a href="index.html">
+                <img src="img/123.png" style="width: 30px; height: 30px; margin-right: 5px;">
+                <span style="color: azure; text-align: center;">O'ZBEKISTON RESPUBLIKASI MUDOFAA VAZIRLIGI ㅤ</span></a>
+                <span class="date-time" id="currentDateTime">
+                    <i class="far fa-calendar-alt"></i>
+                    <span id="date"></span>
+                    <i class="far fa-clock" style="margin-left: 10px;"></i>
+                    <span id="time"></span>
+                </span>
+            </div>
+
+
+
+            <div class="top-bar-right">
+                <!-- Search box birinchi qatorda -->
+                <div class="search-box-top">
+                    <input type="text" placeholder="Qidirish..." id="searchInput">
+                    <button id="searchBtn"><i class="fas fa-search"></i></button>
+                </div>
+
+                <!-- Til tanlash -->
+                <div class="language-selector">
+                    <button class="lang-btn active" data-lang="uz">UZ</button>
+                    <button class="lang-btn" data-lang="ru">RU</button>
+                    <button class="lang-btn" data-lang="en">EN</button>
+                </div>
+
+                <!-- Bildirishnomalar -->
+                <div class="notifications">
+                    <button class="notification-btn" id="notificationBtn">
+                        <i class="far fa-bell"></i>
+                        <span class="notification-badge">3</span>
+                    </button>
+                    <div class="notification-dropdown" id="notificationDropdown">
+                        <div class="notification-header">
+                            <h4>Bildirishnomalar</h4>
+                            <span class="mark-read">Hammasini o'qildi deb belgilash</span>
+                        </div>
+                        <div class="notification-list">
+                            <div class="notification-item unread">
+                                <i class="fas fa-bullhorn notification-icon"></i>
+                                <div class="notification-content">
+                                    <p class="notification-text">Yangi vakansiya e'lon qilindi</p>
+                                    <span class="notification-time">5 daqiqa oldin</span>
+                                </div>
+                            </div>
+                            <div class="notification-item unread">
+                                <i class="fas fa-file-alt notification-icon"></i>
+                                <div class="notification-content">
+                                    <p class="notification-text">Arizangiz ko'rib chiqilmoqda</p>
+                                    <span class="notification-time">1 soat oldin</span>
+                                </div>
+                            </div>
+                            <div class="notification-item">
+                                <i class="fas fa-calendar-check notification-icon"></i>
+                                <div class="notification-content">
+                                    <p class="notification-text">Harbiy qasamyod marosimi</p>
+                                    <span class="notification-time">1 kun oldin</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="notification-footer">
+                            <a href="#">Barcha bildirishnomalar</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kun/tun rejimi -->
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                </button>
+
+                
+
+            </div>
+        </div>
+
+        <!-- Main navbar - ikkinchi qator (o'rta qism) -->
+        <div class="main-nav">
+            <ul class="nav-links">
+                <li class="nav-item">
+                    <a href="#"><i class="fas fa-home"></i><span data-i18n="about">BIZ HAQIMIZDA</span></a>
+                    <div class="dropdown-menu">
+                        <a href="https://gov.uz/oz/mudofaa/pages/about" data-i18n="history">Vazirlik</a>
+                        <a href="https://gov.uz/oz/mudofaa/guides" data-i18n="leadership">Rahbariyat</a>
+                        <a href="#information" data-i18n="tasks">Bog'lanish</a>
+                        <a href="#" data-i18n="symbols">Ko'p beriladigan savollar</a>
+                        
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="#"><i class="fas fa-briefcase"></i><span data-i18n="career">KARYERA</span></a>
+                    <div class="dropdown-menu">
+                        <a href="#" data-i18n="militaryService">Bu nima</a>
+                        <a href="#" data-i18n="contract">Harbiy xizmatga qadar</a>
+                        <a href="#" data-i18n="academies">Harbiy xizmat davomida</a>
+                        <a href="https://vacancy.gov.uz/" data-i18n="internship"></a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="#"><i class="fas fa-users"></i><span data-i18n="candidates">NOMZODLARGA</span></a>
+                    <div class="dropdown-menu">
+                        <a href="#" data-i18n="requirements">Saralash</a>
+                        <a href="#" data-i18n="documents">KBHX ga</a>
+                        <a href="#" data-i18n="exams">OXTM ga</a>
+                        <a href="#" data-i18n="benefits">HAL ga</a>
+                        <a href="#" data-i18n="benefitT">HTO'M GA</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="#"><i class="fas fa-bullhorn"></i><span data-i18n="vacancies">VAKANSIYA</span></a>
+                    <div class="dropdown-menu">
+                        <a href="#" data-i18n="officers">Ofitserlar</a>
+                        <a href="#" data-i18n="sergeants">Serjantlar</a>
+                        <a href="#" data-i18n="specialists">Mutaxassislar</a>
+                        <a href="#" data-i18n="civilians">Fuqarolik xodimlari</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="#"><i class="fas fa-newspaper"></i><span data-i18n="news">YANGILIKLAR</span></a>
+                    <div class="dropdown-menu">
+                        <a href="#" data-i18n="latest">So'nggi yangiliklar</a>
+                        <a href="#" data-i18n="official">Rasmiy bayonotlar</a>
+                        <a href="#" data-i18n="photo">Foto galereya</a>
+                        <a href="#" data-i18n="video">Video materiallar</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="hujjatlar.html"><i class="fas fa-newspaper"></i><span data-i18n="datess">HUJJATLAR</span></a>
+                </li>
+            </ul>
+
+            <!-- Application button (o'rta qatorning o'ng qismi) -->
+            <div class="main-nav-actions">
+                <a href="ariza.html" class="application-btn">
+                    <i class="fas fa-file-alt"></i>
+                    <span data-i18n="apply">ARIZA BERISH</span>
+                </a>
+                <span class="phone-number">
+                    <i class="fas fa-phone-alt"></i>
+                    1530
+                </span>
+                <div class="user-info">
+                    <i class="fas fa-user-circle"></i>
+                    <span class="user-name">ANVAROV A.A.</span>
+                </div>
+            </div>
+
+            <!-- Mobile menu button -->
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+       
+   </nav>
+
+    <!-- BACKGROUND IMAGE SECTION -->
+<!-- OLIY HARBIY TA'LIM FAQ SECTION -->
+<section class="faq-section" id="oliy-harbiy-talim-faq">
+    <div class="container">
+        <div class="section-header">
+            <h2>HARBIY AKADEMIK LETSEY</h2>
+            <p>“Temurbeklar maktabi” davlat ta’lim muassasasi hisoblanadi va faoliyatini O‘zbekiston Respublikasi Konstitutsiyasi, O‘zbekiston Respublikasining “Ta’lim to‘g‘risida”gi Qonuni, “Temurbeklar maktabi” harbiy-akademik litseyi to‘g‘risidagi Nizom, boshqa me’yoriy-huquqiy hujjatlar va o‘z Ustaviga muvofiq amalga oshiradi.</p>
+        </div>
+        
+        <div class="faq-container">
+            <!-- Oliy harbiy ta'lim nima? - Asosiy savol -->
+            <div class="faq-item featured">
+                <div class="faq-question">
+                    <h3><i class="fas fa-university" style="color: #d32f2f; margin-right: 10px;"></i> Qanday Harbiy Akademik Litsetlar mavjud?</h3>
+                    <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="faq-answer">
+                    <div class="featured-answer">
+                        
+                        <div class="info-box">
+                            <div class="info-item">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>Farg‘ona “Temurbeklar maktabi” harbiy-akademik litseyi (MV), Farg‘ona viloyati, Farg‘ona shahri</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>“Jaloliddin Manguberdi” nomidagi harbiy-akademik litseyi (MV), Xorazm viloyati Urganch shahri </span>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Qanday oliy harbiy ta'lim muassasalari bor? -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>BMB test sinovlari qaysi fanlarni o’z ichiga oladi?</h3>
+                    <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="faq-answer">
+                    <div class="institutions-grid">
+                        <div class="institution-card">
+                            <h4><i class=""></i> Aniq fanlar: Matematika va fizika;
+<br>Ijtimoiy-gumanitar fanlar: Ona tili va adabiyot, chet tili, tarix.
+<br>
+<br>- Farg‘ona “Temurbeklar maktabi” harbiy-akademik litseyi aniq fanlar yo‘nalishi bo‘yicha test topshiradi (1- fan matematika, 2- fan fizika, 3- fan ona tili va adabiyot);
+<br>- “Jaloliddin Manguberdi” nomidagi harbiy-akademik litseyi aniq fanlar yo‘nalishi bo‘yicha test topshiradi (1- fan matematika, 2- fan fizika, 3- fan ona tili va adabiyot);
+<br> Baholash mezonlari: 1-fan : <strong>3.1</strong>  2-fan:<strong>2.1</strong>  3-fan <strong>1.1</strong> 
+</h4>
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Kimlar qabul qilinadi? -->
+            
+            
+            <!-- Qabul qilish muddatlari -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Qabul muddatlari</h3>
+                    <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="faq-answer">
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <span class="timeline-day">Nomzodlar uchun dastlabki tanlash “Temurbeklar maktabi”ga o‘qishga kirish istagini bildirgan nomzodlarning arizalari asosida yashash joyi bo‘yicha mudofaa ishlari bo‘yicha bo‘limlarda har yili 
+1 apreldan 30 aprelga qadar o‘tkaziladi.
+</span>
+                            <br><span class="timeline-desc">Harbiy-kasbiy tanlash nomzodning yashash joyi bo‘yicha mudofaa ishlari boshqarmasida har yili 
+1 maydan 20 iyun kuniga qadar o‘tkaziladi.
+</span>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Qanday hujjatlar kerak? -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Kimlar HALga kirishi mumkin? </h3>
+                    <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="faq-answer">
+                    <div class="documents-list">
+                        <h4>“Temurbeklar maktabi”ga joriy yilda umumta’lim va ixtisoslashtirilgan maktab-internat maktablarining (keyingi o‘rinlarda — umumta’lim maktablar) 9-sinfini tamomlaganlik to‘g‘risidagi shahodatnomaga ega, sog‘lig‘ining holatiga ko‘ra o‘qishga yaroqli deb topilgan hamda haqqoniy va shaffoflik tamoyillariga asoslangan saralash tanlovidan muvaffaqiyatli o‘tgan, erkak jinsli O‘zbekiston Respublikasining fuqarolari o‘qishga qabul qilinadi. </h4>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+            
+
+            <!-- Imtihonlardan ozod qilish -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Kimlar imtiyoz asosida qabul qilinadi?</h3>
+                    <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="faq-answer">
+                    <p>O‘zbekiston Respublikasi ta’lim muassasalariga qabul qilish bo‘yicha Davlat komissiyasining qaroriga muvofiq dastlabki va harbiy-kasbiy tanlashdan muvaffaqiyatli o‘tgan quyidagi nomzodlar “Temurbeklar maktabi”ga test sinovlarisiz tanlovdan tashqari o‘qishga qabul qilinadi:</p>
+                    <ul>
+                        <li><i class="fas fa-medal"></i> xalqaro va respublika fan olimpiadalarining g‘oliblari – belgilangan qabul kvotasi doirasida;</li>
+                        <li><i class="fas fa-trophy"></i> o‘z xizmat vazifalarini bajarish chog‘ida halok bo‘lgan hamda jarohatlanish (shikastlanish) natijasida nogiron bo‘lib qolgan harbiy xizmatchilar, huquqni muhofaza qilish organlari xodimlari va Favqulodda vaziyatlar vazirligi qutqaruv bo‘linmalari xizmatchilarining farzandlari – kvotadan tashqari;</li>
+                        <li><i class="fas fa-docment"></i> yetim, ota-ona qarovisiz qolgan, ijtimoiy nosog‘lom oilalarda yashayotgan, davlat va jamiyat ko‘magiga muhtoj bo‘lgan, joriy yilda umumta’lim maktablarining 9-sinfini tamomlagan Voyaga yetmagan yoshlar bilan ishlash bo‘yicha hududiy idoralararo komissiya tavsiyasi hamda tegishli vazirlik va idoralar rahbarlarining qarorlari asosida – kvotadan tashqari, belgilangan kvotaning 5 foizidan ko‘p bo‘lmagan miqdorda.</li>
+                        <li><i class="fas fa-star"></i> Jismoniy tarbiya va sport vazirligi rahbarligida o‘tkazilayotgan respublika va xalqaro sport musobaqalarining g‘oliblariga O‘zbekiston Respublikasi Vazirlar Mahkamasi huzuridagi Davlat test markazi tomonidan “Temurbeklar maktabi”ga kirish uchun o‘tkazilayotgan test sinovlarida ular to‘plagan ballarning 20 foizi miqdoridagi qo‘shimcha ballar ko‘rinishida imtiyoz beriladi.</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Kirish imtihonlari -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>HAL o’quvchilariga qanday imtiyozlar beriladi?</h3>
+                    <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="faq-answer">
+                   
+                    
+                    <h4 style="margin: 15px 0 10px;">“Temurbeklar maktabi”ni tamomlagandan keyin bitiruvchilarga belgilangan namunadagi diplom va ko‘krak nishoni beriladi.</h4>
+                    
+                    
+                    <h4 style="margin: 20px 0 10px;">“Temurbeklar maktabi” bitiruvchilariga O‘zbekiston Respublikasi oliy harbiy va ixtisoslashtirilgan ta’lim muassasalariga o‘qishga kirishda O‘zbekiston Respublikasi Vazirlar Mahkamasi huzuridagi Davlat test markazi tomonidan o‘tkaziladigan test sinovlarida o‘zlari to‘plagan ballarning 30 foizi miqdoridagi, respublikaning boshqa davlat oliy ta’lim muassasalariga o‘qishga kirishda esa o‘zlari to‘plagan ballarning 15 foizi miqdoridagi qo‘shimcha ballar ko‘rinishida imtiyoz beriladi.  </h4>
+                    
+                    
+                    <h4 style="margin: 20px 0 10px;">“Temurbeklar maktabi” o‘quvchilari qonun hujjatlarida belgilangan normalarga muvofiq o‘qish davomida bepul turar joy, oziq-ovqat va kiyim-kechak bilan ta’minlanadi.</h4>
+                </div>
+            </div>
+            
+            <!-- Imtiyozlar -->
+            
+            
+
+            
+            <!-- Imtihonlardan ozod qilish -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Kimlar imtihonlardan ozod qilinadi?</h3>
+                    <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="faq-answer">
+                    <p>Quyidagi toifadagi fuqarolar imtihonlardan ozod qilinadi:</p>
+                    <ul>
+                        <li><i class="fas fa-medal"></i> <strong>Oltin medal sohiblari</strong> (faqat suhbat asosida)</li>
+                        <li><i class="fas fa-trophy"></i> <strong>Xalqaro olimpiada g'oliblari</strong> (tegishli fanlardan)</li>
+                        <li><i class="fas fa-fighter-jet"></i> <strong>Harbiy xizmatni o'taganlar</strong> (jismoniy tayyorgarlikdan)</li>
+                        <li><i class="fas fa-star"></i> <strong>Imtiyozli toifalar</strong> (yetimlar, nogironlar, ko'p bolali oilalar farzandlari)</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Qizlar uchun -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Saralash qanday bosqichlarni o’z ichiga oladi?</h3>
+                    <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="faq-answer">
+                    <p>“Temurbeklar maktabi” o‘quvchilarini saralash tartibi
+Saralash tanlovi dastlabki tanlash, harbiy-kasbiy tanlov va test sinovlaridan iborat.
+Quyidagilar dastlabki tanlashning asosiy tadbirlari hisoblanadi:
+nomzodga tegishli hujjatlarni va uni tavsiflovchi ma’lumotlarni to‘plash;
+nomzod to‘g‘risidagi turli ma’lumotlarni (oilaviy ahvoli, ota-onasi va yaqin qarindoshlarining harbiy xizmatga munosabati va shu kabilar), nomzodning “Temurbeklar maktabi”ga o‘qishga kirishini tanlashiga asoslar va sabablarni aniqlashtirish;
+umumta’lim fanlari bo‘yicha o‘zlashtirishi, sog‘lig‘i va jismoniy tayyorgarlik holatini har tomonlama va xolisona baholash;
+nomzodlarning shaxsiy-psixologik xususiyatlarini o‘rganish.
+
+	Nomzodlarning birinchi tibbiy tekshiruvi mudofaa ishlari bo‘yicha bo‘limlar huzuridagi tibbiy komissiyalar tomonidan o‘tkaziladi. Tibbiy tekshiruv natijalariga asoslangan sog‘lig‘ining holatiga ko‘ra nomzodning o‘qishga yaroqliligi to‘g‘risida xulosa chiqariladi.
+	Sog‘lig‘ining holatiga ko‘ra o‘qishga yaroqsiz deb topilgan nomzodlar harbiy-kasbiy tanlashga qo‘yilmaydi.
+	Dastlabki tanlash natijalari bo‘yicha “Temurbeklar maktabi”ga o‘qishga kirish uchun tavsiya qilingan nomzodlarning shaxsiy yig‘majildlari tuman (shahar) mudofaa ishlari bo‘yicha bo‘limlari tomonidan har yili 1 may kuniga qadar mudofaa ishlari boshqarmalariga topshiriladi.
+Harbiy-kasbiy tanlashning asosiy tadbirlari quyidagilardan iborat:
+taqdim qilingan nomzodga tegishli hujjatlar va uni tavsiflovchi ma’lumotlarni o‘rganish;
+nomzodlarning yakuniy tibbiy tekshiruvdan o‘tkazish;
+nomzodning savodxonlik darajasini (orfografiya va punktuatsiya) baholash;
+nomzodlarning psixofiziologik xususiyatlarini o‘rganish;
+nomzodlarning jismoniy tayyorgarlik darajasini aniqlash;
+nomzod bilan yakka tartibda yakuniy suhbat o‘tkazish va nomzodlarni test sinovlariga qo‘yish to‘g‘risida yakuniy qaror qabul qilish.
+
+Nomzodlarni yakuniy tibbiy tekshiruvdan o‘tkazish O‘zbekiston Respublikasi mudofaa vaziri va sog‘liqni saqlash vazirining qo‘shma buyrug‘i bilan tasdiqlanadigan tibbiy mutaxassislardan iborat tarkibdagi harbiy-tibbiy komissiyalar tomonidan amalga oshiriladi.
+	Yakuniy tibbiy tekshiruv natijalariga asoslangan sog‘lig‘ining holatiga ko‘ra nomzodning “Temurbeklar maktabi”da o‘qishga yaroqliligi holati to‘g‘risidagi qaror chiqariladi.
+Sog‘lig‘ining holatiga ko‘ra o‘qishga yaroqsiz deb topilgan nomzodlar saralashning keyingi tadbirlariga qo‘yilmaydi.
+
+Nomzodlarning savodxonlik darajasini (orfografiya va punktuatsiya) baholash diktant yozdirish yo‘li bilan aniqlanadi.
+Diktant o‘tkazish tartibi va uni baholash mezonlari O‘zbekiston Respublikasi Mudofaa vazirligi hamda Oliy va o‘rta maxsus ta’lim vazirligi tomonidan ishlab chiqiladi va tasdiqlanadi.
+Diktant natijasida qoniqarsiz baho olgan nomzodlar saralashning keyingi tadbirlariga qo‘yilmaydi.
+
+Nomzodlarning psixofiziologik xususiyatlarini o‘rganish tegishli mutaxassislarni jalb qilgan holda psixologik testlar o‘tkazish orqali harbiy okruglar tomonidan tashkillashtiriladi va o‘tkaziladi. Psixologik testlarni o‘tkazish tartibi va psixologik testlar O‘zbekiston Respublikasi Mudofaa vazirligi hamda Oliy va o‘rta maxsus ta’lim vazirligi tomonidan ishlab chiqiladi va tasdiqlanadi.
+Psixofiziologik xususiyatlarni o‘rganish natijalari yakka tartibdagi yakuniy suhbat davomida qaror qabul qilishda hisobga olinadi.
+Psixofiziologik xususiyatlarni o‘rganish natijalariga ko‘ra quyidagi xulosalar chiqariladi:
+o‘qishga kirish uchun tavsiya etiladi;
+o‘qishga kirish uchun tavsiya etilmaydi.
+Psixofiziologik xususiyatlarni o‘rganish natijalari bo‘yicha o‘ta olmagan hamda o‘qishga kirish uchun tavsiya etilmagan nomzodlar saralashning keyingi bosqichiga qo‘yilmaydi.
+
+Nomzodlarning jismoniy tayyorgarlik darajasi Mudofaa vazirligi tomonidan belgilangan meyyorlar asosida mudofaa ishlari boshqarmasi tomonidan aniqlanadi.
+Jismoniy tayyorgarlik darajasi bo‘yicha talablarga javob bermaydigan nomzodlar saralashning keyingi bosqichiga qo‘yilmaydi.
+
+Yakka tartibdagi yakuniy suhbat idoralararo maxsus komissiya tomonidan nomzodning yetakchilik sifatlari, mantiqiy fikrlash darajasi, savodxonligi, aqliy qobiliyatlari hamda boshqa harbiy xizmatchi va davlat xizmati xodimi uchun muhim kasbiy sifatlarini aniqlash maqsadida psixofiziologik xususiyatlarini o‘rganish va diktant natijalari asosida mudofaa ishlari boshqarmasida o‘tkaziladi.
+
+Test sinovlari O‘zbekiston Respublikasi Vazirlar Mahkamasi huzuridagi Davlat test markazi tomonidan o‘rnatilgan tartibda o‘tkaziladi.
+	Test sinovlari o‘tkaziladigan umumta’lim fanlari bloki O‘zbekiston Respublikasi ta’lim muassasalariga qabul qilish bo‘yicha Davlat komissiyasi tomonidan tasdiqlanadi.
+Nomzodlar test sinovlarini o‘z ixtiyoriga ko‘ra uch tildan – o‘zbek, qoraqalpoq va rus tillaridan birida topshiradilar.
+</p>
+                    
+                </div>
+            </div>
+
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Sinovlarni baholash me’yorlari?</h3>
+                    <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="faq-answer">
+                    <p>“Temurbeklar maktabi” harbiy-akademik litseylariga nomzodlar tanlovini o‘tkazish bo‘yicha metodikalarga asosan o‘tkaziladi.
+Diktant o‘tkazish metodikasiga asosan diktant matnining hajmi 100-120 ta so‘zdan iborat bo‘ladi. Diktant 5 ballik tizimda baholanadi. 
+1 tagacha orfografik yoki punktuatsion xatolikka yo‘l qo‘yilsa – 5 ball;
+2 tadan 4 tagacha orfografik yoki punktuatsion xatolikka yo‘l qo‘yilsa – 4 ball;
+5 tadan 10 tagacha orfografik yoki punktuatsion xatolikka yo‘l qo‘yilsa – 3 ball;
+11 ta va undan ortiq orfografik yoki punktuatsion xatolikka yo‘l qo‘yilsa – 2 ball;
+nomzod daftarni diktant yozilmagan bo‘sh holda topshirganda u – 0 ball bilan baholanadi.
+
+Psixofiziologik xususiyatlarni o‘rganish metodikasiga asosan psixologik testlar nomzodlarning quyidagi individual-psixologik xususiyatlarini aniqlashga yo‘naltiriladi: 
+aql zakovati, umumiy intellektual salohiyati va xotirasi;
+mantiqiy fikrlashi, ziyrakligi, tafakkur shakllarining rivojlanganlik darajasi, fikrlash tezligi va tahlil qilish qobiliyatlari;
+shaxsiga xos individual xususiyatlari, kirishimliligi, psixik turg‘unligi va samimiyligi.
+Psixologik test o‘tkazish metodikasiga asosan 1- qism 6 ta topshiriq, 90 ta savoldan iborat bo‘lib 
+87-90 ball 5 baho, 68-86 ball 4 baho, 49-67 ball 3 baho, 0-48 ball 2 baho bilan baholanadi. 
+2- qism 7- topshiriq 120 ta savoldan psixoemotsional barqarorlikni baholash so‘rovnomasidan iborat bo‘lib 83-99 ball 5 baho, 67-82 ball 4 baho, 52-66 ball 3 baho, 0-51 ball 2 baho bilan baholanadi.
+“Ishonchlilik” shkalasi “Samimiy” 0 dan 9 gacha, “Nosamimiy” 10 dan 19 gacha bo‘lib, ushbu shkala bo‘yicha samimiy javob bermagan taqdirda, nomzod faqat 2- qism psixologik testni qaytadan topshiradi va ikkinchi marta test topshirganda ham samimiy bo‘lmagan javob bersa, nomzodga nisbatan tavsiya etilmaydi xulosasi chiqariladi.
+
+Jismoniy tayyorgarlik darajasini aniqlash bo‘yicha sinov o‘tkazish metodikasiga asosan 
+to‘sinda (turnikda) tortilish;
+100 metrga yugurish;
+2000 metrga yugurish sinov mashqlari hisoblanadi.
+100 metrga yugurish-   15,1-15,3 soniyagacha – 3 baho, 30 ball;
+                                          14,6-15,0 soniyagacha – 4 baho, 40 ball;
+                                          13,0-14,5 soniyagacha – 5 baho, 50 ball.
+Turnikda tortilish-         5-6 marotaba – 3 baho, 30 ball;
+                                          7-8 marotaba – 4 baho, 40 ball;
+                                          9-19 marotaba – 5 baho, 50 ball.
+2000 metrga yugurish- 9,31-9,45 daq.son., - 3 baho, 30 ball;
+                                          9,01-9,30 daq.son., - 4 baho, 40 ball;
+                                         8,16-9,00 daq.son., - 5 baho, 50 ball.
+Nomzodlarning jismoniy tayyorgarlik darajasini aniqlash bo‘yicha jami asosiy ballar “A’lo” baho uchun – 150 ball, “Yaxshi” baho uchun 120 – ball, “Qoniqarli” baho uchun – 90 ball ko‘rinishida bo‘lib, qo‘shimcha rag‘bat bali – 40 ball bilan umumiy to‘plashi mumkin bo‘lgan 
+maksimal ball – 190 ballni tashkil etadi.
+
+Yakka tartibdagi yakuniy suhbat o‘tkazish 
+Qabul komissiyasi a’zolari yakka tartibdagi yakuniy suhbatga kirgan har bir nomzodga 3 ta savol beradi. Bunda har bir yo‘nalish (3 ta yo‘nalish) bo‘yicha 1 tadan savol beriladi.
+nomzod xulosa va qaror qabul qiladi, ijodiy fikrlay oladi, mustaqil mushohada qiladi, mohiyatini tushunadi, biladi va aytib beradi deb topilganda – 5 ball;
+nomzod mustaqil mushohada yuritadi, mohiyatini tushunadi, biladi, aytib beradi va tasavvurga ega deb topilganda – 4 ball;
+nomzod mohiyatini qisman tushunadi, biladi, aytib beradi va tasavvurga ega deb topilganda 3 – ball;
+nomzod bilmaydi, aytib bera olmaydi va tasavvurga qisman ega deb topilganda 2 – ball;
+nomzod bilmaydi, aytib bera olmaydi va tasavvurga ega emas deb topilganda 0 – ball qo‘yiladi.
+Nomzodning savollarga javobiga komissiyaning har bir a’zosi nomzodga o‘z bahosini qo‘yadi. Qo‘yilgan barcha ballar umumlashtirilib, nomzodning o‘rtacha arifmetik balli aniqlanadi.
+
+
+</p>
+                    
+                </div>
+            </div>
+            
+            <!-- Chet el fuqarolari -->
+            
+        
+        
+    </div>
+</section>
+
+
+    <!-- BACKGROUND IMAGE SECTION -->
+  
+
+    <!-- FOOTER SECTION -->
+    <footer id="information" class="footer" >
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-grid">
+                    <!-- Copyright column -->
+                    <div class="footer-col">
+                        <div class="footer-logo">
+                            <img width="50px"  src="img/123.png" alt="">
+                            <span>Mudofaa Vazirligi</span>
+                        </div>
+                        <p class="copyright-text">
+                            Ushbu saytda nashr etilgan materiallar<br>
+                            foydalanilganda army.gov.uz manbasi<br>
+                            ko'rsatilishi shart
+                        </p>
+                        <p class="copyright-year">
+                            <i class="far fa-copyright"></i> 2026 Barcha huquqlar himoyalangan
+                        </p>
+                    </div>
+
+                    <!-- Contact column -->
+                    <div  class="footer-col">
+                        <h3>ALOQA</h3>
+                        <div class="contact-info">
+                            <p>
+                                <i class="fas fa-map-marker-alt"></i>
+                                100000, Toshkent shahri, Mirzo Ulug‘bek ko‘chasi, 100
+                            </p>
+                            <p>
+                                <i class="fas fa-phone-alt"></i>
+                                <a href="tel:+998712698019">+998 71 269 80 19</a>
+                            </p>
+                            <p class="emergency-phone">
+                                <i class="fas fa-phone-volume"></i>
+                                <strong>1530</strong> (Ishonch telefoni)
+                            </p>
+                            <p>
+                                <i class="far fa-envelope"></i>
+                                <a href="mailto:mudofaa@mil.uz">mudofaa@mil.uz</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Social media column -->
+                    <div class="footer-col">
+                        <h3>BIZNI KUZATIB BORING!</h3>
+                        <div class="social-links">
+                            <a href=" https://t.me/Armygovuz" class="social-link"><i class="fab fa-telegram"></i></a>
+                            <!-- <a href="https://www.facebook.com/@Armygovuz" class="social-link"><i class="fab fa-facebook"></i></a> -->
+                            <a href=" https://instagram.com/Armygovuz" class="social-link"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.youtube.com/@Armygovuz" class="social-link"><i class="fab fa-youtube"></i></a>
+                            <!-- <a href="https://www.twintter.com/@Armygovuz" class="social-link"><i class="fab fa-twitter"></i></a> -->
+                        </div>
+                        
+                        <!-- Report text error -->
+                        <div class="report-error">
+                            <p>Matnda xato ko'rdingizmi?</p>
+                            <p class="error-instruction">
+                                <i class="fas fa-mouse-pointer"></i>
+                                Sichqoncha bilan belgilang va<br>
+                                <kbd>CTRL</kbd> + <kbd>Enter</kbd> ni bosing
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Quick links column -->
+                    <div class="footer-col">
+                        <h3>Tezkor havolalar</h3>
+                        <ul class="footer-links">
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Vakansiyalar</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Ariza berish</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Harbiy qismlar</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Matbuot xizmati</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Sayt xaritasi</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 O'zbekiston Respublikasi Mudofaa Vazirligi. Barcha huquqlar himoyalangan.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript fayl -->
+    <script src="script.js"></script>
+</body>
+</html>
